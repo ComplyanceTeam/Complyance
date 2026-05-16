@@ -192,10 +192,21 @@ def pick_trade_corridor() -> tuple:
     return formats[idx], countries[idx]
 
 
-def generate_invoice(invoice_id: str, is_credit_note: bool = False) -> dict:
-    """Generate a single realistic invoice row."""
+def generate_invoice(invoice_id: str, is_credit_note: bool = False,
+                     ensure_clean: bool = False) -> dict:
+    """
+    Generate a single realistic invoice row.
+
+    Args:
+        invoice_id: Unique invoice identifier
+        is_credit_note: If True, generate negative amounts
+        ensure_clean: If True, ensure the invoice has NO natural mapping errors
+                      (use target-compatible currency, valid VATs, etc.)
+    """
     source_format, target_country = pick_trade_corridor()
     source_rules = FORMAT_BY_NAME[source_format]
+    target_format = COUNTRY_FORMAT_MAP.get(target_country, "peppol_bis_3")
+    target_rules = FORMAT_BY_NAME.get(target_format, {})
 
     # Seller from source format's country
     seller_id, seller_name, seller_country = get_seller_for_format(source_format)
@@ -208,8 +219,16 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False) -> dict:
     issue_date = base_date.strftime("%Y-%m-%d")
     delivery_date = (base_date + timedelta(days=random.randint(1, 30))).strftime("%Y-%m-%d")
 
-    # Currency: typically the seller's country currency
-    currency = COUNTRY_CURRENCIES.get(seller_country, "EUR")
+    # Currency: for clean invoices, must be supported by target format
+    if ensure_clean:
+        target_supported = FORMAT_CURRENCIES.get(target_format, ["EUR"])
+        seller_currency = COUNTRY_CURRENCIES.get(seller_country, "EUR")
+        if seller_currency in target_supported:
+            currency = seller_currency
+        else:
+            currency = target_supported[0]  # Use target's default
+    else:
+        currency = COUNTRY_CURRENCIES.get(seller_country, "EUR")
 
     # Tax rate: pick from seller's country standard rates
     tax_rates = STANDARD_TAX_RATES.get(seller_country, [0.19])
@@ -222,11 +241,20 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False) -> dict:
         k=1
     )[0]
 
-    # Use the source format's line item structure
-    if source_rules["line_item_structure"] == "nested":
-        line_items = generate_line_items_nested(num_items)
+    # Line items: for clean invoices, use target-compatible structure
+    if ensure_clean:
+        # Use the target format's structure to ensure compatibility
+        target_structure = target_rules.get("line_item_structure", "flat")
+        if target_structure == "nested":
+            line_items = generate_line_items_nested(num_items)
+        else:
+            line_items = generate_line_items_flat(num_items)
     else:
-        line_items = generate_line_items_flat(num_items)
+        # Use the source format's line item structure
+        if source_rules["line_item_structure"] == "nested":
+            line_items = generate_line_items_nested(num_items)
+        else:
+            line_items = generate_line_items_flat(num_items)
 
     subtotal = compute_subtotal_from_items(line_items)
     # Clamp subtotal to realistic range
@@ -246,8 +274,8 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False) -> dict:
     tax_amount = round(subtotal * tax_rate, 2)
     total_amount = round(subtotal + tax_amount, 2)
 
-    # Credit note = negative amounts
-    if is_credit_note:
+    # Credit note = negative amounts (only if NOT ensuring clean for non-credit-note-supporting targets)
+    if is_credit_note and not ensure_clean:
         subtotal = -abs(subtotal)
         tax_amount = -abs(tax_amount)
         total_amount = -abs(total_amount)
@@ -304,8 +332,8 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
     for error_type in chosen_errors:
         if error_type == "tax_amount_mismatch":
             correct_tax = round(abs(inv["subtotal"]) * inv["tax_rate"], 2)
-            # Offset by 1-15%
-            offset = round(correct_tax * random.uniform(0.01, 0.15), 2)
+            # Offset by at least 1.00 to always exceed validation tolerance (0.01)
+            offset = max(1.00, round(correct_tax * random.uniform(0.02, 0.15), 2))
             inv["tax_amount"] = round(abs(inv["subtotal"]) * inv["tax_rate"] + random.choice([-1, 1]) * offset, 2)
             inv["total_amount"] = round(inv["subtotal"] + inv["tax_amount"], 2)
             errors.append("tax_amount_mismatch")
@@ -334,30 +362,20 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
                 corrections["currency"] = supported[0]
 
         elif error_type == "line_item_structure_incompatible":
-            source_structure = source_rules["line_item_structure"]
             target_structure = target_rules["line_item_structure"]
-            # Only inject if structures actually differ, or force it
-            if source_structure == "nested" and target_structure == "flat":
-                errors.append("line_item_structure_incompatible")
-                corrections["line_item_structure"] = "flat"
-            elif source_structure == "flat" and target_structure == "nested":
-                # Convert flat items to have sub_items to create incompatibility
+            # Only inject when target expects flat — add sub_items to make it nested
+            # This is the detectable case: nested data → flat-only target
+            if target_structure == "flat":
                 items = json.loads(inv["line_items_json"])
-                if len(items) >= 2:
-                    # Wrap items in nested groups to simulate nested source
-                    items[0]["sub_items"] = [items.pop(1)] if len(items) > 1 else []
+                if items:
+                    items[0]["sub_items"] = [
+                        {"line_id": "1.1", "description": "Sub-component",
+                         "quantity": 1, "unit": "EA",
+                         "unit_price": 10.0, "line_total": 10.0}
+                    ]
                     inv["line_items_json"] = json.dumps(items, ensure_ascii=False)
                 errors.append("line_item_structure_incompatible")
-                corrections["line_item_structure"] = target_structure
-            else:
-                # Structures match — force a mismatch by adding nested to flat target
-                if target_structure == "flat":
-                    items = json.loads(inv["line_items_json"])
-                    if items:
-                        items[0]["sub_items"] = [{"line_id": "1.1", "description": "Sub-component", "quantity": 1, "unit": "EA", "unit_price": 10.0, "line_total": 10.0}]
-                        inv["line_items_json"] = json.dumps(items, ensure_ascii=False)
-                    errors.append("line_item_structure_incompatible")
-                    corrections["line_item_structure"] = "flat"
+                corrections["line_item_structure"] = "flat"
 
         elif error_type == "buyer_vat_missing_for_target":
             target_required = target_rules["required_fields"].split(",")
@@ -466,15 +484,13 @@ def generate_dataset(num_invoices: int, prefix: str, error_rate: float = 0.0):
     for i in range(num_invoices):
         invoice_id = f"INV-{prefix}-{i+1:05d}"
 
-        # ~3% credit notes (only for source set with errors)
-        is_credit_note = (error_rate > 0 and random.random() < 0.03)
-        invoice = generate_invoice(invoice_id, is_credit_note=is_credit_note)
+        if i in error_indices:            # Error invoice: start clean, then inject ONLY deliberate errors
+            invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
 
-        target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
-        pair = f"{invoice['source_format']}→{target_format}"
-        format_pairs[pair] += 1
+            target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
+            pair = f"{invoice['source_format']}→{target_format}"
+            format_pairs[pair] += 1
 
-        if i in error_indices:
             # Inject errors
             modified_invoice, errors, corrections = inject_errors(invoice, target_format)
 
@@ -488,10 +504,21 @@ def generate_dataset(num_invoices: int, prefix: str, error_rate: float = 0.0):
                     "corrected_fields": json.dumps(corrections),
                 })
             else:
-                # Error injection didn't apply — treat as clean
+                # Error injection didn't apply — regenerate as clean
+                invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
+                target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
+                pair = f"{invoice['source_format']}→{target_format}"
+                format_pairs[pair] += 1
                 invoices.append(invoice)
                 mappings.append(compute_mapping(invoice))
         else:
+            # Clean invoice: ensure no natural mapping errors
+            invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
+
+            target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
+            pair = f"{invoice['source_format']}→{target_format}"
+            format_pairs[pair] += 1
+
             invoices.append(invoice)
             mappings.append(compute_mapping(invoice))
 
