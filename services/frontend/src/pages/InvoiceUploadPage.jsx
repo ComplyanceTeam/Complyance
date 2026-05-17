@@ -18,17 +18,12 @@ export default function InvoiceUploadPage() {
   }
 
   const startUpload = async () => {
-    if (!file || isUploading) {
-      return
-    }
-
+    if (!file || isUploading) return
     setIsUploading(true)
     setProgress(18)
-
     const intervalId = window.setInterval(() => {
       setProgress((current) => Math.min(current + 16, 94))
     }, 240)
-
     try {
       const response = await invoiceApi.uploadInvoice(file)
       window.clearInterval(intervalId)
@@ -42,48 +37,57 @@ export default function InvoiceUploadPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
-        <Card header="Invoice upload" subtitle="Drag and drop a CSV, XML, or JSON invoice dataset for pipeline ingestion.">
-          <UploadDropzone file={file} onFileSelect={handleFileSelect} progress={progress} feedback={feedback} isUploading={isUploading} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <Card header="Batch Ingestion" subtitle="Upload invoice datasets for processing">
+            <UploadDropzone file={file} onFileSelect={handleFileSelect} progress={progress} feedback={feedback} isUploading={isUploading} />
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={startUpload}
-              className="inline-flex items-center gap-2 rounded-2xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-400"
-              disabled={!file || isUploading}
-            >
-              <UploadCloud className="h-4 w-4" />
-              {isUploading ? 'Uploading...' : 'Start validation run'}
-            </button>
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:bg-slate-50"
-              onClick={() => {
-                setFile(null)
-                setProgress(0)
-                setFeedback(uploadFeedback)
-              }}
-            >
-              Reset
-            </button>
-          </div>
-        </Card>
+            <div className="mt-8 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={startUpload}
+                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm active:scale-95"
+                disabled={!file || isUploading}
+              >
+                <UploadCloud className="h-4 w-4" />
+                {isUploading ? 'PROCESSING...' : 'START VALIDATION'}
+              </button>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-xs font-bold text-slate-500 border border-slate-200 transition hover:bg-slate-50 active:scale-95"
+                onClick={() => {
+                  setFile(null)
+                  setProgress(0)
+                  setFeedback(uploadFeedback)
+                }}
+              >
+                RESET
+              </button>
+            </div>
+          </Card>
+        </div>
 
-        <Card header="Upload validation feedback" subtitle="Pre-ingestion checks applied to the file before pipeline execution.">
-          <div className="space-y-4 text-sm text-slate-600">
-            {[
-              'Column headers match the canonical invoice schema.',
-              'Date and currency fields were normalized successfully.',
-              'No structural violations were detected in the sample window.',
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 px-4 py-3">
-                <FileWarning className="mt-0.5 h-4 w-4 text-amber-500" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
+        <div className="lg:col-span-1">
+          <Card header="Validation Rules" subtitle="Pre-ingestion compliance checks">
+            <div className="space-y-4">
+              {[
+                'Schema Consistency',
+                'Data Normalization',
+                'Structural Integrity',
+              ].map((item, idx) => (
+                <div key={item} className="flex items-start gap-3 p-4 rounded-xl border border-slate-50 bg-slate-50/30">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white border border-slate-100 text-[10px] font-black text-slate-400">
+                    0{idx + 1}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-bold text-slate-900">{item}</p>
+                    <p className="text-[10px] text-slate-400 font-medium leading-relaxed mt-0.5">Applied to all batch records before pipeline entry.</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   )

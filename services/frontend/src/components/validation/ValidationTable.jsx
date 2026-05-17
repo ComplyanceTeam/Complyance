@@ -2,29 +2,35 @@ import StatusPill from '../ui/StatusPill'
 
 export default function ValidationTable({ rows = [] }) {
   return (
-    <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+    <div className="bg-white border border-slate-100 rounded-xl overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-slate-200">
-          <thead className="bg-slate-50/90">
+        <table className="min-w-full divide-y divide-slate-100">
+          <thead className="bg-slate-50/50">
             <tr>
-              {['invoice_id', 'error_type', 'severity', 'corrected_fields', 'validation_status'].map((heading) => (
+              {['Invoice ID', 'Error Type', 'Severity', 'Corrected', 'Status'].map((heading) => (
                 <th
                   key={heading}
-                  className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-[0.16em] text-slate-500"
+                  className="px-6 py-4 text-left text-[10px] font-black uppercase tracking-widest text-slate-400"
                 >
-                  {heading.replaceAll('_', ' ')}
+                  {heading}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100 bg-white">
-            {rows.map((row) => (
-              <tr key={`${row.invoice_id}-${row.error_type}`} className="hover:bg-slate-50/70">
-                <td className="px-4 py-4 text-sm font-medium text-slate-900">{row.invoice_id}</td>
-                <td className="px-4 py-4 text-sm text-slate-600">{row.error_type}</td>
-                <td className="px-4 py-4 text-sm"><StatusPill status={row.severity} /></td>
-                <td className="px-4 py-4 text-sm text-slate-600">{row.corrected_fields}</td>
-                <td className="px-4 py-4 text-sm"><StatusPill status={row.validation_status} /></td>
+          <tbody className="divide-y divide-slate-50">
+            {rows.map((row, idx) => (
+              <tr key={idx} className="hover:bg-slate-50/30 transition-colors group">
+                <td className="px-6 py-4 text-[11px] font-bold text-slate-900">{row.invoice_id}</td>
+                <td className="px-6 py-4 text-[11px] font-medium text-slate-500">{row.error_type}</td>
+                <td className="px-6 py-4">
+                   <StatusPill status={row.severity} />
+                </td>
+                <td className="px-6 py-4 text-[11px] font-bold text-slate-400 group-hover:text-slate-900 transition-colors">
+                  {row.corrected_fields || 'None'}
+                </td>
+                <td className="px-6 py-4">
+                   <StatusPill status={row.validation_status} />
+                </td>
               </tr>
             ))}
           </tbody>
