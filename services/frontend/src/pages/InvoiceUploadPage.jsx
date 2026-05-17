@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FileWarning, UploadCloud } from 'lucide-react'
+import { FileWarning, UploadCloud, RefreshCw } from 'lucide-react'
 import Card from '../components/ui/Card'
 import UploadDropzone from '../components/upload/UploadDropzone'
 import { invoiceApi } from '../services/api'
@@ -14,7 +14,7 @@ export default function InvoiceUploadPage() {
   const handleFileSelect = (nextFile) => {
     setFile(nextFile)
     setProgress(12)
-    setFeedback(['File type accepted', 'Column headers validated', 'Mapping preview ready'])
+    setFeedback(['Payload detected', 'Schema mapped', 'Ingestion ready'])
   }
 
   const startUpload = async () => {
@@ -36,57 +36,70 @@ export default function InvoiceUploadPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="max-w-5xl mx-auto space-y-10">
+      <div className="text-center">
+        <h1 className="text-3xl font-black text-slate-900 tracking-tighter uppercase">Batch Ingestion Terminal</h1>
+        <p className="mt-2 text-xs font-bold text-slate-400 uppercase tracking-[0.3em]">Initialize automated transformation sequence</p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
-          <Card header="Batch Ingestion" subtitle="Upload invoice datasets for processing">
+          <Card 
+            header="Source Ingestion" 
+            subtitle="Upload datasets for ML-driven validation"
+            action={
+              <button 
+                onClick={() => { setFile(null); setProgress(0); setFeedback(uploadFeedback); }}
+                className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-slate-900 transition-colors"
+              >
+                <RefreshCw className="h-4 w-4" />
+              </button>
+            }
+          >
             <UploadDropzone file={file} onFileSelect={handleFileSelect} progress={progress} feedback={feedback} isUploading={isUploading} />
 
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-10 flex items-center justify-center">
               <button
                 type="button"
                 onClick={startUpload}
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm active:scale-95"
+                className="btn-primary px-12 py-4 text-xs tracking-[0.2em] shadow-2xl shadow-slate-900/20"
                 disabled={!file || isUploading}
               >
-                <UploadCloud className="h-4 w-4" />
-                {isUploading ? 'PROCESSING...' : 'START VALIDATION'}
-              </button>
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-xs font-bold text-slate-500 border border-slate-200 transition hover:bg-slate-50 active:scale-95"
-                onClick={() => {
-                  setFile(null)
-                  setProgress(0)
-                  setFeedback(uploadFeedback)
-                }}
-              >
-                RESET
+                <UploadCloud className="h-5 w-5" />
+                {isUploading ? 'INGESTING...' : 'INITIALIZE PIPELINE'}
               </button>
             </div>
           </Card>
         </div>
 
-        <div className="lg:col-span-1">
-          <Card header="Validation Rules" subtitle="Pre-ingestion compliance checks">
-            <div className="space-y-4">
+        <div className="space-y-6">
+          <Card header="Compliance Core" subtitle="Active validation rules">
+            <div className="space-y-6">
               {[
-                'Schema Consistency',
-                'Data Normalization',
-                'Structural Integrity',
+                { label: 'Syntax Integrity', desc: 'Validates UBL/CII structural requirements.' },
+                { label: 'Tax Geometry', desc: 'Recalculates VAT totals with 0.01 tolerance.' },
+                { label: 'Cross-Border', desc: 'Resolves country-specific format mandates.' },
               ].map((item, idx) => (
-                <div key={item} className="flex items-start gap-3 p-4 rounded-xl border border-slate-50 bg-slate-50/30">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white border border-slate-100 text-[10px] font-black text-slate-400">
-                    0{idx + 1}
+                <div key={item.label} className="group">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-[10px] font-black text-slate-300">0{idx + 1}</span>
+                    <p className="text-[11px] font-black text-slate-900 uppercase tracking-widest">{item.label}</p>
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-bold text-slate-900">{item}</p>
-                    <p className="text-[10px] text-slate-400 font-medium leading-relaxed mt-0.5">Applied to all batch records before pipeline entry.</p>
-                  </div>
+                  <p className="text-[10px] font-bold text-slate-400 leading-relaxed pl-7">{item.desc}</p>
                 </div>
               ))}
             </div>
           </Card>
+          
+          <div className="p-6 rounded-2xl bg-slate-900 text-white shadow-xl shadow-slate-900/10">
+             <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+                <span className="text-[10px] font-black uppercase tracking-widest">Engine Active</span>
+             </div>
+             <p className="text-[11px] font-bold text-white/50 leading-relaxed">
+               Securely processing invoices using deterministic rulesets and XGBoost supervisors.
+             </p>
+          </div>
         </div>
       </div>
     </div>

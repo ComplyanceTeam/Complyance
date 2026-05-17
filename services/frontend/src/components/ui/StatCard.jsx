@@ -1,30 +1,30 @@
 import { ArrowUpRight, ArrowDownRight } from 'lucide-react'
 
-export default function StatCard({ title, value, change, description, icon: Icon, accent = 'blue' }) {
+export default function StatCard({ title, value, change, description, icon: Icon }) {
   const isPositive = change.startsWith('+')
   
   return (
-    <div className="bg-white border border-slate-100 rounded-xl p-5 flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.04)] hover:-translate-y-0.5 group">
-      <div className="flex items-start justify-between mb-4">
+    <div className="surface-card surface-card-hover p-6 flex flex-col justify-between min-h-[160px] group">
+      <div className="flex items-start justify-between">
         <div className="min-w-0">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{title}</p>
-          <p className="mt-1 text-2xl font-bold text-slate-900 tracking-tight">{value}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.15em] text-slate-400 mb-2">{title}</p>
+          <p className="text-3xl font-black text-slate-900 tracking-tighter">{value}</p>
         </div>
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-50 text-slate-900 border border-slate-100 transition-colors group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900">
-          {Icon ? <Icon className="h-5 w-5" /> : <ArrowUpRight className="h-5 w-5" />}
+        <div className="flex h-12 w-12 flex-center rounded-xl bg-slate-50 text-slate-900 border border-slate-100 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
+          {Icon ? <Icon className="h-6 w-6" /> : <ArrowUpRight className="h-6 w-6" />}
         </div>
       </div>
 
-      <div className="flex items-center gap-2">
-        <div className={`flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold transition-transform group-hover:scale-105 ${
+      <div className="mt-6 flex items-center gap-3">
+        <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-black ${
           isPositive 
-            ? 'bg-emerald-50 text-emerald-600' 
-            : 'bg-rose-50 text-rose-600'
+            ? 'bg-emerald-50 text-emerald-600 border border-emerald-100' 
+            : 'bg-rose-50 text-rose-600 border border-rose-100'
         }`}>
-          {isPositive ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
+          {isPositive ? <ArrowUpRight className="h-3.5 w-3.5" /> : <ArrowDownRight className="h-3.5 w-3.5" />}
           {change}
         </div>
-        {description && <span className="text-[10px] font-medium text-slate-400 truncate">{description}</span>}
+        <span className="text-[11px] font-bold text-slate-400 truncate">{description}</span>
       </div>
     </div>
   )
