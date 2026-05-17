@@ -9,41 +9,40 @@ export default function PipelineMonitoringPage() {
 
   useEffect(() => {
     let mounted = true
-
     dashboardApi.getPipelineStages().then((data) => {
-      if (mounted) {
-        setStages(data)
-      }
+      if (mounted) setStages(data)
     })
-
-    return () => {
-      mounted = false
-    }
+    return () => { mounted = false }
   }, [])
 
   return (
-    <div className="space-y-6">
-      <Card header="Pipeline monitoring" subtitle="Track execution across ingestion, validation, transformation, correction, and output stages.">
+    <div className="space-y-8">
+      <Card header="Stage Monitor" subtitle="Real-time execution status across the transformation lifecycle">
         <PipelineVisualization stages={stages} />
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {stages.map((stage) => (
-          <Card key={stage.name} header={stage.name} subtitle={`Status: ${stage.status}`}>
-            <div className="space-y-3 text-sm text-slate-600">
+          <div key={stage.name} className="bg-white border border-slate-100 rounded-xl p-5 group hover:border-slate-200 transition-all duration-300">
+            <div className="flex items-center justify-between mb-4">
+               <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">{stage.name}</p>
+               <div className={`h-1.5 w-1.5 rounded-full ${stage.status === 'completed' ? 'bg-emerald-500' : stage.status === 'active' ? 'bg-blue-500 animate-pulse' : 'bg-slate-200'}`} />
+            </div>
+            
+            <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span>Throughput</span>
-                <span className="font-semibold text-slate-900">{stage.throughput}%</span>
+                <span className="text-[10px] font-bold text-slate-500 uppercase">Load</span>
+                <span className="text-[10px] font-black text-slate-900">{stage.throughput}%</span>
               </div>
-              <div className="h-2 rounded-full bg-slate-100">
-                <div className="h-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500" style={{ width: `${stage.throughput}%` }} />
+              <div className="h-1 rounded-full bg-slate-50 overflow-hidden">
+                <div className="h-full bg-slate-900 transition-all duration-500" style={{ width: `${stage.throughput}%` }} />
               </div>
-              <div className="flex items-center justify-between">
-                <span>Latency</span>
-                <span className="font-semibold text-slate-900">{stage.latency}</span>
+              <div className="flex items-center justify-between pt-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase">Latency</span>
+                <span className="text-[10px] font-black text-slate-900">{stage.latency}</span>
               </div>
             </div>
-          </Card>
+          </div>
         ))}
       </div>
     </div>

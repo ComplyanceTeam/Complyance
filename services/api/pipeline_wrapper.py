@@ -16,11 +16,14 @@ from core.engine.preprocess import preprocess_invoice
 from core.engine.predict import predict_invoice
 from core.engine.correction import correct_invoice
 from core.engine.mapper import map_invoice
+from core.engine.utils import clean_nan_values
 
 # Base directory for outputs (relative to this file for container safety)
 BASE_DIR = os.path.dirname(__file__)
 OUTPUTS_DIR = os.path.join(BASE_DIR, "outputs")
+PROCESSED_DIR = os.path.join(BASE_DIR, "processed")
 os.makedirs(OUTPUTS_DIR, exist_ok=True)
+os.makedirs(PROCESSED_DIR, exist_ok=True)
 
 def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") -> Dict[str, Any]:
     """
@@ -36,8 +39,8 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
         if file_type == "json":
             json.dump([input_data], f)
         
-    # We need to manage the working directory for 'outputs' to be found by the engine
-    # The current engine expects an 'outputs' folder in the CWD
+    # We need to manage the working directory for 'outputs' and 'processed' to be found by the engine
+    # The current engine expects these folders in the CWD
     original_cwd = os.getcwd()
     os.chdir(BASE_DIR)
     
@@ -76,7 +79,7 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
             mapped_df = pd.read_csv(final_mapped_path)
             transcoded_payload = mapped_df.iloc[0].to_dict()
             
-        return {
+        return clean_nan_values({
             "invoice_id": input_data.get("invoice_id", "UNKNOWN"),
             "source_format": input_data.get("source_format", "UNKNOWN"),
             "target_format": transcoded_payload.get("target_format", "UNKNOWN"),
@@ -84,7 +87,10 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
             "transcoded_payload": transcoded_payload,
             "is_mapping_valid": is_mapping_valid,
             "mapping_errors": mapping_errors
-        }
+        })
         
+    except Exception as e:
+        print(f"Pipeline error: {str(e)}")
+        raise e
     finally:
         os.chdir(original_cwd)

@@ -3,6 +3,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
 generator client {
   provider             = "prisma-client-py"
   recursive_type_depth = 5
@@ -10,7 +11,7 @@ generator client {
 
 model TranscodeHistory {
   id                 String   @id @default(uuid())
-  invoice_id         String
+  invoice_id         String   @unique
   source_format      String
   target_format      String
   original_payload   Json

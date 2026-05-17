@@ -134,9 +134,13 @@ def preprocess_invoice(invoice_csv_path):
 
             data = json.loads(x)
 
-            if 'invoice_lines' in data:
+            if isinstance(data, dict) and 'invoice_lines' in data:
 
                 return len(data['invoice_lines'])
+
+            elif isinstance(data, list):
+
+                return len(data)
 
             return 0
 
@@ -152,15 +156,23 @@ def preprocess_invoice(invoice_csv_path):
 
             total_qty = 0
 
-            if 'invoice_lines' in data:
+            items = []
+            if isinstance(data, dict) and 'invoice_lines' in data:
+                items = data['invoice_lines']
+            elif isinstance(data, list):
+                items = data
 
-                for item in data['invoice_lines']:
-
+            for item in items:
+                # Handle nested structure {line: {item_details: {qty}}}
+                if 'line' in item:
                     qty = item.get('line', {}) \
                               .get('item_details', {}) \
                               .get('qty', 0)
-
-                    total_qty += qty
+                # Handle flat structure {quantity}
+                else:
+                    qty = item.get('quantity', 0) or item.get('qty', 0)
+                
+                total_qty += qty
 
             return total_qty
 
@@ -175,16 +187,21 @@ def preprocess_invoice(invoice_csv_path):
             data = json.loads(x)
 
             prices = []
+            items = []
+            if isinstance(data, dict) and 'invoice_lines' in data:
+                items = data['invoice_lines']
+            elif isinstance(data, list):
+                items = data
 
-            if 'invoice_lines' in data:
-
-                for item in data['invoice_lines']:
-
+            for item in items:
+                if 'line' in item:
                     price = item.get('line', {}) \
                                 .get('item_details', {}) \
                                 .get('price', 0)
-
-                    prices.append(price)
+                else:
+                    price = item.get('unit_price', 0) or item.get('price', 0)
+                
+                prices.append(price)
 
             if len(prices) == 0:
 
@@ -201,18 +218,24 @@ def preprocess_invoice(invoice_csv_path):
         try:
 
             data = json.loads(x)
+            
+            items = []
+            if isinstance(data, dict) and 'invoice_lines' in data:
+                items = data['invoice_lines']
+            elif isinstance(data, list):
+                items = data
 
-            if 'invoice_lines' in data:
-
-                for item in data['invoice_lines']:
-
+            for item in items:
+                if 'line' in item:
                     price = item.get('line', {}) \
                                 .get('item_details', {}) \
                                 .get('price', 0)
+                else:
+                    price = item.get('unit_price', 0) or item.get('price', 0)
 
-                    if price < 0:
+                if price < 0:
 
-                        return 1
+                    return 1
 
             return 0
 

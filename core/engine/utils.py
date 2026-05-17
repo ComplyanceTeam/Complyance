@@ -198,6 +198,30 @@ def is_field_empty(value) -> bool:
     return False
 
 
+def clean_nan_values(data):
+    """
+    Recursively convert NaN values to None in dictionaries and lists.
+    Useful for JSON serialization where NaN is not allowed.
+    """
+    import pandas as pd
+    if isinstance(data, dict):
+        return {
+            key: clean_nan_values(value)
+            for key, value in data.items()
+        }
+    elif isinstance(data, list):
+        return [
+            clean_nan_values(item)
+            for item in data
+        ]
+    elif isinstance(data, float) and (data != data): # Standard NaN check
+        return None
+    elif pd.isna(data) if 'pd' in globals() else False:
+        return None
+    else:
+        return data
+
+
 def get_missing_required_fields(invoice: dict, required_fields: list) -> list:
     """
     Check which required fields are missing/empty in an invoice.

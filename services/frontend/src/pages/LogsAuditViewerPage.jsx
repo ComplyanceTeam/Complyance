@@ -9,21 +9,17 @@ export default function LogsAuditViewerPage() {
 
   useEffect(() => {
     let mounted = true
-
     auditApi.getLogs().then((data) => {
-      if (mounted) {
-        setRows(data)
-      }
+      if (mounted) setRows(data)
     })
-
-    return () => {
-      mounted = false
-    }
+    return () => { mounted = false }
   }, [])
 
   return (
-    <Card header="Logs and audit viewer" subtitle="Operational history of validation, correction, and pipeline progression events.">
-      <AuditLogTable rows={rows} />
-    </Card>
+    <div className="space-y-6">
+      <Card header="Operational Audit Log" subtitle="History of pipeline execution and system events">
+        <AuditLogTable rows={rows} />
+      </Card>
+    </div>
   )
 }

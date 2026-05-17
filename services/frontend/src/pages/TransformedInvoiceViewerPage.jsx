@@ -9,21 +9,19 @@ export default function TransformedInvoiceViewerPage() {
 
   useEffect(() => {
     let mounted = true
-
     invoiceApi.getTransformedInvoice().then((data) => {
-      if (mounted) {
-        setInvoice(data)
-      }
+      if (mounted) setInvoice(data)
     })
-
-    return () => {
-      mounted = false
-    }
+    return () => { mounted = false }
   }, [])
 
   return (
-    <Card header="Transformed invoice viewer" subtitle="Syntax-highlighted JSON preview of the normalized target invoice payload.">
-      <JsonViewer data={invoice} />
-    </Card>
+    <div className="space-y-6">
+      <Card header="Target Payload Preview" subtitle="Normalized JSON output after transformation and validation">
+        <div className="bg-slate-900 rounded-xl p-6 overflow-hidden">
+          <JsonViewer data={invoice} />
+        </div>
+      </Card>
+    </div>
   )
 }
