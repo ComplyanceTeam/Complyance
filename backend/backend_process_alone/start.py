@@ -13,6 +13,10 @@ from parsers.xml_to_csv import convert_xml_to_csv
 from parsers.json_to_csv import convert_json_to_csv
 from parsers.csv_loader import load_csv
 
+from pipeline.append_transcode_history import (
+    append_transcode_history
+)
+
 # ---------------------------------------------------------
 # Pipeline Imports
 # ---------------------------------------------------------
@@ -47,7 +51,12 @@ if not os.path.exists(file_path):
 # DETECT FILE TYPE
 # =========================================================
 
-file_extension = file_path.split('.')[-1].lower()
+file_extension = (
+
+    file_path
+    .split('.')[-1]
+    .lower()
+)
 
 print(
     f"\nDetected File Type : {file_extension}"
@@ -57,37 +66,67 @@ print(
 # PARSE FILE
 # =========================================================
 
+# ---------------------------------------------------------
+# XML INPUT
+# ---------------------------------------------------------
+
 if file_extension == 'xml':
 
-    print("\nConverting XML to CSV...")
+    print(
+        "\nConverting XML to CSV..."
+    )
 
     csv_path = convert_xml_to_csv(
         file_path
     )
 
+# ---------------------------------------------------------
+# JSON INPUT
+# ---------------------------------------------------------
+
 elif file_extension == 'json':
 
-    print("\nConverting JSON to CSV...")
+    print(
+        "\nConverting JSON to CSV..."
+    )
 
     csv_path = convert_json_to_csv(
         file_path
     )
 
+# ---------------------------------------------------------
+# CSV INPUT
+# ---------------------------------------------------------
+
 elif file_extension == 'csv':
 
-    print("\nLoading CSV file...")
+    print(
+        "\nLoading CSV file..."
+    )
 
     csv_path = load_csv(
         file_path
     )
 
+# ---------------------------------------------------------
+# INVALID FILE
+# ---------------------------------------------------------
+
 else:
 
-    print("Unsupported file type.")
+    print(
+        "Unsupported file type."
+    )
 
     exit()
 
-print(f"\nCSV Ready : {csv_path}")
+# =========================================================
+# CSV READY
+# =========================================================
+
+print(
+    f"\nCSV Ready : {csv_path}"
+)
 
 # =========================================================
 # PREPROCESSING
@@ -178,10 +217,12 @@ print(
 # FINAL OUTPUT SUMMARY
 # =========================================================
 
-print("\nGenerated Files:\n")
+print(
+    "\nGenerated Files:\n"
+)
 
 # ---------------------------------------------------------
-# Always Generated
+# ALWAYS GENERATED
 # ---------------------------------------------------------
 
 print(
@@ -197,7 +238,7 @@ print(
 )
 
 # ---------------------------------------------------------
-# JSON Input Extra Output
+# JSON OUTPUT
 # ---------------------------------------------------------
 
 if file_extension == 'json':
@@ -207,7 +248,7 @@ if file_extension == 'json':
     )
 
 # ---------------------------------------------------------
-# XML Input Extra Output
+# XML OUTPUT
 # ---------------------------------------------------------
 
 elif file_extension == 'xml':
@@ -215,6 +256,28 @@ elif file_extension == 'xml':
     print(
         "4. outputs/final_mapped_invoice.xml"
     )
+
+# =========================================================
+# APPEND TRANSCODE HISTORY
+# =========================================================
+
+print(
+    "\nAppending transcode history into PostgreSQL..."
+)
+
+append_transcode_history(
+
+    # IMPORTANT FIX
+    csv_path,
+
+    'outputs/corrected_invoice.csv',
+
+    'outputs/prediction_output.csv'
+)
+
+print(
+    "\nTranscode history append completed."
+)
 
 # =========================================================
 # FINAL MESSAGE
