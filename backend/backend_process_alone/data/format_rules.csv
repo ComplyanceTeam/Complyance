@@ -1,0 +1,9 @@
+format_id,format_name,used_in_countries,syntax,required_fields,optional_fields,tax_id_field_name,line_item_structure,supports_credit_note,max_line_items,supported_currencies
+F_PEPPOL,peppol_bis_3,"BE,NL",UBL,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat,buyer_vat",payment_reference,CompanyID,nested,1,50,EUR
+F_XREC_UBL,xrechnung_ubl,DE,UBL,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat",buyer_vat,EndpointID,flat,1,100,EUR
+F_XREC_CII,xrechnung_cii,DE,CII,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat",payment_reference,IssuerID,flat,0,30,EUR
+F_FACTURX,facturx,FR,CII,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat",buyer_vat,VATID,nested,1,50,EUR
+F_PINT_MY,pint_my,MY,UBL,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat,buyer_vat",delivery_date,RegistrationNo,nested,1,100,MYR
+F_PINT_SG,pint_sg,SG,UBL,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat",buyer_vat,UEN,flat,1,50,SGD
+F_ZUGFERD,zugferd,"DE,FR",CII,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount","seller_vat,buyer_vat",TaxRegistrationID,nested,1,200,EUR
+F_NLCIUS,nlcius,NL,UBL,"invoice_id,seller_id,buyer_id,issue_date,currency,subtotal,tax_amount,total_amount,seller_vat,buyer_vat",payment_reference,KvKNumber,flat,0,25,EUR
