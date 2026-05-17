@@ -6,5 +6,5 @@ joblib
 xmltodict
 forex-python
 fastapi
-uvicorn[standard]
+uvicorn
 python-multipart
