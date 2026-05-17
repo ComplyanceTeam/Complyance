@@ -38,11 +38,11 @@ export default function DashboardPage() {
         <Card 
           header="Operational Velocity" 
           subtitle="Processing volume over the last 24 hours" 
-          className="lg:col-span-2"
+          className="lg:col-span-2 min-w-0"
           action={<button className="btn-secondary py-1.5 text-[10px] uppercase tracking-widest">Download Data</button>}
         >
-          <div className="h-[350px] w-full mt-6">
-            <ResponsiveContainer width="100%" height="100%">
+          <div className="h-[350px] w-full mt-6 min-h-[350px]">
+            <ResponsiveContainer width="99%" height="100%">
               <AreaChart data={summary.trendData} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="velocityGradient" x1="0" y1="0" x2="0" y2="1">
@@ -80,9 +80,9 @@ export default function DashboardPage() {
           </div>
         </Card>
 
-        <Card header="Inbound Mix" subtitle="Source format distribution">
-          <div className="h-[280px] flex items-center justify-center mt-6">
-            <ResponsiveContainer width="100%" height="100%">
+        <Card header="Inbound Mix" subtitle="Source format distribution" className="min-w-0">
+          <div className="h-[280px] flex items-center justify-center mt-6 min-h-[280px]">
+            <ResponsiveContainer width="99%" height="100%">
               <PieChart>
                 <Pie 
                   data={summary.pipelineSplit} 
@@ -155,7 +155,7 @@ export default function DashboardPage() {
           {summary.recentActivity.map((item) => (
             <div key={item.id} className="p-4 flex items-center justify-between bg-white hover:bg-slate-50/50 transition-all cursor-pointer group">
               <div className="flex items-center gap-6">
-                <div className="w-12 h-12 flex-center bg-slate-900 rounded-xl text-[12px] font-black text-white shadow-lg shadow-slate-900/10 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 flex items-center justify-center bg-slate-900 rounded-xl text-[12px] font-black text-white shadow-lg shadow-slate-900/10 group-hover:scale-110 transition-transform">
                   {item.country}
                 </div>
                 <div className="min-w-0">
@@ -171,7 +171,7 @@ export default function DashboardPage() {
                   </div>
                   <p className="text-[10px] text-slate-300 font-bold mt-1 uppercase">{item.updatedAt}</p>
                 </div>
-                <div className="w-8 h-8 flex-center rounded-full bg-slate-50 text-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all">
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-50 text-slate-300 group-hover:bg-slate-900 group-hover:text-white transition-all">
                   <ChevronRight className="h-4 w-4" />
                 </div>
               </div>

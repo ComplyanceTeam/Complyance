@@ -25,14 +25,24 @@
 }
 
 @layer components {
+  /* Layout stability */
+  .layout-container {
+    @apply flex flex-col min-h-screen min-w-0;
+  }
+
+  .main-content {
+    @apply flex-1 p-4 sm:p-6 lg:p-10 max-w-[1600px] w-full mx-auto min-w-0;
+  }
+
   .surface-card {
-    @apply bg-white border border-slate-200 rounded-2xl shadow-sm transition-all duration-300;
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm transition-all duration-300 min-w-0 overflow-hidden;
   }
 
   .surface-card-hover {
     @apply hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/40 hover:-translate-y-1;
   }
 
+  /* Alignment helpers */
   .flex-center {
     @apply flex items-center justify-center;
   }

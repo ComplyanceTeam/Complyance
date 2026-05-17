@@ -10,7 +10,7 @@ export default function StatCard({ title, value, change, description, icon: Icon
           <p className="text-[11px] font-black uppercase tracking-[0.15em] text-slate-400 mb-2">{title}</p>
           <p className="text-3xl font-black text-slate-900 tracking-tighter">{value}</p>
         </div>
-        <div className="flex h-12 w-12 flex-center rounded-xl bg-slate-50 text-slate-900 border border-slate-100 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-900 border border-slate-100 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
           {Icon ? <Icon className="h-6 w-6" /> : <ArrowUpRight className="h-6 w-6" />}
         </div>
       </div>

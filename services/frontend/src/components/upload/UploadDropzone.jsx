@@ -20,7 +20,7 @@ export default function UploadDropzone({
         onDragOver={(event) => event.preventDefault()}
         onDrop={handleDrop}
       >
-        <div className="mx-auto flex h-20 w-20 flex-center rounded-2xl bg-slate-900 text-white shadow-2xl shadow-slate-900/20 group-hover:scale-105 transition-transform duration-300">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-2xl shadow-slate-900/20 group-hover:scale-105 transition-transform duration-300">
           <CloudUpload className="h-8 w-8" />
         </div>
 
@@ -39,7 +39,7 @@ export default function UploadDropzone({
         </label>
 
         {file && (
-          <div className="mt-8 flex flex-center">
+          <div className="mt-8 flex items-center justify-center">
             <div className="inline-flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-2 text-[10px] font-black text-emerald-600 border border-emerald-100 uppercase tracking-widest">
               <FileCheck2 className="h-4 w-4" />
               {file.name}
@@ -65,7 +65,7 @@ export default function UploadDropzone({
           {isUploading ? (
             <LoaderCircle className="h-5 w-5 animate-spin text-slate-900" />
           ) : (
-            <div className="h-5 w-5 flex-center rounded-full bg-emerald-500 text-white">
+            <div className="h-5 w-5 items-center justify-center flex rounded-full bg-emerald-500 text-white">
                <FileCheck2 className="h-3 w-3" />
             </div>
           )}
