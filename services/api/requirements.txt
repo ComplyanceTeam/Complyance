@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+prisma
+pydantic
+pandas
+joblib
+forex-python
+xmltodict
+python-dotenv

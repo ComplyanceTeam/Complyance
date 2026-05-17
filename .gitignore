@@ -1,1 +1,42 @@
-phase.txt
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+ENV/
+bin/
+lib/
+include/
+share/
+
+# Environment Variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Prisma
+/services/api/prisma/*.db
+/services/api/prisma/*.db-journal
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+out/
+
+# Local data / logs
+*.log
+/services/api/temp/
+/services/api/outputs/
+/core/engine/__pycache__/

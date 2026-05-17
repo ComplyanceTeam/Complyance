@@ -1,0 +1,21 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = 5
+}
+
+model TranscodeHistory {
+  id                 String   @id @default(uuid())
+  invoice_id         String
+  source_format      String
+  target_format      String
+  original_payload   Json
+  transcoded_payload Json?
+  is_mapping_valid   Boolean
+  mapping_errors     String?
+  created_at         DateTime @default(now())
+}
