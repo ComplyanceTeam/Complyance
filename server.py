@@ -8,8 +8,9 @@
 import os
 import sys
 
-# Add the backend folder to the path
-sys.path.append(os.path.join(os.path.dirname(__file__), "backend", "backend_process_alone"))
+# Add the root directory to path so the backend package can be found
+sys.path.insert(0, os.path.dirname(__file__))
 
-# Import the actual FastAPI app
-from server import app
+# Import using absolute package path to avoid circular imports 
+# (since this file is also named server.py)
+from backend.backend_process_alone.server import app
