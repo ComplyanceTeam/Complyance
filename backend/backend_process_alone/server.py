@@ -8,10 +8,10 @@
 import os
 import sys
 
-# ── Critical: fix working directory so all relative paths work ──
+# Append paths without forcing directory alterations
 _SERVER_DIR = os.path.dirname(os.path.abspath(__file__))
-os.chdir(_SERVER_DIR)
-sys.path.insert(0, _SERVER_DIR)
+if _SERVER_DIR not in sys.path:
+    sys.path.insert(0, _SERVER_DIR)
 
 import shutil
 import json
