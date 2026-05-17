@@ -12,7 +12,7 @@ import os
 from parsers.xml_to_csv import convert_xml_to_csv
 from parsers.json_to_csv import convert_json_to_csv
 from parsers.csv_loader import load_csv
-
+from pipeline.append_transcode_history import append_transcode_history
 # ---------------------------------------------------------
 # Pipeline Imports
 # ---------------------------------------------------------
@@ -216,6 +216,26 @@ elif file_extension == 'xml':
         "4. outputs/final_mapped_invoice.xml"
     )
 
+# =========================================================
+# APPEND TRANSCODE HISTORY
+# =========================================================
+
+print(
+    "\nAppending transcode history into PostgreSQL..."
+)
+
+append_transcode_history(
+
+    file_path,
+
+    'outputs/corrected_invoice.csv',
+
+    'outputs/prediction_output.csv'
+)
+
+print(
+    "\nTranscode history append completed."
+)
 # =========================================================
 # FINAL MESSAGE
 # =========================================================
