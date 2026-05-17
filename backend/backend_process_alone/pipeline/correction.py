@@ -5,7 +5,6 @@
 
 import pandas as pd
 import json
-import re
 
 from forex_python.converter import CurrencyRates
 
@@ -47,7 +46,7 @@ def correct_invoice(
     corrected_df = invoice_df.copy()
 
     # =====================================================
-    # STORE CORRECTED FIELDS
+    # STORE CORRECTED FIELD CHANGES
     # =====================================================
 
     corrected_fields_list = []
@@ -80,13 +79,39 @@ def correct_invoice(
 
         if 'missing_required_field' in errors:
 
-            target_format = corrected_df.loc[
-                idx,
-                'target_format'
-            ]
+            # ---------------------------------------------
+            # FIND TARGET FORMAT USING TARGET COUNTRY
+            # ---------------------------------------------
+
+            target_country = str(
+                corrected_df.loc[
+                    idx,
+                    'target_country'
+                ]
+            ).lower()
+
+            target_format = None
+
+            for _, format_rule in format_df.iterrows():
+
+                countries = str(
+
+                    format_rule[
+                        'used_in_countries'
+                    ]
+
+                ).lower()
+
+                if target_country in countries:
+
+                    target_format = format_rule[
+                        'format_id'
+                    ]
+
+                    break
 
             # ---------------------------------------------
-            # Find Format Rule
+            # FIND FORMAT RULE
             # ---------------------------------------------
 
             format_row = format_df[
@@ -114,7 +139,7 @@ def correct_invoice(
                 ]
 
                 # -----------------------------------------
-                # Validate Required Fields
+                # CHECK REQUIRED FIELDS
                 # -----------------------------------------
 
                 for field in required_fields:
@@ -127,9 +152,13 @@ def correct_invoice(
                         ]
 
                         if (
+
                             pd.isnull(value)
+
                             or
+
                             str(value).strip() == ''
+
                         ):
 
                             corrected_df.loc[
@@ -196,10 +225,82 @@ def correct_invoice(
                 'currency'
             ]
 
-            target_currency = 'EUR'
+            # ---------------------------------------------
+            # FIND TARGET FORMAT USING TARGET COUNTRY
+            # ---------------------------------------------
+
+            target_country = str(
+                corrected_df.loc[
+                    idx,
+                    'target_country'
+                ]
+            ).lower()
+
+            target_format = None
+
+            for _, format_rule in format_df.iterrows():
+
+                countries = str(
+
+                    format_rule[
+                        'used_in_countries'
+                    ]
+
+                ).lower()
+
+                if target_country in countries:
+
+                    target_format = format_rule[
+                        'format_id'
+                    ]
+
+                    break
 
             # ---------------------------------------------
-            # Fetch Live Exchange Rate
+            # SKIP IF FORMAT NOT FOUND
+            # ---------------------------------------------
+
+            if target_format is None:
+
+                continue
+
+            # ---------------------------------------------
+            # GET TARGET FORMAT RULE
+            # ---------------------------------------------
+
+            format_row = format_df[
+
+                format_df['format_id']
+                == target_format
+            ]
+
+            # ---------------------------------------------
+            # GET SUPPORTED CURRENCIES
+            # ---------------------------------------------
+
+            supported_currencies = str(
+
+                format_row.iloc[0][
+                    'supported_currencies'
+                ]
+
+            ).split(',')
+
+            supported_currencies = [
+
+                curr.strip()
+
+                for curr in supported_currencies
+            ]
+
+            # ---------------------------------------------
+            # PICK FIRST SUPPORTED CURRENCY
+            # ---------------------------------------------
+
+            target_currency = supported_currencies[0]
+
+            # ---------------------------------------------
+            # FETCH LIVE EXCHANGE RATE
             # ---------------------------------------------
 
             try:
@@ -215,7 +316,7 @@ def correct_invoice(
                 conversion_rate = 1
 
             # ---------------------------------------------
-            # Convert Monetary Fields
+            # CONVERT MONETARY FIELDS
             # ---------------------------------------------
 
             money_fields = [
@@ -258,7 +359,7 @@ def correct_invoice(
                         pass
 
             # ---------------------------------------------
-            # Update Currency
+            # UPDATE CURRENCY
             # ---------------------------------------------
 
             corrected_df.loc[
@@ -271,7 +372,7 @@ def correct_invoice(
             ] = target_currency
 
             # ---------------------------------------------
-            # Convert JSON Prices
+            # CONVERT JSON LINE ITEM PRICES
             # ---------------------------------------------
 
             try:
@@ -343,7 +444,7 @@ def correct_invoice(
                 )
 
                 # -----------------------------------------
-                # Flat → Nested Structure
+                # FLAT → NESTED STRUCTURE
                 # -----------------------------------------
 
                 if isinstance(data, list):
@@ -456,7 +557,7 @@ def correct_invoice(
             ] = abs(subtotal)
 
             # ---------------------------------------------
-            # Recalculate Tax + Total
+            # RECALCULATE TAX + TOTAL
             # ---------------------------------------------
 
             tax_rate = corrected_df.loc[
