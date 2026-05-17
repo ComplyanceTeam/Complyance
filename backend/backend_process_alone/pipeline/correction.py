@@ -53,10 +53,20 @@ def correct_invoice(
     corrected_fields_list = []
 
     # =====================================================
-    # CURRENCY API
+    # CURRENCY API (with cache to avoid per-row API calls)
     # =====================================================
 
     c = CurrencyRates()
+    _rate_cache = {}
+
+    def _get_rate(from_curr, to_curr):
+        key = f"{from_curr}_{to_curr}"
+        if key not in _rate_cache:
+            try:
+                _rate_cache[key] = c.get_rate(from_curr, to_curr)
+            except:
+                _rate_cache[key] = 1
+        return _rate_cache[key]
 
     # =====================================================
     # PROCESS EACH ROW
@@ -199,20 +209,13 @@ def correct_invoice(
             target_currency = 'EUR'
 
             # ---------------------------------------------
-            # Fetch Live Exchange Rate
+            # Fetch Exchange Rate (cached)
             # ---------------------------------------------
 
-            try:
-
-                conversion_rate = c.get_rate(
-
-                    old_currency,
-                    target_currency
-                )
-
-            except:
-
-                conversion_rate = 1
+            conversion_rate = _get_rate(
+                old_currency,
+                target_currency
+            )
 
             # ---------------------------------------------
             # Convert Monetary Fields

@@ -1,66 +1,47 @@
 import axios from 'axios'
-import {
-  analyticsData,
-  auditLogs,
-  dashboardSummary,
-  transformedInvoice,
-  uploadFeedback,
-  validationResults,
-} from '../data/mockData'
 
-const useMockApi = import.meta.env.VITE_USE_MOCK_API !== 'false'
+const envUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api'
+const API_BASE = envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`
 
 export const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api',
-  timeout: 15000,
+  baseURL: API_BASE,
+  timeout: 300000,  // 5 min — pipeline processes can take time on large files
 })
 
-const withDelay = (payload, delay = 250) =>
-  new Promise((resolve) => {
-    window.setTimeout(() => resolve(payload), delay)
-  })
+// ── Generic request helper ──────────────────────────────
+const get = (path) => apiClient.get(path).then((r) => r.data)
+const post = (path, data, config) => apiClient.post(path, data, config).then((r) => r.data)
 
-const requestData = async (loader, payload) => {
-  if (useMockApi) {
-    return withDelay(payload)
-  }
-
-  try {
-    const response = await loader()
-    return response?.data ?? response
-  } catch {
-    return withDelay(payload)
-  }
-}
-
+// ── Dashboard ───────────────────────────────────────────
 export const dashboardApi = {
-  getSummary: () => requestData(() => apiClient.get('/dashboard/summary'), dashboardSummary),
-  getPipelineStages: () => requestData(() => apiClient.get('/dashboard/pipeline-stages'), dashboardSummary.pipelineStages),
-  getRecentActivity: () => requestData(() => apiClient.get('/dashboard/activity'), dashboardSummary.recentActivity),
+  getSummary: () => get('/dashboard/summary'),
+  getPipelineStages: () => get('/dashboard/pipeline-stages'),
+  getRecentActivity: () => get('/dashboard/activity'),
 }
 
+// ── Validation ──────────────────────────────────────────
 export const validationApi = {
-  getResults: () => requestData(() => apiClient.get('/validation/results'), validationResults),
+  getResults: () => get('/validation/results'),
 }
 
+// ── Invoice ─────────────────────────────────────────────
 export const invoiceApi = {
-  getTransformedInvoice: () => requestData(() => apiClient.get('/invoice/transformed'), transformedInvoice),
+  getTransformedInvoice: () => get('/invoice/transformed'),
   uploadInvoice: async (file) => {
-    const mockResponse = {
-      fileName: file?.name || 'invoice.csv',
-      status: 'Uploaded',
-      accepted: true,
-      warnings: uploadFeedback,
-    }
-
-    return requestData(() => apiClient.post('/invoice/upload', file), mockResponse)
+    const form = new FormData()
+    form.append('file', file)
+    return post('/invoice/upload', form, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    })
   },
 }
 
+// ── Analytics ───────────────────────────────────────────
 export const analyticsApi = {
-  getAnalytics: () => requestData(() => apiClient.get('/analytics/summary'), analyticsData),
+  getAnalytics: () => get('/analytics/summary'),
 }
 
+// ── Audit ───────────────────────────────────────────────
 export const auditApi = {
-  getLogs: () => requestData(() => apiClient.get('/audit/logs'), auditLogs),
+  getLogs: () => get('/audit/logs'),
 }

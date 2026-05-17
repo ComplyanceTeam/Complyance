@@ -5,3 +5,6 @@ xgboost
 joblib
 xmltodict
 forex-python
+fastapi
+uvicorn[standard]
+python-multipart
