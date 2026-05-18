@@ -2,6 +2,7 @@ import os
 import sys
 
 _SERVER_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(_SERVER_DIR)
 if _SERVER_DIR not in sys.path:
     sys.path.insert(0, _SERVER_DIR)
 

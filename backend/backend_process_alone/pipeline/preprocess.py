@@ -25,7 +25,7 @@ encoders = joblib.load(
 # =========================================================
 
 format_df = pd.read_csv(
-    r'data\format_rules.csv'
+    'data/format_rules.csv'
 )
 
 # =========================================================
