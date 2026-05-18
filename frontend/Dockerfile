@@ -9,6 +9,14 @@ RUN npm install
 
 COPY . .
 
+# Accept VITE variables as build-time arguments (essential for Docker builds)
+ARG VITE_API_BASE_URL
+ARG VITE_USE_MOCK_API
+
+# Set them as environment variables inside the build environment
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+ENV VITE_USE_MOCK_API=$VITE_USE_MOCK_API
+
 RUN npm run build
 
 # Production stage
