@@ -29,7 +29,7 @@ def convert_json_to_csv(json_path):
 
     file_name = os.path.basename(json_path).split('.')[0]
 
-    output_path = f'converted/{file_name}.csv'
+    output_path = f'processed/converted/{file_name}.csv'
 
     # -----------------------------------------------------
     # Save CSV

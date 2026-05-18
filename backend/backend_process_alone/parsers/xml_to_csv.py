@@ -5,43 +5,105 @@
 
 import xmltodict
 import pandas as pd
-import json
 import os
+
+# =========================================================
+# MAIN FUNCTION
+# =========================================================
 
 def convert_xml_to_csv(xml_path):
 
     # -----------------------------------------------------
-    # Read XML
+    # READ XML
     # -----------------------------------------------------
 
-    with open(xml_path, 'r', encoding='utf-8') as file:
+    with open(
+
+        xml_path,
+
+        'r',
+
+        encoding='utf-8'
+
+    ) as file:
 
         xml_data = file.read()
 
     # -----------------------------------------------------
-    # Parse XML
+    # PARSE XML
     # -----------------------------------------------------
 
-    data_dict = xmltodict.parse(xml_data)
+    data_dict = xmltodict.parse(
+        xml_data
+    )
 
     # -----------------------------------------------------
-    # Flatten XML Structure
+    # EXTRACT INVOICE LIST
     # -----------------------------------------------------
 
-    df = pd.json_normalize(data_dict)
+    invoices = data_dict[
+        'Invoices'
+    ][
+        'Invoice'
+    ]
 
     # -----------------------------------------------------
-    # Create Output Path
+    # SINGLE INVOICE FIX
     # -----------------------------------------------------
 
-    file_name = os.path.basename(xml_path).split('.')[0]
+    if isinstance(invoices, dict):
 
-    output_path = f'converted/{file_name}.csv'
+        invoices = [invoices]
 
     # -----------------------------------------------------
-    # Save CSV
+    # CREATE DATAFRAME
     # -----------------------------------------------------
 
-    df.to_csv(output_path, index=False)
+    df = pd.DataFrame(
+        invoices
+    )
+
+    # -----------------------------------------------------
+    # PRESERVE RAW VALUES
+    # -----------------------------------------------------
+
+    df = df.fillna('')
+
+    # -----------------------------------------------------
+    # CREATE OUTPUT PATH
+    # -----------------------------------------------------
+
+    file_name = os.path.basename(
+        xml_path
+    ).split('.')[0]
+
+    output_path = (
+
+        f'processed/converted/'
+        f'{file_name}.csv'
+    )
+
+    # -----------------------------------------------------
+    # SAVE CSV
+    # -----------------------------------------------------
+
+    df.to_csv(
+
+        output_path,
+
+        index=False
+    )
+
+    print(
+        "\nXML Successfully Converted To CSV"
+    )
+
+    print(
+        f"\nSaved File : {output_path}"
+    )
+
+    # -----------------------------------------------------
+    # RETURN CSV PATH
+    # -----------------------------------------------------
 
     return output_path
