@@ -62,6 +62,7 @@ class Validator:
         self._check_buyer_vat_missing(invoice, errors, corrections)
         self._check_seller_vat_format(invoice, errors, corrections)
         self._check_credit_note_support(invoice, errors, corrections)
+        self._check_max_line_items(invoice, errors, corrections)
 
         # Deduplicate errors while preserving order
         seen = set()
@@ -73,6 +74,19 @@ class Validator:
 
         is_valid = len(unique_errors) == 0
         return is_valid, unique_errors, corrections
+
+    # ─────────────────────────────────────────────────────
+    # CHECK 8: Max Line Items Exceeded
+    # ─────────────────────────────────────────────────────
+    def _check_max_line_items(self, invoice: dict, errors: list, corrections: dict):
+        """
+        Check if the number of line items exceeds the target format's limit.
+        """
+        max_items = self.target_rules.get("max_line_items", 999)
+        items = parse_line_items(invoice.get("line_items_json", "[]"))
+        if len(items) > max_items:
+            errors.append("max_line_items_exceeded")
+            corrections["line_items_json"] = f"TOTAL_ITEMS_{len(items)}_EXCEEDS_LIMIT_{max_items}"
 
     # ─────────────────────────────────────────────────────
     # CHECK 1: Missing Required Fields

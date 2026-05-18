@@ -7,7 +7,7 @@ and tax ID field renaming.
 """
 
 import json
-from utils import (
+from .utils import (
     parse_line_items, detect_line_item_structure,
     flatten_line_items, nest_line_items,
 )
@@ -157,10 +157,10 @@ class Transcoder:
             flattened = flatten_line_items(items)
             return json.dumps(flattened, ensure_ascii=False)
 
-        # Flat → Nested: group items (usually acceptable as-is)
+        # Flat → Nested: group items
         if actual_structure == "flat" and target_structure == "nested":
-            # Flat items are valid in a nested format (no sub_items = leaf items)
-            return json.dumps(items, ensure_ascii=False)
+            nested = nest_line_items(items)
+            return json.dumps(nested, ensure_ascii=False)
 
         return json.dumps(items, ensure_ascii=False)
 

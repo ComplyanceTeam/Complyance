@@ -23,11 +23,8 @@ services:
       context: .
       dockerfile: services/api/Dockerfile
     container_name: complyance_api
-    depends_on:
-      db:
-        condition: service_healthy
     environment:
-      DATABASE_URL: "postgresql://postgres:postgres@db:5432/complyance"
+      - DATABASE_URL=${DATABASE_URL}
     ports:
       - "3001:3001"
     volumes:

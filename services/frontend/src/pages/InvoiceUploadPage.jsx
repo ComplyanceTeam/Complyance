@@ -21,16 +21,70 @@ export default function InvoiceUploadPage() {
     if (!file || isUploading) return
     setIsUploading(true)
     setProgress(18)
+    
     const intervalId = window.setInterval(() => {
-      setProgress((current) => Math.min(current + 16, 94))
-    }, 240)
+      setProgress((current) => Math.min(current + 5, 94))
+    }, 1000)
+
     try {
-      const response = await invoiceApi.uploadInvoice(file)
+      // 1. Read the file content
+      const text = await file.text()
+      if (!text.trim()) {
+          throw new Error('Selected file is empty.')
+      }
+
+      let invoiceData
+      try {
+          invoiceData = JSON.parse(text)
+          if (Array.isArray(invoiceData)) {
+              if (invoiceData.length === 0) throw new Error('JSON array is empty.')
+              invoiceData = invoiceData[0]
+          }
+      } catch (err) {
+          throw new Error('Invalid JSON format. Please upload a valid invoice object.')
+      }
+
+      // 2. Post to the real API
+      console.log('Initiating pipeline for:', invoiceData.invoice_id)
+      const response = await invoiceApi.uploadInvoice(invoiceData)
+      
+      if (!response || !response.data) {
+          throw new Error('Backend returned an empty response.')
+      }
+
       window.clearInterval(intervalId)
       setProgress(100)
-      setFeedback(response.warnings)
-    } finally {
+      
+      const result = response.data
+      setFeedback([
+          `Status: Processed`,
+          `Target: ${result.target_format || 'Auto'}`,
+          `Integrity: ${result.is_mapping_valid ? 'Verified' : 'Flagged'}`,
+          `Findings: ${result.mapping_errors || 'None'}`
+      ])
+      
+    } catch (err) {
+      console.error('Upload Error:', err)
+      let errorMsg = err.message || 'Unknown network error'
+      
+      // Handle FastAPI 422 Validation Errors (which are objects/arrays)
+      if (err.response?.status === 422) {
+          const details = err.response?.data?.detail
+          if (Array.isArray(details)) {
+              errorMsg = `Validation Error: ${details.map(d => `${d.loc.join('.')}: ${d.msg}`).join(', ')}`
+          } else if (typeof details === 'object') {
+              errorMsg = `Validation Error: ${JSON.stringify(details)}`
+          } else {
+              errorMsg = details || errorMsg
+          }
+      } else {
+          errorMsg = err.response?.data?.detail || errorMsg
+      }
+
+      setFeedback([`Execution Failed: ${errorMsg}`])
       window.clearInterval(intervalId)
+      setProgress(0)
+    } finally {
       setIsUploading(false)
     }
   }

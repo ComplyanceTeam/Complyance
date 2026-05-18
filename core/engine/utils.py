@@ -5,7 +5,7 @@ VAT validation, JSON helpers, line item structure operations.
 
 import re
 import json
-from config import VAT_PATTERNS, FORMAT_CURRENCIES, COUNTRY_FORMAT_MAP
+from .config import VAT_PATTERNS, FORMAT_CURRENCIES, COUNTRY_FORMAT_MAP
 
 
 # ═══════════════════════════════════════════════════════════

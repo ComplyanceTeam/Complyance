@@ -28,10 +28,11 @@ COPY services/api /app/services/api
 
 # Set environment variables
 ENV PYTHONPATH="/app"
-ENV DATABASE_URL="postgresql://postgres:postgres@db:5432/complyance"
+# DATABASE_URL should be provided at runtime via environment variables or .env file
 
 # Initialize Prisma
 WORKDIR /app/services/api
+
 RUN prisma generate --schema=prisma/schema.prisma
 
 # Expose the port the app runs on

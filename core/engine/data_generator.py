@@ -12,6 +12,7 @@ import re
 import os
 import sys
 import math
+import uuid
 from datetime import datetime, timedelta
 from collections import Counter
 
@@ -22,6 +23,7 @@ from config import (
     VAT_PATTERNS, STANDARD_TAX_RATES, COUNTRY_CURRENCIES, TRADE_CORRIDORS,
     PRODUCT_CATALOG, COMPANIES, ERROR_TYPES, ERROR_WEIGHTS,
 )
+from utils import clean_nan_values
 
 random.seed(42)  # Reproducibility
 
@@ -196,12 +198,6 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False,
                      ensure_clean: bool = False) -> dict:
     """
     Generate a single realistic invoice row.
-
-    Args:
-        invoice_id: Unique invoice identifier
-        is_credit_note: If True, generate negative amounts
-        ensure_clean: If True, ensure the invoice has NO natural mapping errors
-                      (use target-compatible currency, valid VATs, etc.)
     """
     source_format, target_country = pick_trade_corridor()
     source_rules = FORMAT_BY_NAME[source_format]
@@ -287,7 +283,7 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False,
     # Payment reference
     payment_reference = f"PAY-{random.randint(100000, 999999)}-{invoice_id.split('-')[-1]}"
 
-    return {
+    return clean_nan_values({
         "invoice_id": invoice_id,
         "source_format": source_format,
         "target_country": target_country,
@@ -304,7 +300,7 @@ def generate_invoice(invoice_id: str, is_credit_note: bool = False,
         "buyer_vat": buyer_vat,
         "payment_reference": payment_reference,
         "delivery_date": delivery_date,
-    }
+    })
 
 
 # ═══════════════════════════════════════════════════════════
@@ -363,8 +359,6 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
 
         elif error_type == "line_item_structure_incompatible":
             target_structure = target_rules["line_item_structure"]
-            # Only inject when target expects flat — add sub_items to make it nested
-            # This is the detectable case: nested data → flat-only target
             if target_structure == "flat":
                 items = json.loads(inv["line_items_json"])
                 if items:
@@ -386,7 +380,6 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
                 corrections["buyer_vat"] = original_buyer_vat
 
         elif error_type == "seller_vat_format_invalid":
-            # Get the seller's country from the source format
             seller_countries = source_rules["used_in_countries"].split(",")
             seller_country = seller_countries[0]
             original_vat = inv["seller_vat"]
@@ -396,7 +389,6 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
 
         elif error_type == "credit_note_not_supported":
             if not target_rules["supports_credit_note"]:
-                # Make it a credit note (negative amounts)
                 inv["subtotal"] = -abs(inv["subtotal"])
                 inv["tax_amount"] = -abs(inv["tax_amount"])
                 inv["total_amount"] = -abs(inv["total_amount"])
@@ -405,20 +397,13 @@ def inject_errors(invoice: dict, target_format_name: str) -> tuple:
                 corrections["tax_amount"] = str(abs(inv["tax_amount"]))
                 corrections["total_amount"] = str(abs(inv["total_amount"]))
 
-    # Deduplicate errors
-    errors = list(dict.fromkeys(errors))
-
-    return inv, errors, corrections
+    return clean_nan_values(inv), errors, corrections
 
 
 def compute_mapping(invoice: dict) -> dict:
-    """
-    Compute the deterministic mapping result for a clean (no-error) invoice.
-    Returns the mapping row for mappings_train.csv.
-    """
+    """Compute the deterministic mapping result for a clean invoice."""
     target_country = invoice["target_country"]
     target_format = COUNTRY_FORMAT_MAP.get(target_country)
-
     if not target_format:
         return {
             "invoice_id": invoice["invoice_id"],
@@ -427,7 +412,6 @@ def compute_mapping(invoice: dict) -> dict:
             "mapping_errors": "missing_required_field",
             "corrected_fields": json.dumps({"target_country": "unsupported"}),
         }
-
     return {
         "invoice_id": invoice["invoice_id"],
         "target_format": target_format,
@@ -437,18 +421,10 @@ def compute_mapping(invoice: dict) -> dict:
     }
 
 
-# ═══════════════════════════════════════════════════════════
-# CSV WRITERS
-# ═══════════════════════════════════════════════════════════
-
 def write_format_rules():
     """Write format_rules.csv."""
     filepath = os.path.join(DATA_DIR, "format_rules.csv")
-    fieldnames = [
-        "format_id", "format_name", "used_in_countries", "syntax",
-        "required_fields", "optional_fields", "tax_id_field_name",
-        "line_item_structure", "supports_credit_note", "max_line_items",
-    ]
+    fieldnames = ["format_id", "format_name", "used_in_countries", "syntax", "required_fields", "optional_fields", "tax_id_field_name", "line_item_structure", "supports_credit_note", "max_line_items"]
     with open(filepath, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -460,184 +436,71 @@ def write_format_rules():
 
 
 def generate_dataset(num_invoices: int, prefix: str, error_rate: float = 0.0):
-    """
-    Generate invoices and optionally their mappings.
-
-    Args:
-        num_invoices: Number of invoices to generate
-        prefix: ID prefix ("SRC" for source, "TST" for test)
-        error_rate: Fraction of invoices with errors (0.0 to 1.0)
-
-    Returns:
-        (invoices_list, mappings_list)
-    """
+    """Generate invoices and their mappings."""
     invoices = []
     mappings = []
-
-    # Determine which invoices get errors
     num_errors = int(num_invoices * error_rate)
     error_indices = set(random.sample(range(num_invoices), num_errors))
-
-    # Track format pair coverage
     format_pairs = Counter()
 
     for i in range(num_invoices):
         invoice_id = f"INV-{prefix}-{i+1:05d}"
+        invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
+        target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
+        format_pairs[f"{invoice['source_format']}→{target_format}"] += 1
 
-        if i in error_indices:            # Error invoice: start clean, then inject ONLY deliberate errors
-            invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
-
-            target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
-            pair = f"{invoice['source_format']}→{target_format}"
-            format_pairs[pair] += 1
-
-            # Inject errors
+        if i in error_indices:
             modified_invoice, errors, corrections = inject_errors(invoice, target_format)
-
-            if errors:  # Only count if errors were actually injected
+            if errors:
                 invoices.append(modified_invoice)
-                mappings.append({
-                    "invoice_id": invoice_id,
-                    "target_format": target_format,
-                    "is_mapping_valid": False,
-                    "mapping_errors": "|".join(errors),
-                    "corrected_fields": json.dumps(corrections),
-                })
-            else:
-                # Error injection didn't apply — regenerate as clean
-                invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
-                target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
-                pair = f"{invoice['source_format']}→{target_format}"
-                format_pairs[pair] += 1
-                invoices.append(invoice)
-                mappings.append(compute_mapping(invoice))
-        else:
-            # Clean invoice: ensure no natural mapping errors
-            invoice = generate_invoice(invoice_id, is_credit_note=False, ensure_clean=True)
-
-            target_format = COUNTRY_FORMAT_MAP.get(invoice["target_country"], "unknown")
-            pair = f"{invoice['source_format']}→{target_format}"
-            format_pairs[pair] += 1
-
-            invoices.append(invoice)
-            mappings.append(compute_mapping(invoice))
+                mappings.append({"invoice_id": invoice_id, "target_format": target_format, "is_mapping_valid": False, "mapping_errors": "|".join(errors), "corrected_fields": json.dumps(corrections)})
+                continue
+        
+        invoices.append(invoice)
+        mappings.append(compute_mapping(invoice))
 
     return invoices, mappings, format_pairs
 
 
 def write_invoices(invoices: list, filename: str):
-    """Write invoices to CSV."""
-    filepath = os.path.join(DATA_DIR, filename)
-    fieldnames = [
-        "invoice_id", "source_format", "target_country", "seller_id", "buyer_id",
-        "issue_date", "currency", "subtotal", "tax_rate", "tax_amount",
-        "total_amount", "line_items_json", "seller_vat", "buyer_vat",
-        "payment_reference", "delivery_date",
-    ]
-    with open(filepath, "w", newline="", encoding="utf-8") as f:
+    """Write invoices to CSV and JSON."""
+    filepath_csv = os.path.join(DATA_DIR, filename)
+    fieldnames = ["invoice_id", "source_format", "target_country", "seller_id", "buyer_id", "issue_date", "currency", "subtotal", "tax_rate", "tax_amount", "total_amount", "line_items_json", "seller_vat", "buyer_vat", "payment_reference", "delivery_date"]
+    with open(filepath_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(invoices)
-    print(f"  ✅ {filename} — {len(invoices)} rows")
+    
+    # Write JSON
+    filepath_json = filepath_csv.replace(".csv", ".json")
+    with open(filepath_json, "w", encoding="utf-8") as f:
+        json.dump(clean_nan_values(invoices), f, indent=4)
+    print(f"  ✅ {filename} (.csv & .json) — {len(invoices)} rows")
 
-
-def write_mappings(mappings: list, filename: str):
-    """Write mappings to CSV."""
-    filepath = os.path.join(DATA_DIR, filename)
-    fieldnames = [
-        "invoice_id", "target_format", "is_mapping_valid",
-        "mapping_errors", "corrected_fields",
-    ]
-    with open(filepath, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(mappings)
-    print(f"  ✅ {filename} — {len(mappings)} rows")
-
-
-# ═══════════════════════════════════════════════════════════
-# DATASET STATISTICS & VALIDATION
-# ═══════════════════════════════════════════════════════════
-
-def print_stats(invoices, mappings, format_pairs, label):
-    """Print dataset statistics."""
-    total = len(invoices)
-    errors = sum(1 for m in mappings if not m["is_mapping_valid"])
-    error_pct = (errors / total) * 100
-
-    print(f"\n{'='*60}")
-    print(f"  📊 {label} Statistics")
-    print(f"{'='*60}")
-    print(f"  Total invoices:     {total}")
-    print(f"  Valid mappings:     {total - errors} ({100 - error_pct:.1f}%)")
-    print(f"  Invalid mappings:   {errors} ({error_pct:.1f}%)")
-
-    # Error type breakdown
-    error_counts = Counter()
-    for m in mappings:
-        if m["mapping_errors"]:
-            for err in m["mapping_errors"].split("|"):
-                error_counts[err] += 1
-    if error_counts:
-        print(f"\n  Error Type Breakdown:")
-        for err, count in error_counts.most_common():
-            print(f"    {err}: {count} ({count/errors*100:.1f}%)")
-
-    # Format pair coverage
-    print(f"\n  Source→Target Format Pairs ({len(format_pairs)} unique):")
-    for pair, count in format_pairs.most_common():
-        print(f"    {pair}: {count}")
-
-    # Currency distribution
-    currencies = Counter(inv["currency"] for inv in invoices)
-    print(f"\n  Currency Distribution:")
-    for curr, count in currencies.most_common():
-        print(f"    {curr}: {count}")
-
-
-# ═══════════════════════════════════════════════════════════
-# MAIN
-# ═══════════════════════════════════════════════════════════
 
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
-
     print("\n🔧 E-Invoice Synthetic Dataset Generator")
-    print("=" * 60)
-
-    # Step 1: Format rules
-    print("\n📁 Step 1: Writing format_rules.csv...")
     write_format_rules()
-
-    # Step 2: Training dataset (3,200 invoices, ~20% errors)
-    print("\n📁 Step 2: Generating training dataset...")
-    source_invoices, source_mappings, src_pairs = generate_dataset(
-        num_invoices=3200,
-        prefix="SRC",
-        error_rate=0.20,  # 20% error rate
-    )
-    write_invoices(source_invoices, "invoices_source.csv")
-    write_mappings(source_mappings, "mappings_train.csv")
-    print_stats(source_invoices, source_mappings, src_pairs, "Training Set")
-
-    # Step 3: Test dataset (850 invoices, ~20% errors)
-    print("\n📁 Step 3: Generating test dataset...")
-    test_invoices, test_mappings, test_pairs = generate_dataset(
-        num_invoices=850,
-        prefix="TST",
-        error_rate=0.20,
-    )
-    write_invoices(test_invoices, "invoices_test.csv")
-    # Also write test mappings as ground truth (for our own validation)
-    write_mappings(test_mappings, "mappings_test_ground_truth.csv")
-    print_stats(test_invoices, test_mappings, test_pairs, "Test Set")
-
-    # Final summary
-    print(f"\n{'='*60}")
-    print("  ✅ All datasets generated successfully!")
-    print(f"  📂 Output directory: {DATA_DIR}")
-    print(f"{'='*60}\n")
-
+    
+    print("\n📁 Generating training dataset...")
+    src_inv, src_map, _ = generate_dataset(3200, "SRC", 0.20)
+    write_invoices(src_inv, "invoices_source.csv")
+    
+    print("\n📁 Generating test dataset...")
+    tst_inv, tst_map, _ = generate_dataset(850, "TST", 0.20)
+    write_invoices(tst_inv, "invoices_test.csv")
+    
+    # Write mappings separately
+    with open(os.path.join(DATA_DIR, "mappings_train.csv"), "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["invoice_id", "target_format", "is_mapping_valid", "mapping_errors", "corrected_fields"])
+        writer.writeheader()
+        writer.writerows(src_map)
+        
+    with open(os.path.join(DATA_DIR, "mappings_test_ground_truth.csv"), "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=["invoice_id", "target_format", "is_mapping_valid", "mapping_errors", "corrected_fields"])
+        writer.writeheader()
+        writer.writerows(tst_map)
 
 if __name__ == "__main__":
     main()

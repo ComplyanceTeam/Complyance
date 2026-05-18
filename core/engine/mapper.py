@@ -7,6 +7,8 @@ import pandas as pd
 import json
 import xmltodict
 from .paths import get_data_path
+from .transcoder import SYNTAX_FIELD_MAPS
+from .utils import nest_line_items
 
 # =========================================================
 # LOAD FORMAT RULES
@@ -19,6 +21,22 @@ format_df = pd.read_csv(
 # =========================================================
 # MAIN MAPPING FUNCTION
 # =========================================================
+
+def build_nested_dict(flat_dict):
+    """Convert flat dict with path keys ('a/b/c') to nested dict."""
+    nested = {}
+    for key, value in flat_dict.items():
+        if '/' in key:
+            parts = key.split('/')
+            curr = nested
+            for part in parts[:-1]:
+                if part not in curr:
+                    curr[part] = {}
+                curr = curr[part]
+            curr[parts[-1]] = value
+        else:
+            nested[key] = value
+    return nested
 
 def map_invoice(
 
@@ -77,12 +95,7 @@ def map_invoice(
 
                 break
 
-        # -------------------------------------------------
-        # Skip if no format found
-        # -------------------------------------------------
-
         if target_format is None:
-
             continue
 
         # =================================================
@@ -90,251 +103,101 @@ def map_invoice(
         # =================================================
 
         format_row = format_df[
-
-            format_df['format_id']
-            == target_format
-
+            format_df['format_id'] == target_format
         ].iloc[0]
 
         syntax = format_row['syntax']
+        tax_id_field_name = format_row['tax_id_field_name']
+        line_item_structure = format_row['line_item_structure']
+        supports_credit_note = format_row['supports_credit_note']
 
-        required_fields = [
-
-            field.strip()
-
-            for field in str(
-                format_row[
-                    'required_fields'
-                ]
-            ).split(',')
-        ]
-
-        optional_fields = [
-
-            field.strip()
-
-            for field in str(
-                format_row[
-                    'optional_fields'
-                ]
-            ).split(',')
-        ]
-
-        tax_id_field_name = (
-
-            format_row[
-                'tax_id_field_name'
-            ]
-        )
-
-        line_item_structure = (
-
-            format_row[
-                'line_item_structure'
-            ]
-        )
-
-        supports_credit_note = (
-
-            format_row[
-                'supports_credit_note'
-            ]
-        )
+        # Get field map for target syntax
+        field_map = SYNTAX_FIELD_MAPS.get(syntax, {})
 
         # =================================================
         # CREATE TARGET INVOICE OBJECT
         # =================================================
 
         mapped_invoice = {}
+        
+        # Add metadata (for internal tracking, usually filtered for final XML)
+        if input_file_type == 'json':
+            mapped_invoice['_target_format'] = target_format
+            mapped_invoice['_syntax'] = syntax
 
-        # -------------------------------------------------
-        # Metadata
-        # -------------------------------------------------
+        # Map all standard fields using the syntax map
+        standard_fields = [
+            'invoice_id', 'seller_id', 'buyer_id', 'issue_date',
+            'currency', 'subtotal', 'tax_rate', 'tax_amount',
+            'total_amount', 'seller_vat', 'buyer_vat',
+            'payment_reference', 'delivery_date'
+        ]
 
-        mapped_invoice[
-            'target_format'
-        ] = target_format
-
-        mapped_invoice[
-            'syntax'
-        ] = syntax
-
-        mapped_invoice[
-            'line_item_structure'
-        ] = line_item_structure
-
-        # =================================================
-        # REQUIRED FIELDS
-        # =================================================
-
-        for field in required_fields:
-
+        for field in standard_fields:
+            # Use mapped name if available, otherwise canonical
+            mapped_name = field_map.get(field, field)
+            
+            # Special case for seller_vat as it has a dynamic target name in format_rules
+            if field == 'seller_vat':
+                mapped_name = tax_id_field_name
+            
             if field in row.index:
-
-                mapped_invoice[field] = row[field]
-
+                mapped_invoice[mapped_name] = row[field]
             else:
-
-                mapped_invoice[field] = 'MISSING'
-
-        # =================================================
-        # OPTIONAL FIELDS
-        # =================================================
-
-        for field in optional_fields:
-
-            if field in row.index:
-
-                mapped_invoice[field] = row[field]
-
-        # =================================================
-        # VAT FIELD TRANSFORMATION
-        # =================================================
-
-        if 'seller_vat' in row.index:
-
-            mapped_invoice[
-                tax_id_field_name
-            ] = row['seller_vat']
+                mapped_invoice[mapped_name] = None
 
         # =================================================
         # LINE ITEM STRUCTURE TRANSFORMATION
         # =================================================
 
         try:
-
-            line_json = json.loads(
-                row['line_items_json']
-            )
-
+            line_data = json.loads(row['line_items_json'])
         except:
+            line_data = []
 
-            line_json = {}
+        target_line_items = line_data
+        
+        # FLAT → NESTED
+        if isinstance(line_data, list) and line_item_structure == 'nested':
+            target_line_items = nest_line_items(line_data)
+        
+        # NESTED → FLAT
+        elif isinstance(line_data, dict) and 'invoice_lines' in line_data and line_item_structure == 'flat':
+            items = line_data['invoice_lines']
+            flattened = []
+            for item in items:
+                details = item.get('line', {}).get('item_details', item)
+                flattened.append({
+                    'description': details.get('description', 'UNKNOWN'),
+                    'price': details.get('price', 0),
+                    'qty': details.get('qty', 1)
+                })
+            target_line_items = flattened
 
-        # -------------------------------------------------
-        # FLAT STRUCTURE
-        # -------------------------------------------------
-
-        if line_item_structure == 'flat':
-
-            flattened_items = []
-
-            if 'invoice_lines' in line_json:
-
-                for item in line_json[
-                    'invoice_lines'
-                ]:
-
-                    flat_item = {
-
-                        'description':
-
-                        item.get(
-                            'line',
-                            {}
-                        ).get(
-                            'item_details',
-                            {}
-                        ).get(
-                            'description',
-                            'UNKNOWN'
-                        ),
-
-                        'price':
-
-                        item.get(
-                            'line',
-                            {}
-                        ).get(
-                            'item_details',
-                            {}
-                        ).get(
-                            'price',
-                            0
-                        ),
-
-                        'qty':
-
-                        item.get(
-                            'line',
-                            {}
-                        ).get(
-                            'item_details',
-                            {}
-                        ).get(
-                            'qty',
-                            1
-                        )
-                    }
-
-                    flattened_items.append(
-                        flat_item
-                    )
-
-            mapped_invoice[
-                'line_items'
-            ] = flattened_items
-
-        # -------------------------------------------------
-        # NESTED STRUCTURE
-        # -------------------------------------------------
-
-        else:
-
-            mapped_invoice[
-                'line_items'
-            ] = line_json
+        # Map line items key
+        line_items_key = field_map.get('line_items_json', 'line_items')
+        mapped_invoice[line_items_key] = target_line_items
 
         # =================================================
-        # CREDIT NOTE VALIDATION
+        # XML STRUCTURING (if output is XML)
         # =================================================
-
-        subtotal = row.get(
-            'subtotal',
-            0
-        )
-
-        if (
-
-            subtotal < 0
-            and
-            supports_credit_note == 0
-
-        ):
-
-            mapped_invoice[
-                'credit_note_status'
-            ] = 'NOT_SUPPORTED'
-
-        else:
-
-            mapped_invoice[
-                'credit_note_status'
-            ] = 'SUPPORTED'
-
-        # =================================================
-        # CURRENCY
-        # =================================================
-
-        mapped_invoice[
-            'currency'
-        ] = row['currency']
+        
+        if input_file_type == 'xml':
+            # Turn flat path keys into actual XML hierarchy
+            mapped_invoice = build_nested_dict(mapped_invoice)
 
         # =================================================
         # SAVE CURRENT INVOICE
         # =================================================
 
-        mapped_invoices.append(
-            mapped_invoice
-        )
+        mapped_invoices.append(mapped_invoice)
 
     # =====================================================
-    # CREATE FINAL DATAFRAME
+    # CREATE FINAL DATAFRAME (for CSV)
     # =====================================================
-
-    final_df = pd.json_normalize(
-        mapped_invoices
-    )
+    
+    # Flatten everything for CSV output
+    final_df = pd.json_normalize(mapped_invoices)
 
     # =====================================================
     # ALWAYS SAVE CSV
@@ -386,12 +249,11 @@ def map_invoice(
 
     elif input_file_type == 'xml':
 
+        # Wrap in a standard envelope
+        root_tag = 'Invoice' if syntax == 'UBL' else 'CrossIndustryInvoice'
+        
         xml_data = {
-
-            'Invoices': {
-
-                'Invoice': mapped_invoices
-            }
+            root_tag: mapped_invoices[0] if len(mapped_invoices) == 1 else mapped_invoices
         }
 
         xml_string = xmltodict.unparse(

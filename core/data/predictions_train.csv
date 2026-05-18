@@ -1,0 +1,3201 @@
+invoice_id,target_format,is_mapping_valid,mapping_errors,corrected_fields
+INV-SRC-00001,pint_my,True,,{}
+INV-SRC-00002,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00003,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00004,peppol_bis_3,True,,{}
+INV-SRC-00005,facturx,True,,{}
+INV-SRC-00006,peppol_bis_3,True,,{}
+INV-SRC-00007,facturx,False,currency_not_supported|seller_vat_format_invalid,"{""currency"": ""EUR"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00008,nlcius,True,,{}
+INV-SRC-00009,peppol_bis_3,False,currency_not_supported|buyer_vat_missing_for_target,"{""currency"": ""EUR"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00010,pint_sg,True,,{}
+INV-SRC-00011,facturx,True,,{}
+INV-SRC-00012,pint_sg,True,,{}
+INV-SRC-00013,peppol_bis_3,True,,{}
+INV-SRC-00014,xrechnung_ubl,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""25227.34"", ""total_amount"": ""151364.02"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00015,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00016,pint_sg,True,,{}
+INV-SRC-00017,pint_sg,True,,{}
+INV-SRC-00018,facturx,True,,{}
+INV-SRC-00019,facturx,True,,{}
+INV-SRC-00020,nlcius,True,,{}
+INV-SRC-00021,peppol_bis_3,True,,{}
+INV-SRC-00022,pint_my,True,,{}
+INV-SRC-00023,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""77.42"", ""total_amount"": ""1183.41""}"
+INV-SRC-00024,facturx,True,,{}
+INV-SRC-00025,peppol_bis_3,True,,{}
+INV-SRC-00026,facturx,True,,{}
+INV-SRC-00027,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""465.39"", ""total_amount"": ""5636.37"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00028,xrechnung_ubl,True,,{}
+INV-SRC-00029,pint_sg,True,,{}
+INV-SRC-00030,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00031,xrechnung_ubl,True,,{}
+INV-SRC-00032,pint_my,True,,{}
+INV-SRC-00033,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00034,facturx,True,,{}
+INV-SRC-00035,xrechnung_ubl,True,,{}
+INV-SRC-00036,facturx,True,,{}
+INV-SRC-00037,facturx,True,,{}
+INV-SRC-00038,facturx,True,,{}
+INV-SRC-00039,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00040,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""delivery_date"": ""REQUIRED"", ""tax_amount"": ""1068.0"", ""total_amount"": ""11748.05""}"
+INV-SRC-00041,pint_sg,True,,{}
+INV-SRC-00042,nlcius,True,,{}
+INV-SRC-00043,xrechnung_ubl,True,,{}
+INV-SRC-00044,facturx,True,,{}
+INV-SRC-00045,nlcius,True,,{}
+INV-SRC-00046,nlcius,True,,{}
+INV-SRC-00047,nlcius,True,,{}
+INV-SRC-00048,pint_sg,True,,{}
+INV-SRC-00049,pint_sg,True,,{}
+INV-SRC-00050,nlcius,True,,{}
+INV-SRC-00051,pint_my,True,,{}
+INV-SRC-00052,pint_my,True,,{}
+INV-SRC-00053,peppol_bis_3,True,,{}
+INV-SRC-00054,facturx,True,,{}
+INV-SRC-00055,facturx,True,,{}
+INV-SRC-00056,nlcius,True,,{}
+INV-SRC-00057,pint_sg,True,,{}
+INV-SRC-00058,peppol_bis_3,True,,{}
+INV-SRC-00059,facturx,True,,{}
+INV-SRC-00060,facturx,True,,{}
+INV-SRC-00061,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00062,peppol_bis_3,True,,{}
+INV-SRC-00063,xrechnung_ubl,True,,{}
+INV-SRC-00064,pint_sg,True,,{}
+INV-SRC-00065,peppol_bis_3,True,,{}
+INV-SRC-00066,nlcius,True,,{}
+INV-SRC-00067,nlcius,True,,{}
+INV-SRC-00068,facturx,True,,{}
+INV-SRC-00069,nlcius,True,,{}
+INV-SRC-00070,facturx,True,,{}
+INV-SRC-00071,xrechnung_ubl,True,,{}
+INV-SRC-00072,pint_my,True,,{}
+INV-SRC-00073,facturx,True,,{}
+INV-SRC-00074,xrechnung_ubl,True,,{}
+INV-SRC-00075,pint_sg,True,,{}
+INV-SRC-00076,xrechnung_ubl,True,,{}
+INV-SRC-00077,xrechnung_ubl,True,,{}
+INV-SRC-00078,xrechnung_ubl,True,,{}
+INV-SRC-00079,facturx,True,,{}
+INV-SRC-00080,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00081,facturx,True,,{}
+INV-SRC-00082,facturx,True,,{}
+INV-SRC-00083,xrechnung_ubl,True,,{}
+INV-SRC-00084,pint_sg,True,,{}
+INV-SRC-00085,peppol_bis_3,True,,{}
+INV-SRC-00086,peppol_bis_3,True,,{}
+INV-SRC-00087,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00088,peppol_bis_3,True,,{}
+INV-SRC-00089,peppol_bis_3,True,,{}
+INV-SRC-00090,pint_sg,True,,{}
+INV-SRC-00091,facturx,True,,{}
+INV-SRC-00092,xrechnung_ubl,True,,{}
+INV-SRC-00093,peppol_bis_3,True,,{}
+INV-SRC-00094,nlcius,True,,{}
+INV-SRC-00095,xrechnung_ubl,True,,{}
+INV-SRC-00096,pint_my,True,,{}
+INV-SRC-00097,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00098,facturx,True,,{}
+INV-SRC-00099,xrechnung_ubl,True,,{}
+INV-SRC-00100,facturx,True,,{}
+INV-SRC-00101,peppol_bis_3,False,currency_not_supported|buyer_vat_missing_for_target,"{""currency"": ""EUR"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00102,xrechnung_ubl,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""123.68"", ""total_amount"": ""1497.88"", ""currency"": ""EUR""}"
+INV-SRC-00103,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00104,pint_my,True,,{}
+INV-SRC-00105,nlcius,True,,{}
+INV-SRC-00106,pint_my,True,,{}
+INV-SRC-00107,xrechnung_ubl,True,,{}
+INV-SRC-00108,nlcius,True,,{}
+INV-SRC-00109,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-00110,peppol_bis_3,True,,{}
+INV-SRC-00111,xrechnung_ubl,True,,{}
+INV-SRC-00112,facturx,True,,{}
+INV-SRC-00113,pint_sg,True,,{}
+INV-SRC-00114,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00115,facturx,True,,{}
+INV-SRC-00116,nlcius,True,,{}
+INV-SRC-00117,xrechnung_ubl,True,,{}
+INV-SRC-00118,xrechnung_ubl,True,,{}
+INV-SRC-00119,facturx,True,,{}
+INV-SRC-00120,xrechnung_ubl,True,,{}
+INV-SRC-00121,pint_sg,True,,{}
+INV-SRC-00122,facturx,True,,{}
+INV-SRC-00123,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00124,facturx,True,,{}
+INV-SRC-00125,xrechnung_ubl,True,,{}
+INV-SRC-00126,peppol_bis_3,True,,{}
+INV-SRC-00127,nlcius,True,,{}
+INV-SRC-00128,facturx,True,,{}
+INV-SRC-00129,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00130,facturx,True,,{}
+INV-SRC-00131,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""5085.54"", ""total_amount"": ""30513.24""}"
+INV-SRC-00132,xrechnung_ubl,True,,{}
+INV-SRC-00133,xrechnung_ubl,True,,{}
+INV-SRC-00134,pint_my,True,,{}
+INV-SRC-00135,nlcius,True,,{}
+INV-SRC-00136,xrechnung_ubl,True,,{}
+INV-SRC-00137,xrechnung_ubl,True,,{}
+INV-SRC-00138,peppol_bis_3,True,,{}
+INV-SRC-00139,peppol_bis_3,True,,{}
+INV-SRC-00140,peppol_bis_3,True,,{}
+INV-SRC-00141,facturx,True,,{}
+INV-SRC-00142,nlcius,True,,{}
+INV-SRC-00143,peppol_bis_3,True,,{}
+INV-SRC-00144,xrechnung_ubl,True,,{}
+INV-SRC-00145,peppol_bis_3,True,,{}
+INV-SRC-00146,xrechnung_ubl,True,,{}
+INV-SRC-00147,pint_sg,True,,{}
+INV-SRC-00148,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""0.0"", ""total_amount"": ""126122.22""}"
+INV-SRC-00149,pint_my,True,,{}
+INV-SRC-00150,xrechnung_ubl,True,,{}
+INV-SRC-00151,nlcius,True,,{}
+INV-SRC-00152,xrechnung_ubl,True,,{}
+INV-SRC-00153,facturx,True,,{}
+INV-SRC-00154,xrechnung_ubl,True,,{}
+INV-SRC-00155,pint_sg,True,,{}
+INV-SRC-00156,xrechnung_ubl,True,,{}
+INV-SRC-00157,pint_my,True,,{}
+INV-SRC-00158,nlcius,True,,{}
+INV-SRC-00159,facturx,False,credit_note_not_supported,"{""subtotal"": ""26472.41"", ""tax_amount"": ""2144.27"", ""total_amount"": ""28616.68""}"
+INV-SRC-00160,peppol_bis_3,True,,{}
+INV-SRC-00161,facturx,True,,{}
+INV-SRC-00162,facturx,True,,{}
+INV-SRC-00163,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00164,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-00165,nlcius,True,,{}
+INV-SRC-00166,peppol_bis_3,True,,{}
+INV-SRC-00167,nlcius,True,,{}
+INV-SRC-00168,peppol_bis_3,True,,{}
+INV-SRC-00169,pint_my,True,,{}
+INV-SRC-00170,peppol_bis_3,True,,{}
+INV-SRC-00171,nlcius,True,,{}
+INV-SRC-00172,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00173,nlcius,True,,{}
+INV-SRC-00174,peppol_bis_3,True,,{}
+INV-SRC-00175,peppol_bis_3,True,,{}
+INV-SRC-00176,facturx,True,,{}
+INV-SRC-00177,pint_sg,True,,{}
+INV-SRC-00178,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00179,facturx,True,,{}
+INV-SRC-00180,xrechnung_ubl,True,,{}
+INV-SRC-00181,nlcius,False,missing_required_field|seller_vat_format_invalid,"{""payment_reference"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00182,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""939.86"", ""total_amount"": ""14366.46""}"
+INV-SRC-00183,nlcius,True,,{}
+INV-SRC-00184,peppol_bis_3,True,,{}
+INV-SRC-00185,nlcius,True,,{}
+INV-SRC-00186,nlcius,True,,{}
+INV-SRC-00187,peppol_bis_3,True,,{}
+INV-SRC-00188,xrechnung_ubl,True,,{}
+INV-SRC-00189,pint_sg,True,,{}
+INV-SRC-00190,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""42984.61"", ""total_amount"": ""257907.67""}"
+INV-SRC-00191,pint_my,True,,{}
+INV-SRC-00192,facturx,True,,{}
+INV-SRC-00193,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00194,facturx,True,,{}
+INV-SRC-00195,peppol_bis_3,True,,{}
+INV-SRC-00196,facturx,True,,{}
+INV-SRC-00197,peppol_bis_3,True,,{}
+INV-SRC-00198,nlcius,True,,{}
+INV-SRC-00199,xrechnung_ubl,True,,{}
+INV-SRC-00200,xrechnung_ubl,True,,{}
+INV-SRC-00201,facturx,True,,{}
+INV-SRC-00202,nlcius,True,,{}
+INV-SRC-00203,facturx,True,,{}
+INV-SRC-00204,pint_sg,True,,{}
+INV-SRC-00205,nlcius,True,,{}
+INV-SRC-00206,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""167.2"", ""total_amount"": ""2555.75""}"
+INV-SRC-00207,peppol_bis_3,True,,{}
+INV-SRC-00208,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00209,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""24912.0"", ""total_amount"": ""274032.03""}"
+INV-SRC-00210,pint_my,True,,{}
+INV-SRC-00211,facturx,True,,{}
+INV-SRC-00212,xrechnung_ubl,True,,{}
+INV-SRC-00213,nlcius,True,,{}
+INV-SRC-00214,nlcius,True,,{}
+INV-SRC-00215,nlcius,True,,{}
+INV-SRC-00216,facturx,True,,{}
+INV-SRC-00217,peppol_bis_3,True,,{}
+INV-SRC-00218,facturx,True,,{}
+INV-SRC-00219,facturx,True,,{}
+INV-SRC-00220,nlcius,True,,{}
+INV-SRC-00221,xrechnung_ubl,True,,{}
+INV-SRC-00222,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""3069.11"", ""total_amount"": ""37170.32""}"
+INV-SRC-00223,pint_sg,True,,{}
+INV-SRC-00224,nlcius,True,,{}
+INV-SRC-00225,facturx,True,,{}
+INV-SRC-00226,nlcius,True,,{}
+INV-SRC-00227,xrechnung_ubl,True,,{}
+INV-SRC-00228,xrechnung_ubl,True,,{}
+INV-SRC-00229,peppol_bis_3,True,,{}
+INV-SRC-00230,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00231,facturx,True,,{}
+INV-SRC-00232,xrechnung_ubl,True,,{}
+INV-SRC-00233,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00234,nlcius,True,,{}
+INV-SRC-00235,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00236,peppol_bis_3,True,,{}
+INV-SRC-00237,xrechnung_ubl,True,,{}
+INV-SRC-00238,peppol_bis_3,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""5099.04"", ""total_amount"": ""31936.08"", ""currency"": ""EUR""}"
+INV-SRC-00239,peppol_bis_3,True,,{}
+INV-SRC-00240,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00241,pint_sg,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""7468.99"", ""total_amount"": ""46779.47"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00242,facturx,True,,{}
+INV-SRC-00243,pint_sg,True,,{}
+INV-SRC-00244,peppol_bis_3,True,,{}
+INV-SRC-00245,xrechnung_ubl,True,,{}
+INV-SRC-00246,xrechnung_ubl,True,,{}
+INV-SRC-00247,nlcius,True,,{}
+INV-SRC-00248,pint_sg,True,,{}
+INV-SRC-00249,peppol_bis_3,True,,{}
+INV-SRC-00250,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00251,xrechnung_ubl,True,,{}
+INV-SRC-00252,xrechnung_ubl,True,,{}
+INV-SRC-00253,xrechnung_ubl,True,,{}
+INV-SRC-00254,peppol_bis_3,True,,{}
+INV-SRC-00255,peppol_bis_3,True,,{}
+INV-SRC-00256,pint_my,True,,{}
+INV-SRC-00257,pint_sg,True,,{}
+INV-SRC-00258,facturx,True,,{}
+INV-SRC-00259,peppol_bis_3,True,,{}
+INV-SRC-00260,peppol_bis_3,True,,{}
+INV-SRC-00261,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""403.85"", ""total_amount"": ""6173.17""}"
+INV-SRC-00262,pint_sg,True,,{}
+INV-SRC-00263,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00264,nlcius,True,,{}
+INV-SRC-00265,peppol_bis_3,True,,{}
+INV-SRC-00266,pint_my,True,,{}
+INV-SRC-00267,peppol_bis_3,True,,{}
+INV-SRC-00268,facturx,True,,{}
+INV-SRC-00269,facturx,True,,{}
+INV-SRC-00270,xrechnung_ubl,True,,{}
+INV-SRC-00271,facturx,True,,{}
+INV-SRC-00272,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00273,facturx,True,,{}
+INV-SRC-00274,nlcius,True,,{}
+INV-SRC-00275,xrechnung_ubl,True,,{}
+INV-SRC-00276,peppol_bis_3,True,,{}
+INV-SRC-00277,nlcius,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""31.82"", ""total_amount"": ""486.43"", ""currency"": ""EUR""}"
+INV-SRC-00278,xrechnung_ubl,True,,{}
+INV-SRC-00279,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""2882.67"", ""total_amount"": ""44063.62""}"
+INV-SRC-00280,xrechnung_ubl,True,,{}
+INV-SRC-00281,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-00282,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00283,facturx,True,,{}
+INV-SRC-00284,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00285,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00286,xrechnung_ubl,True,,{}
+INV-SRC-00287,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00288,xrechnung_ubl,True,,{}
+INV-SRC-00289,pint_sg,True,,{}
+INV-SRC-00290,nlcius,True,,{}
+INV-SRC-00291,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00292,facturx,True,,{}
+INV-SRC-00293,peppol_bis_3,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""167.85"", ""total_amount"": ""2032.8"", ""currency"": ""EUR""}"
+INV-SRC-00294,facturx,True,,{}
+INV-SRC-00295,peppol_bis_3,True,,{}
+INV-SRC-00296,peppol_bis_3,True,,{}
+INV-SRC-00297,nlcius,True,,{}
+INV-SRC-00298,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-00299,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""2315.06"", ""total_amount"": ""14499.58""}"
+INV-SRC-00300,peppol_bis_3,True,,{}
+INV-SRC-00301,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00302,peppol_bis_3,True,,{}
+INV-SRC-00303,facturx,True,,{}
+INV-SRC-00304,pint_my,True,,{}
+INV-SRC-00305,peppol_bis_3,True,,{}
+INV-SRC-00306,facturx,True,,{}
+INV-SRC-00307,xrechnung_ubl,True,,{}
+INV-SRC-00308,pint_my,True,,{}
+INV-SRC-00309,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00310,facturx,True,,{}
+INV-SRC-00311,xrechnung_ubl,True,,{}
+INV-SRC-00312,nlcius,True,,{}
+INV-SRC-00313,facturx,True,,{}
+INV-SRC-00314,pint_my,True,,{}
+INV-SRC-00315,peppol_bis_3,True,,{}
+INV-SRC-00316,xrechnung_ubl,True,,{}
+INV-SRC-00317,peppol_bis_3,True,,{}
+INV-SRC-00318,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00319,nlcius,True,,{}
+INV-SRC-00320,facturx,True,,{}
+INV-SRC-00321,xrechnung_ubl,True,,{}
+INV-SRC-00322,xrechnung_ubl,True,,{}
+INV-SRC-00323,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""20758.9"", ""total_amount"": ""124553.38""}"
+INV-SRC-00324,peppol_bis_3,True,,{}
+INV-SRC-00325,facturx,True,,{}
+INV-SRC-00326,pint_sg,True,,{}
+INV-SRC-00327,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00328,facturx,True,,{}
+INV-SRC-00329,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-00330,nlcius,True,,{}
+INV-SRC-00331,pint_sg,True,,{}
+INV-SRC-00332,xrechnung_ubl,True,,{}
+INV-SRC-00333,nlcius,True,,{}
+INV-SRC-00334,peppol_bis_3,True,,{}
+INV-SRC-00335,xrechnung_ubl,True,,{}
+INV-SRC-00336,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00337,facturx,True,,{}
+INV-SRC-00338,facturx,True,,{}
+INV-SRC-00339,xrechnung_ubl,True,,{}
+INV-SRC-00340,pint_sg,True,,{}
+INV-SRC-00341,xrechnung_ubl,True,,{}
+INV-SRC-00342,pint_sg,True,,{}
+INV-SRC-00343,facturx,True,,{}
+INV-SRC-00344,nlcius,True,,{}
+INV-SRC-00345,peppol_bis_3,True,,{}
+INV-SRC-00346,facturx,True,,{}
+INV-SRC-00347,nlcius,True,,{}
+INV-SRC-00348,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00349,facturx,True,,{}
+INV-SRC-00350,peppol_bis_3,True,,{}
+INV-SRC-00351,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00352,nlcius,True,,{}
+INV-SRC-00353,facturx,True,,{}
+INV-SRC-00354,peppol_bis_3,True,,{}
+INV-SRC-00355,pint_sg,True,,{}
+INV-SRC-00356,peppol_bis_3,True,,{}
+INV-SRC-00357,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00358,facturx,True,,{}
+INV-SRC-00359,facturx,True,,{}
+INV-SRC-00360,nlcius,True,,{}
+INV-SRC-00361,facturx,True,,{}
+INV-SRC-00362,xrechnung_ubl,True,,{}
+INV-SRC-00363,xrechnung_ubl,True,,{}
+INV-SRC-00364,facturx,True,,{}
+INV-SRC-00365,peppol_bis_3,True,,{}
+INV-SRC-00366,xrechnung_ubl,True,,{}
+INV-SRC-00367,xrechnung_ubl,True,,{}
+INV-SRC-00368,facturx,True,,{}
+INV-SRC-00369,nlcius,True,,{}
+INV-SRC-00370,nlcius,True,,{}
+INV-SRC-00371,xrechnung_ubl,True,,{}
+INV-SRC-00372,xrechnung_ubl,True,,{}
+INV-SRC-00373,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""1611.48"", ""total_amount"": ""24632.65""}"
+INV-SRC-00374,nlcius,True,,{}
+INV-SRC-00375,facturx,True,,{}
+INV-SRC-00376,pint_sg,True,,{}
+INV-SRC-00377,xrechnung_ubl,True,,{}
+INV-SRC-00378,nlcius,True,,{}
+INV-SRC-00379,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00380,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00381,pint_sg,True,,{}
+INV-SRC-00382,xrechnung_ubl,True,,{}
+INV-SRC-00383,xrechnung_ubl,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""815.97"", ""total_amount"": ""7615.76"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00384,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00385,peppol_bis_3,True,,{}
+INV-SRC-00386,facturx,True,,{}
+INV-SRC-00387,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""98.43"", ""total_amount"": ""616.48""}"
+INV-SRC-00388,nlcius,True,,{}
+INV-SRC-00389,xrechnung_ubl,True,,{}
+INV-SRC-00390,nlcius,True,,{}
+INV-SRC-00391,peppol_bis_3,True,,{}
+INV-SRC-00392,pint_my,True,,{}
+INV-SRC-00393,pint_sg,True,,{}
+INV-SRC-00394,xrechnung_ubl,True,,{}
+INV-SRC-00395,nlcius,True,,{}
+INV-SRC-00396,facturx,True,,{}
+INV-SRC-00397,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00398,peppol_bis_3,True,,{}
+INV-SRC-00399,facturx,True,,{}
+INV-SRC-00400,pint_my,True,,{}
+INV-SRC-00401,nlcius,True,,{}
+INV-SRC-00402,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""46720.37"", ""total_amount"": ""280322.23""}"
+INV-SRC-00403,nlcius,True,,{}
+INV-SRC-00404,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00405,peppol_bis_3,True,,{}
+INV-SRC-00406,facturx,True,,{}
+INV-SRC-00407,facturx,True,,{}
+INV-SRC-00408,peppol_bis_3,True,,{}
+INV-SRC-00409,xrechnung_ubl,True,,{}
+INV-SRC-00410,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-00411,xrechnung_ubl,True,,{}
+INV-SRC-00412,nlcius,True,,{}
+INV-SRC-00413,peppol_bis_3,True,,{}
+INV-SRC-00414,facturx,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""20754.93"", ""total_amount"": ""180408.21"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00415,facturx,True,,{}
+INV-SRC-00416,pint_my,True,,{}
+INV-SRC-00417,nlcius,True,,{}
+INV-SRC-00418,facturx,True,,{}
+INV-SRC-00419,peppol_bis_3,False,missing_required_field|seller_vat_format_invalid,"{""payment_reference"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00420,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""7120.19"", ""total_amount"": ""108837.24""}"
+INV-SRC-00421,facturx,True,,{}
+INV-SRC-00422,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00423,xrechnung_ubl,True,,{}
+INV-SRC-00424,facturx,True,,{}
+INV-SRC-00425,xrechnung_ubl,False,currency_not_supported|buyer_vat_missing_for_target,"{""currency"": ""EUR"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00426,xrechnung_ubl,True,,{}
+INV-SRC-00427,pint_sg,True,,{}
+INV-SRC-00428,peppol_bis_3,True,,{}
+INV-SRC-00429,nlcius,True,,{}
+INV-SRC-00430,pint_my,True,,{}
+INV-SRC-00431,peppol_bis_3,True,,{}
+INV-SRC-00432,nlcius,True,,{}
+INV-SRC-00433,pint_sg,True,,{}
+INV-SRC-00434,facturx,True,,{}
+INV-SRC-00435,peppol_bis_3,True,,{}
+INV-SRC-00436,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00437,pint_sg,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""348.67"", ""total_amount"": ""3835.34"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00438,nlcius,True,,{}
+INV-SRC-00439,facturx,False,missing_required_field|currency_not_supported,"{""delivery_date"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-00440,xrechnung_ubl,True,,{}
+INV-SRC-00441,facturx,True,,{}
+INV-SRC-00442,facturx,True,,{}
+INV-SRC-00443,pint_sg,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00444,nlcius,True,,{}
+INV-SRC-00445,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00446,xrechnung_ubl,True,,{}
+INV-SRC-00447,peppol_bis_3,True,,{}
+INV-SRC-00448,pint_sg,True,,{}
+INV-SRC-00449,nlcius,True,,{}
+INV-SRC-00450,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-00451,facturx,True,,{}
+INV-SRC-00452,xrechnung_ubl,True,,{}
+INV-SRC-00453,peppol_bis_3,True,,{}
+INV-SRC-00454,pint_sg,True,,{}
+INV-SRC-00455,pint_sg,True,,{}
+INV-SRC-00456,pint_my,True,,{}
+INV-SRC-00457,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00458,xrechnung_ubl,True,,{}
+INV-SRC-00459,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00460,pint_sg,True,,{}
+INV-SRC-00461,nlcius,True,,{}
+INV-SRC-00462,pint_my,True,,{}
+INV-SRC-00463,nlcius,True,,{}
+INV-SRC-00464,xrechnung_ubl,True,,{}
+INV-SRC-00465,facturx,True,,{}
+INV-SRC-00466,nlcius,True,,{}
+INV-SRC-00467,facturx,True,,{}
+INV-SRC-00468,pint_sg,True,,{}
+INV-SRC-00469,peppol_bis_3,True,,{}
+INV-SRC-00470,xrechnung_ubl,True,,{}
+INV-SRC-00471,pint_my,True,,{}
+INV-SRC-00472,pint_my,True,,{}
+INV-SRC-00473,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00474,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""1134.55"", ""total_amount"": ""6807.29""}"
+INV-SRC-00475,nlcius,True,,{}
+INV-SRC-00476,facturx,True,,{}
+INV-SRC-00477,facturx,True,,{}
+INV-SRC-00478,facturx,True,,{}
+INV-SRC-00479,nlcius,True,,{}
+INV-SRC-00480,facturx,True,,{}
+INV-SRC-00481,pint_my,True,,{}
+INV-SRC-00482,nlcius,True,,{}
+INV-SRC-00483,nlcius,True,,{}
+INV-SRC-00484,nlcius,True,,{}
+INV-SRC-00485,pint_sg,True,,{}
+INV-SRC-00486,xrechnung_ubl,True,,{}
+INV-SRC-00487,facturx,True,,{}
+INV-SRC-00488,nlcius,True,,{}
+INV-SRC-00489,nlcius,True,,{}
+INV-SRC-00490,pint_my,True,,{}
+INV-SRC-00491,pint_my,True,,{}
+INV-SRC-00492,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00493,peppol_bis_3,True,,{}
+INV-SRC-00494,pint_my,True,,{}
+INV-SRC-00495,facturx,True,,{}
+INV-SRC-00496,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00497,pint_sg,True,,{}
+INV-SRC-00498,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00499,facturx,True,,{}
+INV-SRC-00500,facturx,True,,{}
+INV-SRC-00501,facturx,True,,{}
+INV-SRC-00502,xrechnung_ubl,True,,{}
+INV-SRC-00503,facturx,True,,{}
+INV-SRC-00504,facturx,True,,{}
+INV-SRC-00505,pint_my,True,,{}
+INV-SRC-00506,xrechnung_ubl,True,,{}
+INV-SRC-00507,xrechnung_ubl,True,,{}
+INV-SRC-00508,facturx,True,,{}
+INV-SRC-00509,pint_my,True,,{}
+INV-SRC-00510,facturx,True,,{}
+INV-SRC-00511,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""0.0"", ""total_amount"": ""1037.61""}"
+INV-SRC-00512,peppol_bis_3,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00513,facturx,True,,{}
+INV-SRC-00514,xrechnung_ubl,True,,{}
+INV-SRC-00515,facturx,True,,{}
+INV-SRC-00516,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00517,nlcius,True,,{}
+INV-SRC-00518,nlcius,True,,{}
+INV-SRC-00519,facturx,True,,{}
+INV-SRC-00520,facturx,True,,{}
+INV-SRC-00521,xrechnung_ubl,True,,{}
+INV-SRC-00522,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00523,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00524,xrechnung_ubl,True,,{}
+INV-SRC-00525,facturx,True,,{}
+INV-SRC-00526,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""2967.75"", ""total_amount"": ""24165.98""}"
+INV-SRC-00527,pint_sg,True,,{}
+INV-SRC-00528,peppol_bis_3,True,,{}
+INV-SRC-00529,peppol_bis_3,True,,{}
+INV-SRC-00530,nlcius,True,,{}
+INV-SRC-00531,facturx,True,,{}
+INV-SRC-00532,peppol_bis_3,True,,{}
+INV-SRC-00533,pint_my,True,,{}
+INV-SRC-00534,pint_my,True,,{}
+INV-SRC-00535,facturx,True,,{}
+INV-SRC-00536,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00537,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""2811.58"", ""total_amount"": ""30927.4""}"
+INV-SRC-00538,xrechnung_ubl,True,,{}
+INV-SRC-00539,xrechnung_ubl,True,,{}
+INV-SRC-00540,peppol_bis_3,True,,{}
+INV-SRC-00541,nlcius,True,,{}
+INV-SRC-00542,pint_sg,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""8377.75"", ""total_amount"": ""148006.97"", ""currency"": ""SGD""}"
+INV-SRC-00543,pint_sg,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00544,facturx,True,,{}
+INV-SRC-00545,nlcius,True,,{}
+INV-SRC-00546,nlcius,True,,{}
+INV-SRC-00547,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00548,xrechnung_ubl,True,,{}
+INV-SRC-00549,peppol_bis_3,True,,{}
+INV-SRC-00550,peppol_bis_3,True,,{}
+INV-SRC-00551,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00552,xrechnung_ubl,True,,{}
+INV-SRC-00553,facturx,True,,{}
+INV-SRC-00554,facturx,True,,{}
+INV-SRC-00555,xrechnung_ubl,True,,{}
+INV-SRC-00556,nlcius,True,,{}
+INV-SRC-00557,xrechnung_ubl,True,,{}
+INV-SRC-00558,nlcius,True,,{}
+INV-SRC-00559,peppol_bis_3,True,,{}
+INV-SRC-00560,pint_my,True,,{}
+INV-SRC-00561,facturx,True,,{}
+INV-SRC-00562,facturx,True,,{}
+INV-SRC-00563,xrechnung_ubl,True,,{}
+INV-SRC-00564,xrechnung_ubl,True,,{}
+INV-SRC-00565,nlcius,True,,{}
+INV-SRC-00566,pint_sg,True,,{}
+INV-SRC-00567,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00568,peppol_bis_3,True,,{}
+INV-SRC-00569,peppol_bis_3,True,,{}
+INV-SRC-00570,nlcius,True,,{}
+INV-SRC-00571,pint_sg,True,,{}
+INV-SRC-00572,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""1626.43"", ""total_amount"": ""10186.58""}"
+INV-SRC-00573,peppol_bis_3,True,,{}
+INV-SRC-00574,nlcius,True,,{}
+INV-SRC-00575,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00576,xrechnung_ubl,True,,{}
+INV-SRC-00577,nlcius,True,,{}
+INV-SRC-00578,xrechnung_ubl,True,,{}
+INV-SRC-00579,facturx,True,,{}
+INV-SRC-00580,peppol_bis_3,True,,{}
+INV-SRC-00581,peppol_bis_3,True,,{}
+INV-SRC-00582,facturx,True,,{}
+INV-SRC-00583,pint_sg,True,,{}
+INV-SRC-00584,peppol_bis_3,True,,{}
+INV-SRC-00585,peppol_bis_3,True,,{}
+INV-SRC-00586,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""24928.72"", ""total_amount"": ""232668.04""}"
+INV-SRC-00587,nlcius,True,,{}
+INV-SRC-00588,xrechnung_ubl,True,,{}
+INV-SRC-00589,facturx,True,,{}
+INV-SRC-00590,pint_sg,True,,{}
+INV-SRC-00591,peppol_bis_3,True,,{}
+INV-SRC-00592,xrechnung_ubl,True,,{}
+INV-SRC-00593,nlcius,True,,{}
+INV-SRC-00594,pint_sg,True,,{}
+INV-SRC-00595,nlcius,True,,{}
+INV-SRC-00596,xrechnung_ubl,True,,{}
+INV-SRC-00597,xrechnung_ubl,True,,{}
+INV-SRC-00598,facturx,True,,{}
+INV-SRC-00599,peppol_bis_3,True,,{}
+INV-SRC-00600,facturx,True,,{}
+INV-SRC-00601,nlcius,True,,{}
+INV-SRC-00602,nlcius,True,,{}
+INV-SRC-00603,pint_sg,True,,{}
+INV-SRC-00604,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00605,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00606,nlcius,True,,{}
+INV-SRC-00607,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00608,facturx,True,,{}
+INV-SRC-00609,pint_my,True,,{}
+INV-SRC-00610,nlcius,True,,{}
+INV-SRC-00611,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00612,nlcius,True,,{}
+INV-SRC-00613,nlcius,True,,{}
+INV-SRC-00614,facturx,True,,{}
+INV-SRC-00615,pint_sg,True,,{}
+INV-SRC-00616,pint_my,True,,{}
+INV-SRC-00617,facturx,True,,{}
+INV-SRC-00618,peppol_bis_3,True,,{}
+INV-SRC-00619,facturx,True,,{}
+INV-SRC-00620,peppol_bis_3,True,,{}
+INV-SRC-00621,pint_my,True,,{}
+INV-SRC-00622,pint_my,True,,{}
+INV-SRC-00623,xrechnung_ubl,True,,{}
+INV-SRC-00624,xrechnung_ubl,True,,{}
+INV-SRC-00625,facturx,True,,{}
+INV-SRC-00626,facturx,True,,{}
+INV-SRC-00627,pint_sg,False,missing_required_field|currency_not_supported,"{""buyer_id"": ""REQUIRED"", ""currency"": ""SGD""}"
+INV-SRC-00628,facturx,True,,{}
+INV-SRC-00629,nlcius,True,,{}
+INV-SRC-00630,xrechnung_ubl,True,,{}
+INV-SRC-00631,facturx,True,,{}
+INV-SRC-00632,facturx,True,,{}
+INV-SRC-00633,peppol_bis_3,True,,{}
+INV-SRC-00634,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-00635,nlcius,False,missing_required_field|currency_not_supported,"{""payment_reference"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-00636,pint_sg,True,,{}
+INV-SRC-00637,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""15269.21"", ""total_amount"": ""84674.73""}"
+INV-SRC-00638,xrechnung_ubl,True,,{}
+INV-SRC-00639,nlcius,True,,{}
+INV-SRC-00640,peppol_bis_3,True,,{}
+INV-SRC-00641,facturx,True,,{}
+INV-SRC-00642,peppol_bis_3,True,,{}
+INV-SRC-00643,pint_sg,True,,{}
+INV-SRC-00644,nlcius,True,,{}
+INV-SRC-00645,pint_my,False,credit_note_not_supported,"{""subtotal"": ""155299.37"", ""tax_amount"": ""0.0"", ""total_amount"": ""155299.37""}"
+INV-SRC-00646,pint_my,True,,{}
+INV-SRC-00647,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00648,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""14982.55"", ""total_amount"": ""229018.92""}"
+INV-SRC-00649,nlcius,True,,{}
+INV-SRC-00650,facturx,True,,{}
+INV-SRC-00651,facturx,True,,{}
+INV-SRC-00652,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00653,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00654,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""12082.2"", ""total_amount"": ""231758.65""}"
+INV-SRC-00655,peppol_bis_3,True,,{}
+INV-SRC-00656,facturx,False,tax_amount_mismatch|line_item_structure_incompatible,"{""tax_amount"": ""32235.79"", ""total_amount"": ""161178.94"", ""line_item_structure"": ""flat""}"
+INV-SRC-00657,facturx,True,,{}
+INV-SRC-00658,xrechnung_ubl,True,,{}
+INV-SRC-00659,xrechnung_ubl,True,,{}
+INV-SRC-00660,facturx,True,,{}
+INV-SRC-00661,peppol_bis_3,True,,{}
+INV-SRC-00662,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""6248.07"", ""total_amount"": ""37488.44""}"
+INV-SRC-00663,pint_sg,True,,{}
+INV-SRC-00664,xrechnung_ubl,True,,{}
+INV-SRC-00665,nlcius,True,,{}
+INV-SRC-00666,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00667,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""16293.24"", ""total_amount"": ""249053.76""}"
+INV-SRC-00668,peppol_bis_3,True,,{}
+INV-SRC-00669,pint_my,True,,{}
+INV-SRC-00670,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""16643.16"", ""total_amount"": ""254402.54""}"
+INV-SRC-00671,nlcius,True,,{}
+INV-SRC-00672,facturx,True,,{}
+INV-SRC-00673,nlcius,True,,{}
+INV-SRC-00674,xrechnung_ubl,True,,{}
+INV-SRC-00675,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00676,xrechnung_ubl,True,,{}
+INV-SRC-00677,facturx,True,,{}
+INV-SRC-00678,nlcius,True,,{}
+INV-SRC-00679,facturx,True,,{}
+INV-SRC-00680,facturx,True,,{}
+INV-SRC-00681,pint_sg,True,,{}
+INV-SRC-00682,nlcius,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""105.0"", ""total_amount"": ""1604.96"", ""currency"": ""EUR""}"
+INV-SRC-00683,facturx,True,,{}
+INV-SRC-00684,xrechnung_ubl,True,,{}
+INV-SRC-00685,peppol_bis_3,True,,{}
+INV-SRC-00686,pint_sg,True,,{}
+INV-SRC-00687,peppol_bis_3,True,,{}
+INV-SRC-00688,pint_sg,True,,{}
+INV-SRC-00689,pint_my,True,,{}
+INV-SRC-00690,nlcius,True,,{}
+INV-SRC-00691,pint_sg,True,,{}
+INV-SRC-00692,nlcius,True,,{}
+INV-SRC-00693,pint_sg,True,,{}
+INV-SRC-00694,peppol_bis_3,True,,{}
+INV-SRC-00695,facturx,True,,{}
+INV-SRC-00696,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""6219.9"", ""total_amount"": ""245446.81""}"
+INV-SRC-00697,xrechnung_ubl,True,,{}
+INV-SRC-00698,xrechnung_ubl,True,,{}
+INV-SRC-00699,facturx,True,,{}
+INV-SRC-00700,facturx,True,,{}
+INV-SRC-00701,xrechnung_ubl,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00702,xrechnung_ubl,True,,{}
+INV-SRC-00703,nlcius,True,,{}
+INV-SRC-00704,nlcius,True,,{}
+INV-SRC-00705,peppol_bis_3,True,,{}
+INV-SRC-00706,peppol_bis_3,True,,{}
+INV-SRC-00707,facturx,True,,{}
+INV-SRC-00708,facturx,True,,{}
+INV-SRC-00709,pint_sg,True,,{}
+INV-SRC-00710,facturx,True,,{}
+INV-SRC-00711,facturx,True,,{}
+INV-SRC-00712,xrechnung_ubl,True,,{}
+INV-SRC-00713,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00714,pint_sg,True,,{}
+INV-SRC-00715,xrechnung_ubl,True,,{}
+INV-SRC-00716,pint_sg,True,,{}
+INV-SRC-00717,pint_my,True,,{}
+INV-SRC-00718,facturx,True,,{}
+INV-SRC-00719,pint_sg,True,,{}
+INV-SRC-00720,pint_sg,True,,{}
+INV-SRC-00721,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00722,nlcius,True,,{}
+INV-SRC-00723,xrechnung_ubl,True,,{}
+INV-SRC-00724,pint_sg,True,,{}
+INV-SRC-00725,xrechnung_ubl,True,,{}
+INV-SRC-00726,peppol_bis_3,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""624.18"", ""total_amount"": ""8330.09"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00727,facturx,True,,{}
+INV-SRC-00728,peppol_bis_3,True,,{}
+INV-SRC-00729,nlcius,True,,{}
+INV-SRC-00730,peppol_bis_3,True,,{}
+INV-SRC-00731,pint_my,True,,{}
+INV-SRC-00732,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""8070.68"", ""total_amount"": ""154810.36""}"
+INV-SRC-00733,facturx,True,,{}
+INV-SRC-00734,facturx,True,,{}
+INV-SRC-00735,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_SG""}"
+INV-SRC-00736,peppol_bis_3,True,,{}
+INV-SRC-00737,xrechnung_ubl,True,,{}
+INV-SRC-00738,nlcius,True,,{}
+INV-SRC-00739,xrechnung_ubl,True,,{}
+INV-SRC-00740,pint_my,True,,{}
+INV-SRC-00741,nlcius,True,,{}
+INV-SRC-00742,pint_sg,True,,{}
+INV-SRC-00743,peppol_bis_3,True,,{}
+INV-SRC-00744,peppol_bis_3,True,,{}
+INV-SRC-00745,peppol_bis_3,True,,{}
+INV-SRC-00746,pint_my,True,,{}
+INV-SRC-00747,xrechnung_ubl,True,,{}
+INV-SRC-00748,pint_sg,True,,{}
+INV-SRC-00749,peppol_bis_3,True,,{}
+INV-SRC-00750,peppol_bis_3,True,,{}
+INV-SRC-00751,facturx,True,,{}
+INV-SRC-00752,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00753,facturx,True,,{}
+INV-SRC-00754,xrechnung_ubl,True,,{}
+INV-SRC-00755,xrechnung_ubl,True,,{}
+INV-SRC-00756,nlcius,True,,{}
+INV-SRC-00757,peppol_bis_3,True,,{}
+INV-SRC-00758,pint_my,True,,{}
+INV-SRC-00759,xrechnung_ubl,True,,{}
+INV-SRC-00760,xrechnung_ubl,True,,{}
+INV-SRC-00761,facturx,True,,{}
+INV-SRC-00762,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""31110.22"", ""total_amount"": ""194848.22"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00763,peppol_bis_3,True,,{}
+INV-SRC-00764,facturx,True,,{}
+INV-SRC-00765,pint_sg,True,,{}
+INV-SRC-00766,pint_sg,True,,{}
+INV-SRC-00767,xrechnung_ubl,True,,{}
+INV-SRC-00768,xrechnung_ubl,True,,{}
+INV-SRC-00769,pint_sg,True,,{}
+INV-SRC-00770,facturx,True,,{}
+INV-SRC-00771,facturx,True,,{}
+INV-SRC-00772,facturx,True,,{}
+INV-SRC-00773,pint_sg,True,,{}
+INV-SRC-00774,pint_sg,True,,{}
+INV-SRC-00775,xrechnung_ubl,True,,{}
+INV-SRC-00776,peppol_bis_3,True,,{}
+INV-SRC-00777,peppol_bis_3,True,,{}
+INV-SRC-00778,facturx,True,,{}
+INV-SRC-00779,peppol_bis_3,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""10802.66"", ""total_amount"": ""118829.26"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00780,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-00781,facturx,True,,{}
+INV-SRC-00782,peppol_bis_3,True,,{}
+INV-SRC-00783,facturx,True,,{}
+INV-SRC-00784,nlcius,True,,{}
+INV-SRC-00785,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""899.4"", ""total_amount"": ""35491.83""}"
+INV-SRC-00786,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00787,xrechnung_ubl,True,,{}
+INV-SRC-00788,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00789,pint_sg,True,,{}
+INV-SRC-00790,facturx,True,,{}
+INV-SRC-00791,facturx,True,,{}
+INV-SRC-00792,nlcius,True,,{}
+INV-SRC-00793,nlcius,True,,{}
+INV-SRC-00794,pint_my,True,,{}
+INV-SRC-00795,xrechnung_ubl,True,,{}
+INV-SRC-00796,pint_sg,True,,{}
+INV-SRC-00797,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""5647.86"", ""total_amount"": ""99778.86""}"
+INV-SRC-00798,pint_sg,True,,{}
+INV-SRC-00799,nlcius,True,,{}
+INV-SRC-00800,pint_my,True,,{}
+INV-SRC-00801,xrechnung_ubl,True,,{}
+INV-SRC-00802,pint_sg,True,,{}
+INV-SRC-00803,nlcius,True,,{}
+INV-SRC-00804,facturx,True,,{}
+INV-SRC-00805,nlcius,True,,{}
+INV-SRC-00806,peppol_bis_3,True,,{}
+INV-SRC-00807,xrechnung_ubl,True,,{}
+INV-SRC-00808,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-00809,nlcius,True,,{}
+INV-SRC-00810,peppol_bis_3,True,,{}
+INV-SRC-00811,peppol_bis_3,True,,{}
+INV-SRC-00812,facturx,True,,{}
+INV-SRC-00813,nlcius,True,,{}
+INV-SRC-00814,peppol_bis_3,True,,{}
+INV-SRC-00815,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00816,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00817,pint_my,True,,{}
+INV-SRC-00818,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00819,xrechnung_ubl,True,,{}
+INV-SRC-00820,facturx,True,,{}
+INV-SRC-00821,xrechnung_ubl,True,,{}
+INV-SRC-00822,xrechnung_ubl,True,,{}
+INV-SRC-00823,xrechnung_ubl,True,,{}
+INV-SRC-00824,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00825,peppol_bis_3,True,,{}
+INV-SRC-00826,nlcius,True,,{}
+INV-SRC-00827,xrechnung_ubl,True,,{}
+INV-SRC-00828,nlcius,True,,{}
+INV-SRC-00829,xrechnung_ubl,True,,{}
+INV-SRC-00830,peppol_bis_3,True,,{}
+INV-SRC-00831,peppol_bis_3,True,,{}
+INV-SRC-00832,nlcius,True,,{}
+INV-SRC-00833,nlcius,True,,{}
+INV-SRC-00834,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""775.51"", ""total_amount"": ""4653.04""}"
+INV-SRC-00835,facturx,True,,{}
+INV-SRC-00836,facturx,True,,{}
+INV-SRC-00837,facturx,True,,{}
+INV-SRC-00838,peppol_bis_3,True,,{}
+INV-SRC-00839,nlcius,True,,{}
+INV-SRC-00840,nlcius,True,,{}
+INV-SRC-00841,pint_my,True,,{}
+INV-SRC-00842,xrechnung_ubl,True,,{}
+INV-SRC-00843,xrechnung_ubl,True,,{}
+INV-SRC-00844,peppol_bis_3,True,,{}
+INV-SRC-00845,nlcius,True,,{}
+INV-SRC-00846,nlcius,True,,{}
+INV-SRC-00847,nlcius,True,,{}
+INV-SRC-00848,pint_sg,True,,{}
+INV-SRC-00849,facturx,True,,{}
+INV-SRC-00850,peppol_bis_3,True,,{}
+INV-SRC-00851,facturx,True,,{}
+INV-SRC-00852,xrechnung_ubl,True,,{}
+INV-SRC-00853,xrechnung_ubl,True,,{}
+INV-SRC-00854,nlcius,True,,{}
+INV-SRC-00855,facturx,True,,{}
+INV-SRC-00856,xrechnung_ubl,True,,{}
+INV-SRC-00857,pint_my,True,,{}
+INV-SRC-00858,pint_my,True,,{}
+INV-SRC-00859,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00860,pint_sg,True,,{}
+INV-SRC-00861,pint_sg,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00862,facturx,True,,{}
+INV-SRC-00863,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-00864,nlcius,True,,{}
+INV-SRC-00865,peppol_bis_3,False,missing_required_field|currency_not_supported,"{""payment_reference"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-00866,xrechnung_ubl,True,,{}
+INV-SRC-00867,facturx,True,,{}
+INV-SRC-00868,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00869,pint_my,True,,{}
+INV-SRC-00870,facturx,True,,{}
+INV-SRC-00871,nlcius,True,,{}
+INV-SRC-00872,peppol_bis_3,True,,{}
+INV-SRC-00873,nlcius,True,,{}
+INV-SRC-00874,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00875,xrechnung_ubl,True,,{}
+INV-SRC-00876,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-00877,pint_sg,True,,{}
+INV-SRC-00878,xrechnung_ubl,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-00879,xrechnung_ubl,True,,{}
+INV-SRC-00880,peppol_bis_3,True,,{}
+INV-SRC-00881,pint_my,True,,{}
+INV-SRC-00882,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00883,xrechnung_ubl,True,,{}
+INV-SRC-00884,peppol_bis_3,True,,{}
+INV-SRC-00885,peppol_bis_3,True,,{}
+INV-SRC-00886,pint_sg,True,,{}
+INV-SRC-00887,facturx,True,,{}
+INV-SRC-00888,xrechnung_ubl,True,,{}
+INV-SRC-00889,xrechnung_ubl,True,,{}
+INV-SRC-00890,nlcius,True,,{}
+INV-SRC-00891,nlcius,True,,{}
+INV-SRC-00892,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-00893,xrechnung_ubl,True,,{}
+INV-SRC-00894,pint_my,True,,{}
+INV-SRC-00895,nlcius,True,,{}
+INV-SRC-00896,facturx,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""7220.7"", ""total_amount"": ""110373.52"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00897,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""695.81"", ""total_amount"": ""10635.91"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00898,peppol_bis_3,True,,{}
+INV-SRC-00899,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""606.48"", ""total_amount"": ""9270.48""}"
+INV-SRC-00900,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""18800.18"", ""total_amount"": ""227691.03""}"
+INV-SRC-00901,nlcius,True,,{}
+INV-SRC-00902,facturx,True,,{}
+INV-SRC-00903,facturx,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""4640.38"", ""total_amount"": ""183116.61"", ""currency"": ""EUR""}"
+INV-SRC-00904,facturx,True,,{}
+INV-SRC-00905,facturx,True,,{}
+INV-SRC-00906,facturx,True,,{}
+INV-SRC-00907,nlcius,True,,{}
+INV-SRC-00908,peppol_bis_3,True,,{}
+INV-SRC-00909,facturx,True,,{}
+INV-SRC-00910,xrechnung_ubl,True,,{}
+INV-SRC-00911,xrechnung_ubl,True,,{}
+INV-SRC-00912,facturx,False,currency_not_supported|line_item_structure_incompatible,"{""currency"": ""EUR"", ""line_item_structure"": ""flat""}"
+INV-SRC-00913,nlcius,True,,{}
+INV-SRC-00914,pint_my,True,,{}
+INV-SRC-00915,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00916,facturx,True,,{}
+INV-SRC-00917,facturx,True,,{}
+INV-SRC-00918,facturx,True,,{}
+INV-SRC-00919,peppol_bis_3,True,,{}
+INV-SRC-00920,nlcius,True,,{}
+INV-SRC-00921,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""469.61"", ""total_amount"": ""7178.37""}"
+INV-SRC-00922,peppol_bis_3,True,,{}
+INV-SRC-00923,nlcius,True,,{}
+INV-SRC-00924,xrechnung_ubl,True,,{}
+INV-SRC-00925,xrechnung_ubl,True,,{}
+INV-SRC-00926,peppol_bis_3,True,,{}
+INV-SRC-00927,xrechnung_ubl,True,,{}
+INV-SRC-00928,facturx,True,,{}
+INV-SRC-00929,peppol_bis_3,True,,{}
+INV-SRC-00930,xrechnung_ubl,True,,{}
+INV-SRC-00931,peppol_bis_3,True,,{}
+INV-SRC-00932,peppol_bis_3,True,,{}
+INV-SRC-00933,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-00934,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""929.25"", ""total_amount"": ""14204.23""}"
+INV-SRC-00935,nlcius,True,,{}
+INV-SRC-00936,xrechnung_ubl,True,,{}
+INV-SRC-00937,facturx,True,,{}
+INV-SRC-00938,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-00939,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-00940,nlcius,True,,{}
+INV-SRC-00941,pint_my,True,,{}
+INV-SRC-00942,pint_sg,True,,{}
+INV-SRC-00943,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""16343.08"", ""total_amount"": ""102359.3""}"
+INV-SRC-00944,peppol_bis_3,True,,{}
+INV-SRC-00945,peppol_bis_3,True,,{}
+INV-SRC-00946,xrechnung_ubl,True,,{}
+INV-SRC-00947,facturx,True,,{}
+INV-SRC-00948,pint_my,True,,{}
+INV-SRC-00949,xrechnung_ubl,True,,{}
+INV-SRC-00950,peppol_bis_3,True,,{}
+INV-SRC-00951,facturx,True,,{}
+INV-SRC-00952,nlcius,True,,{}
+INV-SRC-00953,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""9453.34"", ""total_amount"": ""144501.09""}"
+INV-SRC-00954,nlcius,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""9611.53"", ""total_amount"": ""128272.36"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00955,facturx,True,,{}
+INV-SRC-00956,xrechnung_ubl,True,,{}
+INV-SRC-00957,facturx,True,,{}
+INV-SRC-00958,peppol_bis_3,True,,{}
+INV-SRC-00959,pint_sg,True,,{}
+INV-SRC-00960,nlcius,True,,{}
+INV-SRC-00961,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00962,peppol_bis_3,True,,{}
+INV-SRC-00963,pint_my,False,missing_required_field|credit_note_not_supported,"{""buyer_id"": ""REQUIRED"", ""subtotal"": ""17165.26"", ""tax_amount"": ""1201.57"", ""total_amount"": ""18366.83""}"
+INV-SRC-00964,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00965,xrechnung_ubl,True,,{}
+INV-SRC-00966,facturx,True,,{}
+INV-SRC-00967,peppol_bis_3,True,,{}
+INV-SRC-00968,pint_my,True,,{}
+INV-SRC-00969,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""169.81"", ""total_amount"": ""1867.95""}"
+INV-SRC-00970,peppol_bis_3,False,currency_not_supported|buyer_vat_missing_for_target,"{""currency"": ""EUR"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-00971,peppol_bis_3,True,,{}
+INV-SRC-00972,peppol_bis_3,True,,{}
+INV-SRC-00973,nlcius,True,,{}
+INV-SRC-00974,pint_my,True,,{}
+INV-SRC-00975,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""4378.89"", ""total_amount"": ""48167.78""}"
+INV-SRC-00976,nlcius,True,,{}
+INV-SRC-00977,peppol_bis_3,True,,{}
+INV-SRC-00978,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-00979,nlcius,True,,{}
+INV-SRC-00980,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-00981,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-00982,nlcius,True,,{}
+INV-SRC-00983,peppol_bis_3,True,,{}
+INV-SRC-00984,peppol_bis_3,True,,{}
+INV-SRC-00985,facturx,True,,{}
+INV-SRC-00986,pint_my,True,,{}
+INV-SRC-00987,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""delivery_date"": ""REQUIRED"", ""tax_amount"": ""869.66"", ""total_amount"": ""9566.25""}"
+INV-SRC-00988,pint_sg,True,,{}
+INV-SRC-00989,nlcius,True,,{}
+INV-SRC-00990,facturx,True,,{}
+INV-SRC-00991,peppol_bis_3,True,,{}
+INV-SRC-00992,xrechnung_ubl,True,,{}
+INV-SRC-00993,xrechnung_ubl,True,,{}
+INV-SRC-00994,xrechnung_ubl,True,,{}
+INV-SRC-00995,nlcius,True,,{}
+INV-SRC-00996,pint_sg,True,,{}
+INV-SRC-00997,pint_sg,True,,{}
+INV-SRC-00998,nlcius,True,,{}
+INV-SRC-00999,pint_my,True,,{}
+INV-SRC-01000,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-01001,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""32369.89"", ""total_amount"": ""202737.74""}"
+INV-SRC-01002,pint_my,True,,{}
+INV-SRC-01003,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""2001.04"", ""total_amount"": ""12532.84""}"
+INV-SRC-01004,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-01005,xrechnung_ubl,True,,{}
+INV-SRC-01006,facturx,True,,{}
+INV-SRC-01007,facturx,True,,{}
+INV-SRC-01008,nlcius,True,,{}
+INV-SRC-01009,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""879.15"", ""total_amount"": ""5274.89"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01010,facturx,True,,{}
+INV-SRC-01011,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""19082.59"", ""total_amount"": ""209908.47""}"
+INV-SRC-01012,xrechnung_ubl,True,,{}
+INV-SRC-01013,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01014,nlcius,True,,{}
+INV-SRC-01015,xrechnung_ubl,True,,{}
+INV-SRC-01016,facturx,False,seller_vat_format_invalid|credit_note_not_supported,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL"", ""subtotal"": ""190473.37"", ""tax_amount"": ""17142.6"", ""total_amount"": ""207615.97""}"
+INV-SRC-01017,xrechnung_ubl,True,,{}
+INV-SRC-01018,facturx,True,,{}
+INV-SRC-01019,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""602.81"", ""total_amount"": ""3775.51""}"
+INV-SRC-01020,facturx,True,,{}
+INV-SRC-01021,pint_sg,True,,{}
+INV-SRC-01022,pint_my,True,,{}
+INV-SRC-01023,pint_my,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-01024,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""2991.84"", ""total_amount"": ""57388.95"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01025,xrechnung_ubl,True,,{}
+INV-SRC-01026,peppol_bis_3,True,,{}
+INV-SRC-01027,facturx,True,,{}
+INV-SRC-01028,nlcius,True,,{}
+INV-SRC-01029,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01030,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01031,xrechnung_ubl,True,,{}
+INV-SRC-01032,pint_sg,True,,{}
+INV-SRC-01033,facturx,True,,{}
+INV-SRC-01034,pint_sg,True,,{}
+INV-SRC-01035,peppol_bis_3,True,,{}
+INV-SRC-01036,nlcius,True,,{}
+INV-SRC-01037,pint_sg,True,,{}
+INV-SRC-01038,facturx,True,,{}
+INV-SRC-01039,peppol_bis_3,True,,{}
+INV-SRC-01040,nlcius,True,,{}
+INV-SRC-01041,xrechnung_ubl,True,,{}
+INV-SRC-01042,pint_sg,True,,{}
+INV-SRC-01043,peppol_bis_3,True,,{}
+INV-SRC-01044,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""18545.93"", ""total_amount"": ""247508.08""}"
+INV-SRC-01045,facturx,True,,{}
+INV-SRC-01046,peppol_bis_3,True,,{}
+INV-SRC-01047,nlcius,True,,{}
+INV-SRC-01048,facturx,True,,{}
+INV-SRC-01049,facturx,True,,{}
+INV-SRC-01050,nlcius,True,,{}
+INV-SRC-01051,peppol_bis_3,True,,{}
+INV-SRC-01052,pint_my,True,,{}
+INV-SRC-01053,xrechnung_ubl,True,,{}
+INV-SRC-01054,facturx,True,,{}
+INV-SRC-01055,facturx,True,,{}
+INV-SRC-01056,peppol_bis_3,True,,{}
+INV-SRC-01057,nlcius,True,,{}
+INV-SRC-01058,xrechnung_ubl,True,,{}
+INV-SRC-01059,peppol_bis_3,True,,{}
+INV-SRC-01060,nlcius,True,,{}
+INV-SRC-01061,xrechnung_ubl,True,,{}
+INV-SRC-01062,pint_sg,True,,{}
+INV-SRC-01063,pint_sg,True,,{}
+INV-SRC-01064,nlcius,True,,{}
+INV-SRC-01065,nlcius,True,,{}
+INV-SRC-01066,nlcius,True,,{}
+INV-SRC-01067,xrechnung_ubl,True,,{}
+INV-SRC-01068,peppol_bis_3,True,,{}
+INV-SRC-01069,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01070,facturx,False,credit_note_not_supported,"{""subtotal"": ""39334.08"", ""tax_amount"": ""2753.39"", ""total_amount"": ""42087.47""}"
+INV-SRC-01071,xrechnung_ubl,True,,{}
+INV-SRC-01072,peppol_bis_3,True,,{}
+INV-SRC-01073,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01074,pint_my,True,,{}
+INV-SRC-01075,xrechnung_ubl,True,,{}
+INV-SRC-01076,peppol_bis_3,True,,{}
+INV-SRC-01077,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""820.82"", ""total_amount"": ""5140.9""}"
+INV-SRC-01078,nlcius,True,,{}
+INV-SRC-01079,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01080,peppol_bis_3,True,,{}
+INV-SRC-01081,xrechnung_ubl,True,,{}
+INV-SRC-01082,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""7911.46"", ""total_amount"": ""45585.1"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01083,pint_sg,True,,{}
+INV-SRC-01084,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""34927.09"", ""total_amount"": ""201246.56""}"
+INV-SRC-01085,facturx,True,,{}
+INV-SRC-01086,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01087,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01088,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01089,facturx,True,,{}
+INV-SRC-01090,nlcius,True,,{}
+INV-SRC-01091,peppol_bis_3,True,,{}
+INV-SRC-01092,peppol_bis_3,True,,{}
+INV-SRC-01093,pint_my,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_SG""}"
+INV-SRC-01094,peppol_bis_3,True,,{}
+INV-SRC-01095,facturx,True,,{}
+INV-SRC-01096,facturx,True,,{}
+INV-SRC-01097,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01098,xrechnung_ubl,True,,{}
+INV-SRC-01099,pint_my,True,,{}
+INV-SRC-01100,peppol_bis_3,True,,{}
+INV-SRC-01101,pint_my,True,,{}
+INV-SRC-01102,peppol_bis_3,True,,{}
+INV-SRC-01103,nlcius,True,,{}
+INV-SRC-01104,peppol_bis_3,True,,{}
+INV-SRC-01105,pint_sg,True,,{}
+INV-SRC-01106,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01107,nlcius,True,,{}
+INV-SRC-01108,pint_my,True,,{}
+INV-SRC-01109,facturx,True,,{}
+INV-SRC-01110,facturx,True,,{}
+INV-SRC-01111,facturx,True,,{}
+INV-SRC-01112,xrechnung_ubl,True,,{}
+INV-SRC-01113,pint_sg,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01114,xrechnung_ubl,True,,{}
+INV-SRC-01115,pint_sg,True,,{}
+INV-SRC-01116,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""2393.98"", ""total_amount"": ""36593.69""}"
+INV-SRC-01117,nlcius,True,,{}
+INV-SRC-01118,pint_my,True,,{}
+INV-SRC-01119,xrechnung_ubl,True,,{}
+INV-SRC-01120,facturx,True,,{}
+INV-SRC-01121,facturx,True,,{}
+INV-SRC-01122,facturx,True,,{}
+INV-SRC-01123,peppol_bis_3,True,,{}
+INV-SRC-01124,xrechnung_ubl,True,,{}
+INV-SRC-01125,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01126,pint_sg,True,,{}
+INV-SRC-01127,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01128,nlcius,True,,{}
+INV-SRC-01129,facturx,True,,{}
+INV-SRC-01130,nlcius,True,,{}
+INV-SRC-01131,peppol_bis_3,True,,{}
+INV-SRC-01132,facturx,True,,{}
+INV-SRC-01133,facturx,True,,{}
+INV-SRC-01134,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""34805.82"", ""total_amount"": ""217994.32""}"
+INV-SRC-01135,nlcius,True,,{}
+INV-SRC-01136,facturx,True,,{}
+INV-SRC-01137,facturx,True,,{}
+INV-SRC-01138,peppol_bis_3,True,,{}
+INV-SRC-01139,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""4636.02"", ""total_amount"": ""56147.33""}"
+INV-SRC-01140,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""39598.03"", ""total_amount"": ""194884.43""}"
+INV-SRC-01141,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""631.42"", ""total_amount"": ""9651.7""}"
+INV-SRC-01142,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""710.45"", ""total_amount"": ""18471.58""}"
+INV-SRC-01143,peppol_bis_3,True,,{}
+INV-SRC-01144,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01145,peppol_bis_3,True,,{}
+INV-SRC-01146,xrechnung_ubl,True,,{}
+INV-SRC-01147,facturx,True,,{}
+INV-SRC-01148,xrechnung_ubl,True,,{}
+INV-SRC-01149,peppol_bis_3,True,,{}
+INV-SRC-01150,peppol_bis_3,True,,{}
+INV-SRC-01151,facturx,True,,{}
+INV-SRC-01152,facturx,True,,{}
+INV-SRC-01153,facturx,True,,{}
+INV-SRC-01154,pint_my,True,,{}
+INV-SRC-01155,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01156,facturx,True,,{}
+INV-SRC-01157,xrechnung_ubl,True,,{}
+INV-SRC-01158,pint_my,True,,{}
+INV-SRC-01159,pint_my,True,,{}
+INV-SRC-01160,nlcius,True,,{}
+INV-SRC-01161,pint_my,True,,{}
+INV-SRC-01162,facturx,True,,{}
+INV-SRC-01163,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01164,xrechnung_ubl,True,,{}
+INV-SRC-01165,peppol_bis_3,True,,{}
+INV-SRC-01166,facturx,True,,{}
+INV-SRC-01167,xrechnung_ubl,True,,{}
+INV-SRC-01168,facturx,False,tax_amount_mismatch|line_item_structure_incompatible,"{""tax_amount"": ""45987.24"", ""total_amount"": ""288025.32"", ""line_item_structure"": ""flat""}"
+INV-SRC-01169,peppol_bis_3,True,,{}
+INV-SRC-01170,xrechnung_ubl,True,,{}
+INV-SRC-01171,facturx,False,line_item_structure_incompatible|seller_vat_format_invalid,"{""line_item_structure"": ""flat"", ""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01172,peppol_bis_3,True,,{}
+INV-SRC-01173,xrechnung_ubl,True,,{}
+INV-SRC-01174,facturx,True,,{}
+INV-SRC-01175,facturx,True,,{}
+INV-SRC-01176,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""9397.06"", ""total_amount"": ""56382.37""}"
+INV-SRC-01177,peppol_bis_3,True,,{}
+INV-SRC-01178,facturx,True,,{}
+INV-SRC-01179,nlcius,True,,{}
+INV-SRC-01180,peppol_bis_3,True,,{}
+INV-SRC-01181,nlcius,True,,{}
+INV-SRC-01182,xrechnung_ubl,True,,{}
+INV-SRC-01183,facturx,True,,{}
+INV-SRC-01184,pint_sg,True,,{}
+INV-SRC-01185,peppol_bis_3,True,,{}
+INV-SRC-01186,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01187,peppol_bis_3,True,,{}
+INV-SRC-01188,nlcius,True,,{}
+INV-SRC-01189,xrechnung_ubl,True,,{}
+INV-SRC-01190,nlcius,True,,{}
+INV-SRC-01191,pint_my,True,,{}
+INV-SRC-01192,peppol_bis_3,True,,{}
+INV-SRC-01193,xrechnung_ubl,True,,{}
+INV-SRC-01194,facturx,True,,{}
+INV-SRC-01195,facturx,True,,{}
+INV-SRC-01196,nlcius,True,,{}
+INV-SRC-01197,peppol_bis_3,True,,{}
+INV-SRC-01198,nlcius,True,,{}
+INV-SRC-01199,nlcius,True,,{}
+INV-SRC-01200,xrechnung_ubl,True,,{}
+INV-SRC-01201,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01202,pint_my,True,,{}
+INV-SRC-01203,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""12715.61"", ""total_amount"": ""154000.16""}"
+INV-SRC-01204,xrechnung_ubl,True,,{}
+INV-SRC-01205,pint_my,True,,{}
+INV-SRC-01206,facturx,True,,{}
+INV-SRC-01207,xrechnung_ubl,True,,{}
+INV-SRC-01208,facturx,True,,{}
+INV-SRC-01209,xrechnung_ubl,True,,{}
+INV-SRC-01210,xrechnung_ubl,True,,{}
+INV-SRC-01211,facturx,True,,{}
+INV-SRC-01212,xrechnung_ubl,True,,{}
+INV-SRC-01213,xrechnung_ubl,True,,{}
+INV-SRC-01214,xrechnung_ubl,True,,{}
+INV-SRC-01215,facturx,True,,{}
+INV-SRC-01216,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""17273.74"", ""total_amount"": ""264041.41""}"
+INV-SRC-01217,xrechnung_ubl,True,,{}
+INV-SRC-01218,facturx,True,,{}
+INV-SRC-01219,peppol_bis_3,True,,{}
+INV-SRC-01220,peppol_bis_3,True,,{}
+INV-SRC-01221,peppol_bis_3,True,,{}
+INV-SRC-01222,nlcius,True,,{}
+INV-SRC-01223,xrechnung_ubl,True,,{}
+INV-SRC-01224,facturx,True,,{}
+INV-SRC-01225,peppol_bis_3,True,,{}
+INV-SRC-01226,facturx,True,,{}
+INV-SRC-01227,nlcius,False,missing_required_field|currency_not_supported,"{""buyer_id"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-01228,pint_sg,True,,{}
+INV-SRC-01229,peppol_bis_3,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""11053.57"", ""total_amount"": ""212027.63"", ""currency"": ""EUR""}"
+INV-SRC-01230,facturx,True,,{}
+INV-SRC-01231,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-01232,nlcius,True,,{}
+INV-SRC-01233,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-01234,facturx,True,,{}
+INV-SRC-01235,nlcius,True,,{}
+INV-SRC-01236,nlcius,True,,{}
+INV-SRC-01237,pint_my,True,,{}
+INV-SRC-01238,xrechnung_ubl,True,,{}
+INV-SRC-01239,xrechnung_ubl,True,,{}
+INV-SRC-01240,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""8656.84"", ""total_amount"": ""132325.93""}"
+INV-SRC-01241,xrechnung_ubl,True,,{}
+INV-SRC-01242,facturx,True,,{}
+INV-SRC-01243,facturx,True,,{}
+INV-SRC-01244,peppol_bis_3,True,,{}
+INV-SRC-01245,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01246,pint_sg,True,,{}
+INV-SRC-01247,pint_sg,True,,{}
+INV-SRC-01248,nlcius,True,,{}
+INV-SRC-01249,pint_sg,True,,{}
+INV-SRC-01250,facturx,True,,{}
+INV-SRC-01251,facturx,True,,{}
+INV-SRC-01252,peppol_bis_3,True,,{}
+INV-SRC-01253,nlcius,True,,{}
+INV-SRC-01254,pint_sg,True,,{}
+INV-SRC-01255,peppol_bis_3,True,,{}
+INV-SRC-01256,xrechnung_ubl,True,,{}
+INV-SRC-01257,xrechnung_ubl,True,,{}
+INV-SRC-01258,pint_my,True,,{}
+INV-SRC-01259,peppol_bis_3,True,,{}
+INV-SRC-01260,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""7323.3"", ""total_amount"": ""59632.58""}"
+INV-SRC-01261,nlcius,True,,{}
+INV-SRC-01262,pint_sg,True,,{}
+INV-SRC-01263,facturx,True,,{}
+INV-SRC-01264,peppol_bis_3,True,,{}
+INV-SRC-01265,pint_sg,True,,{}
+INV-SRC-01266,xrechnung_ubl,True,,{}
+INV-SRC-01267,facturx,True,,{}
+INV-SRC-01268,peppol_bis_3,True,,{}
+INV-SRC-01269,xrechnung_ubl,True,,{}
+INV-SRC-01270,facturx,True,,{}
+INV-SRC-01271,nlcius,True,,{}
+INV-SRC-01272,xrechnung_ubl,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01273,xrechnung_ubl,True,,{}
+INV-SRC-01274,facturx,True,,{}
+INV-SRC-01275,xrechnung_ubl,True,,{}
+INV-SRC-01276,pint_my,True,,{}
+INV-SRC-01277,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01278,pint_sg,True,,{}
+INV-SRC-01279,peppol_bis_3,True,,{}
+INV-SRC-01280,facturx,True,,{}
+INV-SRC-01281,facturx,True,,{}
+INV-SRC-01282,nlcius,True,,{}
+INV-SRC-01283,facturx,True,,{}
+INV-SRC-01284,facturx,True,,{}
+INV-SRC-01285,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01286,pint_my,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01287,facturx,True,,{}
+INV-SRC-01288,nlcius,True,,{}
+INV-SRC-01289,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01290,facturx,True,,{}
+INV-SRC-01291,pint_my,True,,{}
+INV-SRC-01292,peppol_bis_3,True,,{}
+INV-SRC-01293,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01294,xrechnung_ubl,True,,{}
+INV-SRC-01295,xrechnung_ubl,True,,{}
+INV-SRC-01296,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01297,pint_my,True,,{}
+INV-SRC-01298,peppol_bis_3,True,,{}
+INV-SRC-01299,facturx,True,,{}
+INV-SRC-01300,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01301,facturx,True,,{}
+INV-SRC-01302,peppol_bis_3,True,,{}
+INV-SRC-01303,pint_my,True,,{}
+INV-SRC-01304,nlcius,True,,{}
+INV-SRC-01305,peppol_bis_3,True,,{}
+INV-SRC-01306,peppol_bis_3,True,,{}
+INV-SRC-01307,facturx,True,,{}
+INV-SRC-01308,facturx,True,,{}
+INV-SRC-01309,nlcius,True,,{}
+INV-SRC-01310,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-01311,xrechnung_ubl,True,,{}
+INV-SRC-01312,peppol_bis_3,True,,{}
+INV-SRC-01313,pint_sg,True,,{}
+INV-SRC-01314,facturx,True,,{}
+INV-SRC-01315,xrechnung_ubl,True,,{}
+INV-SRC-01316,xrechnung_ubl,True,,{}
+INV-SRC-01317,nlcius,True,,{}
+INV-SRC-01318,xrechnung_ubl,True,,{}
+INV-SRC-01319,xrechnung_ubl,True,,{}
+INV-SRC-01320,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01321,xrechnung_ubl,True,,{}
+INV-SRC-01322,facturx,True,,{}
+INV-SRC-01323,pint_sg,True,,{}
+INV-SRC-01324,xrechnung_ubl,True,,{}
+INV-SRC-01325,nlcius,True,,{}
+INV-SRC-01326,facturx,True,,{}
+INV-SRC-01327,nlcius,True,,{}
+INV-SRC-01328,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""10658.01"", ""total_amount"": ""129080.33""}"
+INV-SRC-01329,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""1208.81"", ""total_amount"": ""13296.88""}"
+INV-SRC-01330,pint_my,True,,{}
+INV-SRC-01331,facturx,True,,{}
+INV-SRC-01332,facturx,True,,{}
+INV-SRC-01333,nlcius,True,,{}
+INV-SRC-01334,facturx,True,,{}
+INV-SRC-01335,nlcius,True,,{}
+INV-SRC-01336,nlcius,True,,{}
+INV-SRC-01337,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01338,facturx,True,,{}
+INV-SRC-01339,peppol_bis_3,True,,{}
+INV-SRC-01340,pint_sg,True,,{}
+INV-SRC-01341,peppol_bis_3,True,,{}
+INV-SRC-01342,facturx,True,,{}
+INV-SRC-01343,peppol_bis_3,True,,{}
+INV-SRC-01344,nlcius,True,,{}
+INV-SRC-01345,xrechnung_ubl,True,,{}
+INV-SRC-01346,peppol_bis_3,True,,{}
+INV-SRC-01347,facturx,True,,{}
+INV-SRC-01348,nlcius,True,,{}
+INV-SRC-01349,pint_my,True,,{}
+INV-SRC-01350,pint_my,True,,{}
+INV-SRC-01351,peppol_bis_3,True,,{}
+INV-SRC-01352,peppol_bis_3,True,,{}
+INV-SRC-01353,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""19670.38"", ""total_amount"": ""96809.12""}"
+INV-SRC-01354,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""20.4"", ""total_amount"": ""127.76""}"
+INV-SRC-01355,pint_my,True,,{}
+INV-SRC-01356,facturx,True,,{}
+INV-SRC-01357,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""0.0"", ""total_amount"": ""10887.99""}"
+INV-SRC-01358,pint_my,True,,{}
+INV-SRC-01359,peppol_bis_3,True,,{}
+INV-SRC-01360,xrechnung_ubl,True,,{}
+INV-SRC-01361,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01362,nlcius,True,,{}
+INV-SRC-01363,nlcius,True,,{}
+INV-SRC-01364,xrechnung_ubl,True,,{}
+INV-SRC-01365,facturx,True,,{}
+INV-SRC-01366,pint_my,True,,{}
+INV-SRC-01367,facturx,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""1031.87"", ""total_amount"": ""6191.2"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01368,pint_my,True,,{}
+INV-SRC-01369,xrechnung_ubl,True,,{}
+INV-SRC-01370,pint_my,True,,{}
+INV-SRC-01371,nlcius,True,,{}
+INV-SRC-01372,facturx,True,,{}
+INV-SRC-01373,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01374,facturx,True,,{}
+INV-SRC-01375,peppol_bis_3,True,,{}
+INV-SRC-01376,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""1557.98"", ""total_amount"": ""7789.9""}"
+INV-SRC-01377,nlcius,True,,{}
+INV-SRC-01378,pint_sg,True,,{}
+INV-SRC-01379,facturx,False,credit_note_not_supported,"{""subtotal"": ""13508.32"", ""tax_amount"": ""810.5"", ""total_amount"": ""14318.82""}"
+INV-SRC-01380,nlcius,True,,{}
+INV-SRC-01381,facturx,True,,{}
+INV-SRC-01382,xrechnung_ubl,True,,{}
+INV-SRC-01383,nlcius,True,,{}
+INV-SRC-01384,peppol_bis_3,True,,{}
+INV-SRC-01385,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01386,peppol_bis_3,True,,{}
+INV-SRC-01387,facturx,True,,{}
+INV-SRC-01388,facturx,True,,{}
+INV-SRC-01389,peppol_bis_3,True,,{}
+INV-SRC-01390,pint_my,False,missing_required_field|seller_vat_format_invalid,"{""buyer_id"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_SG""}"
+INV-SRC-01391,xrechnung_ubl,True,,{}
+INV-SRC-01392,pint_my,True,,{}
+INV-SRC-01393,facturx,True,,{}
+INV-SRC-01394,facturx,False,credit_note_not_supported,"{""subtotal"": ""38412.65"", ""tax_amount"": ""2688.89"", ""total_amount"": ""41101.54""}"
+INV-SRC-01395,pint_sg,True,,{}
+INV-SRC-01396,facturx,True,,{}
+INV-SRC-01397,pint_sg,True,,{}
+INV-SRC-01398,peppol_bis_3,True,,{}
+INV-SRC-01399,facturx,True,,{}
+INV-SRC-01400,peppol_bis_3,True,,{}
+INV-SRC-01401,nlcius,True,,{}
+INV-SRC-01402,pint_sg,True,,{}
+INV-SRC-01403,peppol_bis_3,True,,{}
+INV-SRC-01404,pint_sg,True,,{}
+INV-SRC-01405,pint_sg,False,missing_required_field|buyer_vat_missing_for_target,"{""delivery_date"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01406,nlcius,True,,{}
+INV-SRC-01407,nlcius,True,,{}
+INV-SRC-01408,nlcius,True,,{}
+INV-SRC-01409,peppol_bis_3,False,currency_not_supported|seller_vat_format_invalid,"{""currency"": ""EUR"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01410,peppol_bis_3,True,,{}
+INV-SRC-01411,nlcius,True,,{}
+INV-SRC-01412,facturx,True,,{}
+INV-SRC-01413,xrechnung_ubl,True,,{}
+INV-SRC-01414,xrechnung_ubl,True,,{}
+INV-SRC-01415,facturx,True,,{}
+INV-SRC-01416,peppol_bis_3,False,missing_required_field|tax_amount_mismatch,"{""payment_reference"": ""REQUIRED"", ""tax_amount"": ""21185.49"", ""total_amount"": ""233040.4""}"
+INV-SRC-01417,nlcius,True,,{}
+INV-SRC-01418,peppol_bis_3,True,,{}
+INV-SRC-01419,nlcius,True,,{}
+INV-SRC-01420,peppol_bis_3,True,,{}
+INV-SRC-01421,facturx,True,,{}
+INV-SRC-01422,facturx,True,,{}
+INV-SRC-01423,nlcius,True,,{}
+INV-SRC-01424,nlcius,True,,{}
+INV-SRC-01425,pint_sg,True,,{}
+INV-SRC-01426,pint_my,True,,{}
+INV-SRC-01427,nlcius,True,,{}
+INV-SRC-01428,xrechnung_ubl,True,,{}
+INV-SRC-01429,nlcius,True,,{}
+INV-SRC-01430,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""953.82"", ""total_amount"": ""18296.05""}"
+INV-SRC-01431,nlcius,True,,{}
+INV-SRC-01432,nlcius,True,,{}
+INV-SRC-01433,xrechnung_ubl,False,missing_required_field|seller_vat_format_invalid,"{""delivery_date"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01434,xrechnung_ubl,True,,{}
+INV-SRC-01435,xrechnung_ubl,True,,{}
+INV-SRC-01436,pint_my,True,,{}
+INV-SRC-01437,peppol_bis_3,True,,{}
+INV-SRC-01438,xrechnung_ubl,True,,{}
+INV-SRC-01439,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01440,pint_sg,True,,{}
+INV-SRC-01441,facturx,True,,{}
+INV-SRC-01442,xrechnung_ubl,True,,{}
+INV-SRC-01443,xrechnung_ubl,True,,{}
+INV-SRC-01444,peppol_bis_3,True,,{}
+INV-SRC-01445,facturx,True,,{}
+INV-SRC-01446,pint_my,True,,{}
+INV-SRC-01447,facturx,True,,{}
+INV-SRC-01448,xrechnung_ubl,True,,{}
+INV-SRC-01449,facturx,False,missing_required_field|seller_vat_format_invalid,"{""buyer_id"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01450,facturx,True,,{}
+INV-SRC-01451,pint_sg,True,,{}
+INV-SRC-01452,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-01453,pint_sg,True,,{}
+INV-SRC-01454,peppol_bis_3,True,,{}
+INV-SRC-01455,peppol_bis_3,True,,{}
+INV-SRC-01456,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""delivery_date"": ""REQUIRED"", ""tax_amount"": ""6268.23"", ""total_amount"": ""68950.57""}"
+INV-SRC-01457,xrechnung_ubl,True,,{}
+INV-SRC-01458,facturx,True,,{}
+INV-SRC-01459,pint_my,True,,{}
+INV-SRC-01460,pint_sg,True,,{}
+INV-SRC-01461,facturx,True,,{}
+INV-SRC-01462,pint_sg,True,,{}
+INV-SRC-01463,xrechnung_ubl,True,,{}
+INV-SRC-01464,facturx,True,,{}
+INV-SRC-01465,peppol_bis_3,True,,{}
+INV-SRC-01466,facturx,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""2127.27"", ""total_amount"": ""32516.87"", ""currency"": ""EUR""}"
+INV-SRC-01467,peppol_bis_3,True,,{}
+INV-SRC-01468,peppol_bis_3,True,,{}
+INV-SRC-01469,xrechnung_ubl,True,,{}
+INV-SRC-01470,pint_my,True,,{}
+INV-SRC-01471,nlcius,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""1026.1"", ""total_amount"": ""15684.73"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01472,facturx,True,,{}
+INV-SRC-01473,peppol_bis_3,True,,{}
+INV-SRC-01474,xrechnung_ubl,True,,{}
+INV-SRC-01475,facturx,True,,{}
+INV-SRC-01476,nlcius,True,,{}
+INV-SRC-01477,xrechnung_ubl,True,,{}
+INV-SRC-01478,xrechnung_ubl,True,,{}
+INV-SRC-01479,nlcius,True,,{}
+INV-SRC-01480,xrechnung_ubl,True,,{}
+INV-SRC-01481,peppol_bis_3,True,,{}
+INV-SRC-01482,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""984.92"", ""total_amount"": ""5909.51""}"
+INV-SRC-01483,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01484,xrechnung_ubl,True,,{}
+INV-SRC-01485,facturx,True,,{}
+INV-SRC-01486,xrechnung_ubl,True,,{}
+INV-SRC-01487,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01488,nlcius,True,,{}
+INV-SRC-01489,xrechnung_ubl,True,,{}
+INV-SRC-01490,xrechnung_ubl,True,,{}
+INV-SRC-01491,xrechnung_ubl,True,,{}
+INV-SRC-01492,xrechnung_ubl,False,currency_not_supported|seller_vat_format_invalid,"{""currency"": ""EUR"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01493,peppol_bis_3,True,,{}
+INV-SRC-01494,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01495,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""15371.45"", ""total_amount"": ""169085.97""}"
+INV-SRC-01496,nlcius,True,,{}
+INV-SRC-01497,facturx,True,,{}
+INV-SRC-01498,xrechnung_ubl,True,,{}
+INV-SRC-01499,nlcius,True,,{}
+INV-SRC-01500,xrechnung_ubl,True,,{}
+INV-SRC-01501,nlcius,True,,{}
+INV-SRC-01502,xrechnung_ubl,True,,{}
+INV-SRC-01503,pint_sg,True,,{}
+INV-SRC-01504,nlcius,True,,{}
+INV-SRC-01505,xrechnung_ubl,True,,{}
+INV-SRC-01506,peppol_bis_3,True,,{}
+INV-SRC-01507,pint_my,True,,{}
+INV-SRC-01508,facturx,True,,{}
+INV-SRC-01509,peppol_bis_3,True,,{}
+INV-SRC-01510,facturx,True,,{}
+INV-SRC-01511,peppol_bis_3,True,,{}
+INV-SRC-01512,nlcius,True,,{}
+INV-SRC-01513,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01514,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01515,pint_my,True,,{}
+INV-SRC-01516,facturx,True,,{}
+INV-SRC-01517,xrechnung_ubl,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""48387.83"", ""total_amount"": ""290326.98"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-01518,nlcius,True,,{}
+INV-SRC-01519,nlcius,True,,{}
+INV-SRC-01520,xrechnung_ubl,True,,{}
+INV-SRC-01521,nlcius,True,,{}
+INV-SRC-01522,xrechnung_ubl,True,,{}
+INV-SRC-01523,facturx,True,,{}
+INV-SRC-01524,facturx,True,,{}
+INV-SRC-01525,facturx,True,,{}
+INV-SRC-01526,pint_my,True,,{}
+INV-SRC-01527,facturx,True,,{}
+INV-SRC-01528,peppol_bis_3,True,,{}
+INV-SRC-01529,pint_sg,True,,{}
+INV-SRC-01530,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""10172.84"", ""total_amount"": ""155499.14"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01531,facturx,True,,{}
+INV-SRC-01532,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01533,nlcius,True,,{}
+INV-SRC-01534,xrechnung_ubl,True,,{}
+INV-SRC-01535,facturx,True,,{}
+INV-SRC-01536,peppol_bis_3,True,,{}
+INV-SRC-01537,nlcius,True,,{}
+INV-SRC-01538,peppol_bis_3,True,,{}
+INV-SRC-01539,nlcius,True,,{}
+INV-SRC-01540,facturx,True,,{}
+INV-SRC-01541,peppol_bis_3,True,,{}
+INV-SRC-01542,peppol_bis_3,True,,{}
+INV-SRC-01543,peppol_bis_3,True,,{}
+INV-SRC-01544,pint_my,True,,{}
+INV-SRC-01545,facturx,True,,{}
+INV-SRC-01546,pint_sg,True,,{}
+INV-SRC-01547,facturx,True,,{}
+INV-SRC-01548,facturx,True,,{}
+INV-SRC-01549,xrechnung_ubl,True,,{}
+INV-SRC-01550,nlcius,True,,{}
+INV-SRC-01551,nlcius,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""23445.29"", ""total_amount"": ""257898.14"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01552,facturx,True,,{}
+INV-SRC-01553,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01554,facturx,True,,{}
+INV-SRC-01555,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""11866.54"", ""total_amount"": ""143716.97""}"
+INV-SRC-01556,xrechnung_ubl,True,,{}
+INV-SRC-01557,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01558,nlcius,True,,{}
+INV-SRC-01559,peppol_bis_3,True,,{}
+INV-SRC-01560,nlcius,True,,{}
+INV-SRC-01561,pint_sg,True,,{}
+INV-SRC-01562,facturx,True,,{}
+INV-SRC-01563,facturx,True,,{}
+INV-SRC-01564,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01565,nlcius,True,,{}
+INV-SRC-01566,pint_sg,True,,{}
+INV-SRC-01567,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01568,facturx,True,,{}
+INV-SRC-01569,facturx,True,,{}
+INV-SRC-01570,peppol_bis_3,True,,{}
+INV-SRC-01571,facturx,True,,{}
+INV-SRC-01572,facturx,True,,{}
+INV-SRC-01573,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""3893.38"", ""total_amount"": ""59513.04""}"
+INV-SRC-01574,pint_sg,True,,{}
+INV-SRC-01575,nlcius,True,,{}
+INV-SRC-01576,facturx,True,,{}
+INV-SRC-01577,facturx,False,missing_required_field|seller_vat_format_invalid,"{""delivery_date"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01578,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""1486.89"", ""total_amount"": ""22728.14""}"
+INV-SRC-01579,pint_sg,True,,{}
+INV-SRC-01580,nlcius,True,,{}
+INV-SRC-01581,nlcius,True,,{}
+INV-SRC-01582,peppol_bis_3,True,,{}
+INV-SRC-01583,xrechnung_ubl,True,,{}
+INV-SRC-01584,xrechnung_ubl,True,,{}
+INV-SRC-01585,pint_sg,True,,{}
+INV-SRC-01586,xrechnung_ubl,True,,{}
+INV-SRC-01587,xrechnung_ubl,True,,{}
+INV-SRC-01588,xrechnung_ubl,True,,{}
+INV-SRC-01589,peppol_bis_3,True,,{}
+INV-SRC-01590,peppol_bis_3,True,,{}
+INV-SRC-01591,facturx,True,,{}
+INV-SRC-01592,xrechnung_ubl,True,,{}
+INV-SRC-01593,facturx,True,,{}
+INV-SRC-01594,peppol_bis_3,True,,{}
+INV-SRC-01595,xrechnung_ubl,True,,{}
+INV-SRC-01596,pint_sg,True,,{}
+INV-SRC-01597,nlcius,True,,{}
+INV-SRC-01598,xrechnung_ubl,True,,{}
+INV-SRC-01599,xrechnung_ubl,True,,{}
+INV-SRC-01600,facturx,False,missing_required_field|currency_not_supported,"{""delivery_date"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-01601,facturx,True,,{}
+INV-SRC-01602,nlcius,True,,{}
+INV-SRC-01603,peppol_bis_3,True,,{}
+INV-SRC-01604,peppol_bis_3,True,,{}
+INV-SRC-01605,facturx,True,,{}
+INV-SRC-01606,pint_my,True,,{}
+INV-SRC-01607,xrechnung_ubl,True,,{}
+INV-SRC-01608,peppol_bis_3,True,,{}
+INV-SRC-01609,nlcius,True,,{}
+INV-SRC-01610,facturx,True,,{}
+INV-SRC-01611,facturx,True,,{}
+INV-SRC-01612,peppol_bis_3,True,,{}
+INV-SRC-01613,pint_my,True,,{}
+INV-SRC-01614,xrechnung_ubl,True,,{}
+INV-SRC-01615,pint_sg,True,,{}
+INV-SRC-01616,peppol_bis_3,True,,{}
+INV-SRC-01617,nlcius,True,,{}
+INV-SRC-01618,peppol_bis_3,True,,{}
+INV-SRC-01619,peppol_bis_3,True,,{}
+INV-SRC-01620,pint_sg,True,,{}
+INV-SRC-01621,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01622,xrechnung_ubl,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""44294.23"", ""total_amount"": ""255219.13"", ""currency"": ""EUR""}"
+INV-SRC-01623,xrechnung_ubl,True,,{}
+INV-SRC-01624,peppol_bis_3,True,,{}
+INV-SRC-01625,nlcius,True,,{}
+INV-SRC-01626,nlcius,True,,{}
+INV-SRC-01627,pint_my,True,,{}
+INV-SRC-01628,peppol_bis_3,True,,{}
+INV-SRC-01629,nlcius,True,,{}
+INV-SRC-01630,facturx,True,,{}
+INV-SRC-01631,xrechnung_ubl,True,,{}
+INV-SRC-01632,xrechnung_ubl,True,,{}
+INV-SRC-01633,facturx,True,,{}
+INV-SRC-01634,pint_my,True,,{}
+INV-SRC-01635,pint_sg,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01636,peppol_bis_3,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""22010.64"", ""total_amount"": ""132063.83"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01637,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01638,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""1944.13"", ""total_amount"": ""21385.41""}"
+INV-SRC-01639,facturx,True,,{}
+INV-SRC-01640,nlcius,True,,{}
+INV-SRC-01641,facturx,True,,{}
+INV-SRC-01642,pint_my,True,,{}
+INV-SRC-01643,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""4279.21"", ""total_amount"": ""47071.3""}"
+INV-SRC-01644,xrechnung_ubl,True,,{}
+INV-SRC-01645,pint_sg,True,,{}
+INV-SRC-01646,xrechnung_ubl,True,,{}
+INV-SRC-01647,facturx,True,,{}
+INV-SRC-01648,pint_sg,True,,{}
+INV-SRC-01649,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01650,xrechnung_ubl,False,missing_required_field|currency_not_supported,"{""buyer_id"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-01651,facturx,True,,{}
+INV-SRC-01652,facturx,True,,{}
+INV-SRC-01653,facturx,True,,{}
+INV-SRC-01654,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-01655,facturx,True,,{}
+INV-SRC-01656,pint_my,True,,{}
+INV-SRC-01657,peppol_bis_3,True,,{}
+INV-SRC-01658,nlcius,True,,{}
+INV-SRC-01659,facturx,True,,{}
+INV-SRC-01660,nlcius,True,,{}
+INV-SRC-01661,nlcius,True,,{}
+INV-SRC-01662,xrechnung_ubl,True,,{}
+INV-SRC-01663,nlcius,True,,{}
+INV-SRC-01664,facturx,False,missing_required_field|seller_vat_format_invalid,"{""buyer_id"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-01665,peppol_bis_3,True,,{}
+INV-SRC-01666,nlcius,True,,{}
+INV-SRC-01667,pint_my,True,,{}
+INV-SRC-01668,peppol_bis_3,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""343.36"", ""total_amount"": ""3776.91"", ""currency"": ""EUR""}"
+INV-SRC-01669,pint_sg,True,,{}
+INV-SRC-01670,peppol_bis_3,True,,{}
+INV-SRC-01671,peppol_bis_3,True,,{}
+INV-SRC-01672,pint_my,True,,{}
+INV-SRC-01673,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-01674,nlcius,True,,{}
+INV-SRC-01675,nlcius,True,,{}
+INV-SRC-01676,xrechnung_ubl,True,,{}
+INV-SRC-01677,peppol_bis_3,True,,{}
+INV-SRC-01678,nlcius,True,,{}
+INV-SRC-01679,nlcius,True,,{}
+INV-SRC-01680,xrechnung_ubl,True,,{}
+INV-SRC-01681,pint_sg,True,,{}
+INV-SRC-01682,pint_sg,True,,{}
+INV-SRC-01683,nlcius,True,,{}
+INV-SRC-01684,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01685,peppol_bis_3,True,,{}
+INV-SRC-01686,facturx,True,,{}
+INV-SRC-01687,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-01688,facturx,True,,{}
+INV-SRC-01689,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-01690,xrechnung_ubl,True,,{}
+INV-SRC-01691,nlcius,True,,{}
+INV-SRC-01692,facturx,True,,{}
+INV-SRC-01693,pint_sg,True,,{}
+INV-SRC-01694,facturx,True,,{}
+INV-SRC-01695,xrechnung_ubl,True,,{}
+INV-SRC-01696,peppol_bis_3,True,,{}
+INV-SRC-01697,nlcius,True,,{}
+INV-SRC-01698,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01699,pint_my,True,,{}
+INV-SRC-01700,peppol_bis_3,True,,{}
+INV-SRC-01701,facturx,True,,{}
+INV-SRC-01702,nlcius,True,,{}
+INV-SRC-01703,pint_sg,True,,{}
+INV-SRC-01704,nlcius,True,,{}
+INV-SRC-01705,peppol_bis_3,True,,{}
+INV-SRC-01706,nlcius,True,,{}
+INV-SRC-01707,facturx,True,,{}
+INV-SRC-01708,pint_sg,True,,{}
+INV-SRC-01709,pint_my,True,,{}
+INV-SRC-01710,pint_sg,True,,{}
+INV-SRC-01711,peppol_bis_3,True,,{}
+INV-SRC-01712,peppol_bis_3,True,,{}
+INV-SRC-01713,peppol_bis_3,True,,{}
+INV-SRC-01714,xrechnung_ubl,True,,{}
+INV-SRC-01715,peppol_bis_3,True,,{}
+INV-SRC-01716,pint_sg,True,,{}
+INV-SRC-01717,peppol_bis_3,True,,{}
+INV-SRC-01718,facturx,True,,{}
+INV-SRC-01719,pint_my,False,credit_note_not_supported,"{""subtotal"": ""234013.34"", ""tax_amount"": ""0.0"", ""total_amount"": ""234013.34""}"
+INV-SRC-01720,peppol_bis_3,True,,{}
+INV-SRC-01721,nlcius,True,,{}
+INV-SRC-01722,peppol_bis_3,True,,{}
+INV-SRC-01723,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01724,facturx,True,,{}
+INV-SRC-01725,nlcius,True,,{}
+INV-SRC-01726,nlcius,True,,{}
+INV-SRC-01727,nlcius,True,,{}
+INV-SRC-01728,pint_my,True,,{}
+INV-SRC-01729,facturx,True,,{}
+INV-SRC-01730,xrechnung_ubl,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""4525.75"", ""total_amount"": ""42240.31"", ""currency"": ""EUR""}"
+INV-SRC-01731,facturx,True,,{}
+INV-SRC-01732,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01733,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01734,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-01735,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""21532.17"", ""total_amount"": ""129193.03""}"
+INV-SRC-01736,xrechnung_ubl,True,,{}
+INV-SRC-01737,facturx,True,,{}
+INV-SRC-01738,peppol_bis_3,True,,{}
+INV-SRC-01739,peppol_bis_3,True,,{}
+INV-SRC-01740,pint_my,True,,{}
+INV-SRC-01741,pint_my,True,,{}
+INV-SRC-01742,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01743,xrechnung_ubl,True,,{}
+INV-SRC-01744,facturx,True,,{}
+INV-SRC-01745,facturx,True,,{}
+INV-SRC-01746,peppol_bis_3,True,,{}
+INV-SRC-01747,xrechnung_ubl,True,,{}
+INV-SRC-01748,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""206.0"", ""total_amount"": ""3639.25""}"
+INV-SRC-01749,xrechnung_ubl,True,,{}
+INV-SRC-01750,facturx,True,,{}
+INV-SRC-01751,facturx,True,,{}
+INV-SRC-01752,facturx,True,,{}
+INV-SRC-01753,xrechnung_ubl,True,,{}
+INV-SRC-01754,xrechnung_ubl,True,,{}
+INV-SRC-01755,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""10182.96"", ""total_amount"": ""58673.23""}"
+INV-SRC-01756,peppol_bis_3,True,,{}
+INV-SRC-01757,pint_sg,True,,{}
+INV-SRC-01758,pint_my,True,,{}
+INV-SRC-01759,facturx,True,,{}
+INV-SRC-01760,xrechnung_ubl,True,,{}
+INV-SRC-01761,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""432.44"", ""total_amount"": ""5237.28""}"
+INV-SRC-01762,peppol_bis_3,True,,{}
+INV-SRC-01763,facturx,True,,{}
+INV-SRC-01764,peppol_bis_3,True,,{}
+INV-SRC-01765,peppol_bis_3,True,,{}
+INV-SRC-01766,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-01767,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01768,pint_sg,True,,{}
+INV-SRC-01769,xrechnung_ubl,True,,{}
+INV-SRC-01770,nlcius,True,,{}
+INV-SRC-01771,facturx,True,,{}
+INV-SRC-01772,nlcius,True,,{}
+INV-SRC-01773,nlcius,True,,{}
+INV-SRC-01774,peppol_bis_3,True,,{}
+INV-SRC-01775,peppol_bis_3,True,,{}
+INV-SRC-01776,peppol_bis_3,True,,{}
+INV-SRC-01777,pint_sg,True,,{}
+INV-SRC-01778,peppol_bis_3,True,,{}
+INV-SRC-01779,peppol_bis_3,True,,{}
+INV-SRC-01780,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-01781,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""1620.14"", ""total_amount"": ""9335.1""}"
+INV-SRC-01782,nlcius,True,,{}
+INV-SRC-01783,facturx,True,,{}
+INV-SRC-01784,xrechnung_ubl,True,,{}
+INV-SRC-01785,facturx,True,,{}
+INV-SRC-01786,facturx,True,,{}
+INV-SRC-01787,xrechnung_ubl,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01788,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""10040.28"", ""total_amount"": ""192590.84""}"
+INV-SRC-01789,pint_sg,True,,{}
+INV-SRC-01790,xrechnung_ubl,True,,{}
+INV-SRC-01791,xrechnung_ubl,True,,{}
+INV-SRC-01792,xrechnung_ubl,True,,{}
+INV-SRC-01793,facturx,True,,{}
+INV-SRC-01794,nlcius,True,,{}
+INV-SRC-01795,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01796,nlcius,True,,{}
+INV-SRC-01797,facturx,True,,{}
+INV-SRC-01798,xrechnung_ubl,True,,{}
+INV-SRC-01799,nlcius,True,,{}
+INV-SRC-01800,facturx,True,,{}
+INV-SRC-01801,facturx,True,,{}
+INV-SRC-01802,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01803,peppol_bis_3,True,,{}
+INV-SRC-01804,facturx,True,,{}
+INV-SRC-01805,xrechnung_ubl,True,,{}
+INV-SRC-01806,facturx,True,,{}
+INV-SRC-01807,xrechnung_ubl,True,,{}
+INV-SRC-01808,peppol_bis_3,True,,{}
+INV-SRC-01809,pint_sg,True,,{}
+INV-SRC-01810,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01811,pint_sg,True,,{}
+INV-SRC-01812,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01813,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01814,facturx,True,,{}
+INV-SRC-01815,nlcius,True,,{}
+INV-SRC-01816,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""14378.84"", ""total_amount"": ""174143.68""}"
+INV-SRC-01817,peppol_bis_3,True,,{}
+INV-SRC-01818,peppol_bis_3,True,,{}
+INV-SRC-01819,nlcius,True,,{}
+INV-SRC-01820,facturx,True,,{}
+INV-SRC-01821,xrechnung_ubl,True,,{}
+INV-SRC-01822,peppol_bis_3,True,,{}
+INV-SRC-01823,pint_sg,True,,{}
+INV-SRC-01824,nlcius,True,,{}
+INV-SRC-01825,xrechnung_ubl,True,,{}
+INV-SRC-01826,peppol_bis_3,True,,{}
+INV-SRC-01827,xrechnung_ubl,False,missing_required_field|buyer_vat_missing_for_target,"{""delivery_date"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01828,pint_my,True,,{}
+INV-SRC-01829,facturx,True,,{}
+INV-SRC-01830,peppol_bis_3,True,,{}
+INV-SRC-01831,facturx,True,,{}
+INV-SRC-01832,facturx,True,,{}
+INV-SRC-01833,facturx,True,,{}
+INV-SRC-01834,pint_sg,True,,{}
+INV-SRC-01835,nlcius,True,,{}
+INV-SRC-01836,peppol_bis_3,True,,{}
+INV-SRC-01837,pint_sg,True,,{}
+INV-SRC-01838,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-01839,facturx,True,,{}
+INV-SRC-01840,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""1078.11"", ""total_amount"": ""11859.21""}"
+INV-SRC-01841,pint_sg,True,,{}
+INV-SRC-01842,peppol_bis_3,True,,{}
+INV-SRC-01843,nlcius,True,,{}
+INV-SRC-01844,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01845,facturx,True,,{}
+INV-SRC-01846,peppol_bis_3,True,,{}
+INV-SRC-01847,pint_sg,True,,{}
+INV-SRC-01848,facturx,True,,{}
+INV-SRC-01849,nlcius,True,,{}
+INV-SRC-01850,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-01851,xrechnung_ubl,True,,{}
+INV-SRC-01852,peppol_bis_3,True,,{}
+INV-SRC-01853,peppol_bis_3,True,,{}
+INV-SRC-01854,nlcius,True,,{}
+INV-SRC-01855,nlcius,True,,{}
+INV-SRC-01856,facturx,True,,{}
+INV-SRC-01857,nlcius,True,,{}
+INV-SRC-01858,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01859,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01860,nlcius,True,,{}
+INV-SRC-01861,facturx,True,,{}
+INV-SRC-01862,xrechnung_ubl,True,,{}
+INV-SRC-01863,xrechnung_ubl,True,,{}
+INV-SRC-01864,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-01865,xrechnung_ubl,True,,{}
+INV-SRC-01866,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""41273.59"", ""total_amount"": ""247641.53""}"
+INV-SRC-01867,pint_sg,True,,{}
+INV-SRC-01868,nlcius,True,,{}
+INV-SRC-01869,peppol_bis_3,True,,{}
+INV-SRC-01870,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""457.67"", ""total_amount"": ""2866.46"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01871,xrechnung_ubl,True,,{}
+INV-SRC-01872,facturx,True,,{}
+INV-SRC-01873,xrechnung_ubl,True,,{}
+INV-SRC-01874,peppol_bis_3,True,,{}
+INV-SRC-01875,facturx,True,,{}
+INV-SRC-01876,pint_sg,True,,{}
+INV-SRC-01877,peppol_bis_3,True,,{}
+INV-SRC-01878,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""0.0"", ""total_amount"": ""101025.07""}"
+INV-SRC-01879,facturx,True,,{}
+INV-SRC-01880,facturx,False,credit_note_not_supported,"{""subtotal"": ""9160.75"", ""tax_amount"": ""549.64"", ""total_amount"": ""9710.39""}"
+INV-SRC-01881,peppol_bis_3,True,,{}
+INV-SRC-01882,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""775.19"", ""total_amount"": ""8527.12""}"
+INV-SRC-01883,pint_my,True,,{}
+INV-SRC-01884,facturx,True,,{}
+INV-SRC-01885,xrechnung_ubl,True,,{}
+INV-SRC-01886,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""1776.97"", ""total_amount"": ""19546.71"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01887,facturx,True,,{}
+INV-SRC-01888,facturx,True,,{}
+INV-SRC-01889,peppol_bis_3,True,,{}
+INV-SRC-01890,facturx,True,,{}
+INV-SRC-01891,pint_sg,True,,{}
+INV-SRC-01892,xrechnung_ubl,True,,{}
+INV-SRC-01893,peppol_bis_3,True,,{}
+INV-SRC-01894,pint_sg,True,,{}
+INV-SRC-01895,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-01896,xrechnung_ubl,True,,{}
+INV-SRC-01897,xrechnung_ubl,True,,{}
+INV-SRC-01898,facturx,True,,{}
+INV-SRC-01899,pint_my,True,,{}
+INV-SRC-01900,facturx,True,,{}
+INV-SRC-01901,nlcius,True,,{}
+INV-SRC-01902,xrechnung_ubl,True,,{}
+INV-SRC-01903,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-01904,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01905,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""18735.34"", ""total_amount"": ""107951.24""}"
+INV-SRC-01906,peppol_bis_3,True,,{}
+INV-SRC-01907,nlcius,True,,{}
+INV-SRC-01908,facturx,True,,{}
+INV-SRC-01909,pint_sg,True,,{}
+INV-SRC-01910,pint_sg,True,,{}
+INV-SRC-01911,xrechnung_ubl,True,,{}
+INV-SRC-01912,facturx,True,,{}
+INV-SRC-01913,peppol_bis_3,True,,{}
+INV-SRC-01914,peppol_bis_3,True,,{}
+INV-SRC-01915,pint_sg,True,,{}
+INV-SRC-01916,xrechnung_ubl,True,,{}
+INV-SRC-01917,pint_my,True,,{}
+INV-SRC-01918,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""44.05"", ""total_amount"": ""484.5""}"
+INV-SRC-01919,nlcius,True,,{}
+INV-SRC-01920,facturx,True,,{}
+INV-SRC-01921,pint_my,True,,{}
+INV-SRC-01922,pint_sg,True,,{}
+INV-SRC-01923,nlcius,True,,{}
+INV-SRC-01924,nlcius,True,,{}
+INV-SRC-01925,peppol_bis_3,True,,{}
+INV-SRC-01926,nlcius,True,,{}
+INV-SRC-01927,xrechnung_ubl,True,,{}
+INV-SRC-01928,nlcius,True,,{}
+INV-SRC-01929,pint_sg,True,,{}
+INV-SRC-01930,pint_sg,True,,{}
+INV-SRC-01931,nlcius,True,,{}
+INV-SRC-01932,xrechnung_ubl,True,,{}
+INV-SRC-01933,facturx,True,,{}
+INV-SRC-01934,xrechnung_ubl,True,,{}
+INV-SRC-01935,facturx,True,,{}
+INV-SRC-01936,peppol_bis_3,True,,{}
+INV-SRC-01937,facturx,True,,{}
+INV-SRC-01938,pint_sg,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-01939,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-01940,peppol_bis_3,True,,{}
+INV-SRC-01941,pint_my,True,,{}
+INV-SRC-01942,xrechnung_ubl,True,,{}
+INV-SRC-01943,xrechnung_ubl,True,,{}
+INV-SRC-01944,peppol_bis_3,True,,{}
+INV-SRC-01945,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""63.89"", ""total_amount"": ""702.79"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01946,pint_sg,True,,{}
+INV-SRC-01947,nlcius,True,,{}
+INV-SRC-01948,xrechnung_ubl,True,,{}
+INV-SRC-01949,peppol_bis_3,True,,{}
+INV-SRC-01950,pint_sg,True,,{}
+INV-SRC-01951,facturx,True,,{}
+INV-SRC-01952,xrechnung_ubl,True,,{}
+INV-SRC-01953,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01954,peppol_bis_3,True,,{}
+INV-SRC-01955,nlcius,True,,{}
+INV-SRC-01956,nlcius,True,,{}
+INV-SRC-01957,xrechnung_ubl,True,,{}
+INV-SRC-01958,facturx,True,,{}
+INV-SRC-01959,facturx,True,,{}
+INV-SRC-01960,facturx,True,,{}
+INV-SRC-01961,xrechnung_ubl,True,,{}
+INV-SRC-01962,facturx,True,,{}
+INV-SRC-01963,facturx,True,,{}
+INV-SRC-01964,peppol_bis_3,True,,{}
+INV-SRC-01965,nlcius,True,,{}
+INV-SRC-01966,xrechnung_ubl,True,,{}
+INV-SRC-01967,peppol_bis_3,True,,{}
+INV-SRC-01968,pint_my,True,,{}
+INV-SRC-01969,xrechnung_ubl,True,,{}
+INV-SRC-01970,peppol_bis_3,True,,{}
+INV-SRC-01971,xrechnung_ubl,True,,{}
+INV-SRC-01972,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01973,peppol_bis_3,True,,{}
+INV-SRC-01974,nlcius,True,,{}
+INV-SRC-01975,peppol_bis_3,True,,{}
+INV-SRC-01976,nlcius,True,,{}
+INV-SRC-01977,peppol_bis_3,True,,{}
+INV-SRC-01978,nlcius,True,,{}
+INV-SRC-01979,pint_sg,True,,{}
+INV-SRC-01980,facturx,True,,{}
+INV-SRC-01981,peppol_bis_3,True,,{}
+INV-SRC-01982,facturx,True,,{}
+INV-SRC-01983,facturx,True,,{}
+INV-SRC-01984,facturx,True,,{}
+INV-SRC-01985,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01986,facturx,True,,{}
+INV-SRC-01987,pint_my,True,,{}
+INV-SRC-01988,peppol_bis_3,True,,{}
+INV-SRC-01989,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-01990,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01991,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-01992,nlcius,True,,{}
+INV-SRC-01993,nlcius,True,,{}
+INV-SRC-01994,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-01995,xrechnung_ubl,True,,{}
+INV-SRC-01996,facturx,True,,{}
+INV-SRC-01997,peppol_bis_3,True,,{}
+INV-SRC-01998,xrechnung_ubl,True,,{}
+INV-SRC-01999,peppol_bis_3,True,,{}
+INV-SRC-02000,xrechnung_ubl,True,,{}
+INV-SRC-02001,peppol_bis_3,True,,{}
+INV-SRC-02002,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02003,nlcius,True,,{}
+INV-SRC-02004,xrechnung_ubl,True,,{}
+INV-SRC-02005,facturx,True,,{}
+INV-SRC-02006,pint_my,True,,{}
+INV-SRC-02007,xrechnung_ubl,True,,{}
+INV-SRC-02008,xrechnung_ubl,True,,{}
+INV-SRC-02009,peppol_bis_3,True,,{}
+INV-SRC-02010,nlcius,True,,{}
+INV-SRC-02011,peppol_bis_3,True,,{}
+INV-SRC-02012,nlcius,True,,{}
+INV-SRC-02013,facturx,True,,{}
+INV-SRC-02014,facturx,True,,{}
+INV-SRC-02015,peppol_bis_3,True,,{}
+INV-SRC-02016,pint_my,True,,{}
+INV-SRC-02017,facturx,True,,{}
+INV-SRC-02018,peppol_bis_3,True,,{}
+INV-SRC-02019,pint_sg,True,,{}
+INV-SRC-02020,xrechnung_ubl,True,,{}
+INV-SRC-02021,nlcius,True,,{}
+INV-SRC-02022,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02023,peppol_bis_3,True,,{}
+INV-SRC-02024,nlcius,True,,{}
+INV-SRC-02025,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02026,peppol_bis_3,True,,{}
+INV-SRC-02027,peppol_bis_3,True,,{}
+INV-SRC-02028,pint_my,True,,{}
+INV-SRC-02029,xrechnung_ubl,True,,{}
+INV-SRC-02030,xrechnung_ubl,True,,{}
+INV-SRC-02031,pint_sg,True,,{}
+INV-SRC-02032,facturx,True,,{}
+INV-SRC-02033,peppol_bis_3,True,,{}
+INV-SRC-02034,peppol_bis_3,True,,{}
+INV-SRC-02035,peppol_bis_3,True,,{}
+INV-SRC-02036,pint_sg,True,,{}
+INV-SRC-02037,nlcius,True,,{}
+INV-SRC-02038,xrechnung_ubl,True,,{}
+INV-SRC-02039,peppol_bis_3,True,,{}
+INV-SRC-02040,xrechnung_ubl,True,,{}
+INV-SRC-02041,nlcius,True,,{}
+INV-SRC-02042,xrechnung_ubl,True,,{}
+INV-SRC-02043,peppol_bis_3,True,,{}
+INV-SRC-02044,facturx,True,,{}
+INV-SRC-02045,pint_my,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""12310.8"", ""total_amount"": ""188179.44""}"
+INV-SRC-02046,peppol_bis_3,True,,{}
+INV-SRC-02047,xrechnung_ubl,True,,{}
+INV-SRC-02048,pint_sg,True,,{}
+INV-SRC-02049,facturx,True,,{}
+INV-SRC-02050,xrechnung_ubl,True,,{}
+INV-SRC-02051,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02052,peppol_bis_3,True,,{}
+INV-SRC-02053,pint_my,True,,{}
+INV-SRC-02054,pint_sg,True,,{}
+INV-SRC-02055,nlcius,True,,{}
+INV-SRC-02056,facturx,True,,{}
+INV-SRC-02057,pint_sg,True,,{}
+INV-SRC-02058,peppol_bis_3,True,,{}
+INV-SRC-02059,xrechnung_ubl,True,,{}
+INV-SRC-02060,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02061,xrechnung_ubl,True,,{}
+INV-SRC-02062,xrechnung_ubl,True,,{}
+INV-SRC-02063,facturx,True,,{}
+INV-SRC-02064,facturx,True,,{}
+INV-SRC-02065,xrechnung_ubl,True,,{}
+INV-SRC-02066,nlcius,True,,{}
+INV-SRC-02067,peppol_bis_3,True,,{}
+INV-SRC-02068,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02069,nlcius,True,,{}
+INV-SRC-02070,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02071,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-02072,facturx,True,,{}
+INV-SRC-02073,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02074,facturx,True,,{}
+INV-SRC-02075,facturx,True,,{}
+INV-SRC-02076,peppol_bis_3,True,,{}
+INV-SRC-02077,xrechnung_ubl,True,,{}
+INV-SRC-02078,peppol_bis_3,False,missing_required_field|buyer_vat_missing_for_target,"{""payment_reference"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02079,xrechnung_ubl,True,,{}
+INV-SRC-02080,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02081,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02082,peppol_bis_3,True,,{}
+INV-SRC-02083,nlcius,True,,{}
+INV-SRC-02084,nlcius,True,,{}
+INV-SRC-02085,peppol_bis_3,True,,{}
+INV-SRC-02086,xrechnung_ubl,True,,{}
+INV-SRC-02087,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02088,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02089,peppol_bis_3,True,,{}
+INV-SRC-02090,nlcius,True,,{}
+INV-SRC-02091,nlcius,True,,{}
+INV-SRC-02092,facturx,True,,{}
+INV-SRC-02093,facturx,True,,{}
+INV-SRC-02094,xrechnung_ubl,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""2270.25"", ""total_amount"": ""40107.83""}"
+INV-SRC-02095,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02096,nlcius,True,,{}
+INV-SRC-02097,pint_sg,True,,{}
+INV-SRC-02098,pint_sg,True,,{}
+INV-SRC-02099,pint_my,True,,{}
+INV-SRC-02100,pint_sg,True,,{}
+INV-SRC-02101,nlcius,True,,{}
+INV-SRC-02102,facturx,True,,{}
+INV-SRC-02103,pint_sg,True,,{}
+INV-SRC-02104,nlcius,True,,{}
+INV-SRC-02105,facturx,True,,{}
+INV-SRC-02106,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02107,peppol_bis_3,True,,{}
+INV-SRC-02108,facturx,True,,{}
+INV-SRC-02109,peppol_bis_3,True,,{}
+INV-SRC-02110,nlcius,True,,{}
+INV-SRC-02111,nlcius,True,,{}
+INV-SRC-02112,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02113,peppol_bis_3,True,,{}
+INV-SRC-02114,facturx,True,,{}
+INV-SRC-02115,xrechnung_ubl,True,,{}
+INV-SRC-02116,xrechnung_ubl,True,,{}
+INV-SRC-02117,peppol_bis_3,True,,{}
+INV-SRC-02118,facturx,True,,{}
+INV-SRC-02119,nlcius,True,,{}
+INV-SRC-02120,facturx,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""275.96"", ""total_amount"": ""10889.86"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02121,xrechnung_ubl,True,,{}
+INV-SRC-02122,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""9.21"", ""total_amount"": ""111.57""}"
+INV-SRC-02123,peppol_bis_3,True,,{}
+INV-SRC-02124,xrechnung_ubl,True,,{}
+INV-SRC-02125,facturx,True,,{}
+INV-SRC-02126,peppol_bis_3,True,,{}
+INV-SRC-02127,nlcius,True,,{}
+INV-SRC-02128,peppol_bis_3,True,,{}
+INV-SRC-02129,xrechnung_ubl,True,,{}
+INV-SRC-02130,facturx,False,tax_amount_mismatch|line_item_structure_incompatible,"{""tax_amount"": ""340.82"", ""total_amount"": ""3181.02"", ""line_item_structure"": ""flat""}"
+INV-SRC-02131,nlcius,True,,{}
+INV-SRC-02132,peppol_bis_3,True,,{}
+INV-SRC-02133,peppol_bis_3,True,,{}
+INV-SRC-02134,facturx,True,,{}
+INV-SRC-02135,xrechnung_ubl,True,,{}
+INV-SRC-02136,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-02137,pint_my,True,,{}
+INV-SRC-02138,xrechnung_ubl,True,,{}
+INV-SRC-02139,nlcius,True,,{}
+INV-SRC-02140,peppol_bis_3,True,,{}
+INV-SRC-02141,xrechnung_ubl,True,,{}
+INV-SRC-02142,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02143,facturx,True,,{}
+INV-SRC-02144,peppol_bis_3,True,,{}
+INV-SRC-02145,nlcius,True,,{}
+INV-SRC-02146,facturx,True,,{}
+INV-SRC-02147,nlcius,True,,{}
+INV-SRC-02148,nlcius,True,,{}
+INV-SRC-02149,xrechnung_ubl,True,,{}
+INV-SRC-02150,nlcius,True,,{}
+INV-SRC-02151,pint_my,True,,{}
+INV-SRC-02152,facturx,True,,{}
+INV-SRC-02153,pint_my,True,,{}
+INV-SRC-02154,peppol_bis_3,True,,{}
+INV-SRC-02155,peppol_bis_3,True,,{}
+INV-SRC-02156,xrechnung_ubl,True,,{}
+INV-SRC-02157,facturx,True,,{}
+INV-SRC-02158,xrechnung_ubl,True,,{}
+INV-SRC-02159,peppol_bis_3,True,,{}
+INV-SRC-02160,xrechnung_ubl,True,,{}
+INV-SRC-02161,nlcius,True,,{}
+INV-SRC-02162,facturx,True,,{}
+INV-SRC-02163,pint_sg,True,,{}
+INV-SRC-02164,nlcius,True,,{}
+INV-SRC-02165,xrechnung_ubl,True,,{}
+INV-SRC-02166,xrechnung_ubl,True,,{}
+INV-SRC-02167,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""10979.39"", ""total_amount"": ""120773.28"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02168,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02169,nlcius,True,,{}
+INV-SRC-02170,pint_my,True,,{}
+INV-SRC-02171,xrechnung_ubl,True,,{}
+INV-SRC-02172,xrechnung_ubl,True,,{}
+INV-SRC-02173,pint_sg,False,missing_required_field|seller_vat_format_invalid,"{""buyer_id"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-02174,facturx,True,,{}
+INV-SRC-02175,xrechnung_ubl,True,,{}
+INV-SRC-02176,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02177,peppol_bis_3,True,,{}
+INV-SRC-02178,facturx,True,,{}
+INV-SRC-02179,facturx,True,,{}
+INV-SRC-02180,pint_my,True,,{}
+INV-SRC-02181,nlcius,True,,{}
+INV-SRC-02182,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02183,facturx,True,,{}
+INV-SRC-02184,xrechnung_ubl,True,,{}
+INV-SRC-02185,xrechnung_ubl,True,,{}
+INV-SRC-02186,peppol_bis_3,True,,{}
+INV-SRC-02187,nlcius,True,,{}
+INV-SRC-02188,facturx,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""8846.82"", ""total_amount"": ""135229.94"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02189,nlcius,True,,{}
+INV-SRC-02190,facturx,True,,{}
+INV-SRC-02191,peppol_bis_3,True,,{}
+INV-SRC-02192,xrechnung_ubl,True,,{}
+INV-SRC-02193,peppol_bis_3,True,,{}
+INV-SRC-02194,nlcius,True,,{}
+INV-SRC-02195,peppol_bis_3,True,,{}
+INV-SRC-02196,pint_my,True,,{}
+INV-SRC-02197,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""6611.12"", ""total_amount"": ""126813.33""}"
+INV-SRC-02198,xrechnung_ubl,True,,{}
+INV-SRC-02199,pint_my,True,,{}
+INV-SRC-02200,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""42698.57"", ""total_amount"": ""236783.0""}"
+INV-SRC-02201,xrechnung_ubl,True,,{}
+INV-SRC-02202,pint_sg,True,,{}
+INV-SRC-02203,pint_my,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""2498.71"", ""total_amount"": ""38194.56"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02204,nlcius,True,,{}
+INV-SRC-02205,peppol_bis_3,True,,{}
+INV-SRC-02206,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""9544.76"", ""total_amount"": ""59780.33""}"
+INV-SRC-02207,facturx,True,,{}
+INV-SRC-02208,facturx,False,line_item_structure_incompatible|seller_vat_format_invalid,"{""line_item_structure"": ""flat"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02209,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""17987.83"", ""total_amount"": ""107926.97""}"
+INV-SRC-02210,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""27633.32"", ""total_amount"": ""173071.85""}"
+INV-SRC-02211,peppol_bis_3,True,,{}
+INV-SRC-02212,peppol_bis_3,True,,{}
+INV-SRC-02213,peppol_bis_3,True,,{}
+INV-SRC-02214,pint_sg,True,,{}
+INV-SRC-02215,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02216,facturx,True,,{}
+INV-SRC-02217,peppol_bis_3,True,,{}
+INV-SRC-02218,nlcius,True,,{}
+INV-SRC-02219,xrechnung_ubl,True,,{}
+INV-SRC-02220,peppol_bis_3,True,,{}
+INV-SRC-02221,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02222,peppol_bis_3,True,,{}
+INV-SRC-02223,nlcius,True,,{}
+INV-SRC-02224,facturx,True,,{}
+INV-SRC-02225,xrechnung_ubl,True,,{}
+INV-SRC-02226,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02227,xrechnung_ubl,True,,{}
+INV-SRC-02228,xrechnung_ubl,True,,{}
+INV-SRC-02229,xrechnung_ubl,True,,{}
+INV-SRC-02230,xrechnung_ubl,True,,{}
+INV-SRC-02231,nlcius,True,,{}
+INV-SRC-02232,peppol_bis_3,True,,{}
+INV-SRC-02233,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02234,nlcius,True,,{}
+INV-SRC-02235,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02236,peppol_bis_3,True,,{}
+INV-SRC-02237,peppol_bis_3,True,,{}
+INV-SRC-02238,nlcius,True,,{}
+INV-SRC-02239,peppol_bis_3,True,,{}
+INV-SRC-02240,peppol_bis_3,True,,{}
+INV-SRC-02241,facturx,True,,{}
+INV-SRC-02242,facturx,True,,{}
+INV-SRC-02243,facturx,True,,{}
+INV-SRC-02244,xrechnung_ubl,True,,{}
+INV-SRC-02245,nlcius,True,,{}
+INV-SRC-02246,facturx,True,,{}
+INV-SRC-02247,pint_sg,True,,{}
+INV-SRC-02248,peppol_bis_3,True,,{}
+INV-SRC-02249,nlcius,True,,{}
+INV-SRC-02250,nlcius,True,,{}
+INV-SRC-02251,facturx,True,,{}
+INV-SRC-02252,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02253,pint_sg,True,,{}
+INV-SRC-02254,xrechnung_ubl,True,,{}
+INV-SRC-02255,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02256,peppol_bis_3,True,,{}
+INV-SRC-02257,peppol_bis_3,True,,{}
+INV-SRC-02258,nlcius,True,,{}
+INV-SRC-02259,facturx,True,,{}
+INV-SRC-02260,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""11121.65"", ""total_amount"": ""170002.35""}"
+INV-SRC-02261,nlcius,True,,{}
+INV-SRC-02262,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02263,xrechnung_ubl,True,,{}
+INV-SRC-02264,pint_my,False,credit_note_not_supported,"{""subtotal"": ""99583.12"", ""tax_amount"": ""0.0"", ""total_amount"": ""99583.12""}"
+INV-SRC-02265,peppol_bis_3,True,,{}
+INV-SRC-02266,xrechnung_ubl,True,,{}
+INV-SRC-02267,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02268,peppol_bis_3,True,,{}
+INV-SRC-02269,facturx,False,credit_note_not_supported,"{""subtotal"": ""2271.9"", ""tax_amount"": ""204.47"", ""total_amount"": ""2476.37""}"
+INV-SRC-02270,nlcius,True,,{}
+INV-SRC-02271,facturx,False,missing_required_field|tax_amount_mismatch,"{""delivery_date"": ""REQUIRED"", ""tax_amount"": ""9316.94"", ""total_amount"": ""58353.49""}"
+INV-SRC-02272,nlcius,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02273,pint_my,True,,{}
+INV-SRC-02274,xrechnung_ubl,True,,{}
+INV-SRC-02275,facturx,True,,{}
+INV-SRC-02276,xrechnung_ubl,True,,{}
+INV-SRC-02277,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02278,peppol_bis_3,True,,{}
+INV-SRC-02279,nlcius,True,,{}
+INV-SRC-02280,pint_sg,True,,{}
+INV-SRC-02281,pint_my,True,,{}
+INV-SRC-02282,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02283,peppol_bis_3,True,,{}
+INV-SRC-02284,xrechnung_ubl,True,,{}
+INV-SRC-02285,pint_my,True,,{}
+INV-SRC-02286,peppol_bis_3,True,,{}
+INV-SRC-02287,xrechnung_ubl,True,,{}
+INV-SRC-02288,nlcius,True,,{}
+INV-SRC-02289,facturx,True,,{}
+INV-SRC-02290,xrechnung_ubl,False,missing_required_field|buyer_vat_missing_for_target,"{""delivery_date"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02291,facturx,True,,{}
+INV-SRC-02292,peppol_bis_3,True,,{}
+INV-SRC-02293,facturx,True,,{}
+INV-SRC-02294,nlcius,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""273.61"", ""total_amount"": ""3009.73"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02295,xrechnung_ubl,True,,{}
+INV-SRC-02296,facturx,True,,{}
+INV-SRC-02297,pint_sg,True,,{}
+INV-SRC-02298,nlcius,True,,{}
+INV-SRC-02299,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02300,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02301,nlcius,True,,{}
+INV-SRC-02302,nlcius,True,,{}
+INV-SRC-02303,xrechnung_ubl,True,,{}
+INV-SRC-02304,xrechnung_ubl,True,,{}
+INV-SRC-02305,nlcius,True,,{}
+INV-SRC-02306,nlcius,True,,{}
+INV-SRC-02307,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""2059.86"", ""total_amount"": ""12901.21""}"
+INV-SRC-02308,xrechnung_ubl,True,,{}
+INV-SRC-02309,peppol_bis_3,True,,{}
+INV-SRC-02310,nlcius,True,,{}
+INV-SRC-02311,facturx,True,,{}
+INV-SRC-02312,peppol_bis_3,True,,{}
+INV-SRC-02313,pint_sg,True,,{}
+INV-SRC-02314,nlcius,True,,{}
+INV-SRC-02315,xrechnung_ubl,True,,{}
+INV-SRC-02316,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-02317,nlcius,True,,{}
+INV-SRC-02318,peppol_bis_3,True,,{}
+INV-SRC-02319,xrechnung_ubl,True,,{}
+INV-SRC-02320,nlcius,True,,{}
+INV-SRC-02321,pint_my,True,,{}
+INV-SRC-02322,facturx,True,,{}
+INV-SRC-02323,facturx,True,,{}
+INV-SRC-02324,pint_sg,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""17874.98"", ""total_amount"": ""196624.81"", ""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-02325,xrechnung_ubl,True,,{}
+INV-SRC-02326,pint_sg,True,,{}
+INV-SRC-02327,peppol_bis_3,True,,{}
+INV-SRC-02328,facturx,True,,{}
+INV-SRC-02329,facturx,True,,{}
+INV-SRC-02330,peppol_bis_3,True,,{}
+INV-SRC-02331,facturx,True,,{}
+INV-SRC-02332,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""18.49"", ""total_amount"": ""223.93""}"
+INV-SRC-02333,nlcius,True,,{}
+INV-SRC-02334,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02335,facturx,True,,{}
+INV-SRC-02336,nlcius,True,,{}
+INV-SRC-02337,peppol_bis_3,True,,{}
+INV-SRC-02338,facturx,True,,{}
+INV-SRC-02339,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""186.18"", ""total_amount"": ""3571.32""}"
+INV-SRC-02340,pint_sg,True,,{}
+INV-SRC-02341,nlcius,True,,{}
+INV-SRC-02342,facturx,True,,{}
+INV-SRC-02343,xrechnung_ubl,True,,{}
+INV-SRC-02344,xrechnung_ubl,True,,{}
+INV-SRC-02345,pint_my,True,,{}
+INV-SRC-02346,peppol_bis_3,True,,{}
+INV-SRC-02347,pint_sg,True,,{}
+INV-SRC-02348,facturx,True,,{}
+INV-SRC-02349,facturx,True,,{}
+INV-SRC-02350,facturx,True,,{}
+INV-SRC-02351,facturx,True,,{}
+INV-SRC-02352,facturx,True,,{}
+INV-SRC-02353,pint_sg,True,,{}
+INV-SRC-02354,peppol_bis_3,True,,{}
+INV-SRC-02355,peppol_bis_3,True,,{}
+INV-SRC-02356,pint_my,True,,{}
+INV-SRC-02357,facturx,True,,{}
+INV-SRC-02358,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02359,facturx,True,,{}
+INV-SRC-02360,nlcius,True,,{}
+INV-SRC-02361,facturx,False,missing_required_field|currency_not_supported,"{""delivery_date"": ""REQUIRED"", ""currency"": ""EUR""}"
+INV-SRC-02362,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02363,peppol_bis_3,True,,{}
+INV-SRC-02364,facturx,True,,{}
+INV-SRC-02365,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02366,xrechnung_ubl,True,,{}
+INV-SRC-02367,xrechnung_ubl,True,,{}
+INV-SRC-02368,facturx,True,,{}
+INV-SRC-02369,nlcius,True,,{}
+INV-SRC-02370,peppol_bis_3,True,,{}
+INV-SRC-02371,xrechnung_ubl,True,,{}
+INV-SRC-02372,facturx,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""14691.7"", ""total_amount"": ""84652.18""}"
+INV-SRC-02373,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""891.46"", ""total_amount"": ""5136.53""}"
+INV-SRC-02374,peppol_bis_3,True,,{}
+INV-SRC-02375,xrechnung_ubl,True,,{}
+INV-SRC-02376,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-02377,nlcius,True,,{}
+INV-SRC-02378,peppol_bis_3,True,,{}
+INV-SRC-02379,peppol_bis_3,False,missing_required_field|seller_vat_format_invalid,"{""buyer_id"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02380,xrechnung_ubl,True,,{}
+INV-SRC-02381,nlcius,True,,{}
+INV-SRC-02382,facturx,True,,{}
+INV-SRC-02383,nlcius,True,,{}
+INV-SRC-02384,xrechnung_ubl,True,,{}
+INV-SRC-02385,pint_my,True,,{}
+INV-SRC-02386,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""2379.83"", ""total_amount"": ""13712.36""}"
+INV-SRC-02387,pint_sg,True,,{}
+INV-SRC-02388,peppol_bis_3,True,,{}
+INV-SRC-02389,pint_my,True,,{}
+INV-SRC-02390,xrechnung_ubl,True,,{}
+INV-SRC-02391,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02392,peppol_bis_3,True,,{}
+INV-SRC-02393,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02394,facturx,True,,{}
+INV-SRC-02395,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-02396,peppol_bis_3,True,,{}
+INV-SRC-02397,peppol_bis_3,True,,{}
+INV-SRC-02398,pint_sg,True,,{}
+INV-SRC-02399,peppol_bis_3,True,,{}
+INV-SRC-02400,peppol_bis_3,True,,{}
+INV-SRC-02401,pint_my,True,,{}
+INV-SRC-02402,nlcius,True,,{}
+INV-SRC-02403,peppol_bis_3,True,,{}
+INV-SRC-02404,xrechnung_ubl,True,,{}
+INV-SRC-02405,xrechnung_ubl,True,,{}
+INV-SRC-02406,peppol_bis_3,True,,{}
+INV-SRC-02407,xrechnung_ubl,True,,{}
+INV-SRC-02408,facturx,True,,{}
+INV-SRC-02409,nlcius,True,,{}
+INV-SRC-02410,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02411,xrechnung_ubl,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02412,pint_my,True,,{}
+INV-SRC-02413,pint_my,True,,{}
+INV-SRC-02414,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""11297.24"", ""total_amount"": ""172686.34""}"
+INV-SRC-02415,peppol_bis_3,True,,{}
+INV-SRC-02416,peppol_bis_3,True,,{}
+INV-SRC-02417,nlcius,True,,{}
+INV-SRC-02418,nlcius,True,,{}
+INV-SRC-02419,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02420,pint_sg,True,,{}
+INV-SRC-02421,xrechnung_ubl,True,,{}
+INV-SRC-02422,xrechnung_ubl,True,,{}
+INV-SRC-02423,pint_my,True,,{}
+INV-SRC-02424,xrechnung_ubl,True,,{}
+INV-SRC-02425,nlcius,True,,{}
+INV-SRC-02426,facturx,True,,{}
+INV-SRC-02427,pint_my,True,,{}
+INV-SRC-02428,nlcius,True,,{}
+INV-SRC-02429,xrechnung_ubl,True,,{}
+INV-SRC-02430,facturx,True,,{}
+INV-SRC-02431,pint_sg,True,,{}
+INV-SRC-02432,xrechnung_ubl,True,,{}
+INV-SRC-02433,xrechnung_ubl,True,,{}
+INV-SRC-02434,nlcius,True,,{}
+INV-SRC-02435,facturx,True,,{}
+INV-SRC-02436,xrechnung_ubl,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02437,nlcius,True,,{}
+INV-SRC-02438,peppol_bis_3,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02439,nlcius,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""451.52"", ""total_amount"": ""2709.12"", ""currency"": ""EUR""}"
+INV-SRC-02440,facturx,True,,{}
+INV-SRC-02441,peppol_bis_3,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""16041.45"", ""total_amount"": ""100470.16""}"
+INV-SRC-02442,nlcius,True,,{}
+INV-SRC-02443,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02444,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""4941.95"", ""total_amount"": ""87307.81""}"
+INV-SRC-02445,pint_sg,True,,{}
+INV-SRC-02446,pint_my,True,,{}
+INV-SRC-02447,nlcius,True,,{}
+INV-SRC-02448,xrechnung_ubl,True,,{}
+INV-SRC-02449,facturx,True,,{}
+INV-SRC-02450,xrechnung_ubl,True,,{}
+INV-SRC-02451,xrechnung_ubl,True,,{}
+INV-SRC-02452,peppol_bis_3,True,,{}
+INV-SRC-02453,nlcius,True,,{}
+INV-SRC-02454,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""735.87"", ""total_amount"": ""4608.86""}"
+INV-SRC-02455,peppol_bis_3,True,,{}
+INV-SRC-02456,nlcius,True,,{}
+INV-SRC-02457,nlcius,True,,{}
+INV-SRC-02458,facturx,True,,{}
+INV-SRC-02459,xrechnung_ubl,True,,{}
+INV-SRC-02460,xrechnung_ubl,True,,{}
+INV-SRC-02461,nlcius,True,,{}
+INV-SRC-02462,nlcius,True,,{}
+INV-SRC-02463,nlcius,True,,{}
+INV-SRC-02464,pint_my,True,,{}
+INV-SRC-02465,peppol_bis_3,True,,{}
+INV-SRC-02466,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02467,xrechnung_ubl,True,,{}
+INV-SRC-02468,xrechnung_ubl,True,,{}
+INV-SRC-02469,nlcius,True,,{}
+INV-SRC-02470,facturx,True,,{}
+INV-SRC-02471,xrechnung_ubl,True,,{}
+INV-SRC-02472,xrechnung_ubl,True,,{}
+INV-SRC-02473,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""1778.38"", ""total_amount"": ""10246.87""}"
+INV-SRC-02474,nlcius,True,,{}
+INV-SRC-02475,facturx,True,,{}
+INV-SRC-02476,facturx,True,,{}
+INV-SRC-02477,pint_sg,True,,{}
+INV-SRC-02478,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""9882.51"", ""total_amount"": ""119688.18""}"
+INV-SRC-02479,xrechnung_ubl,True,,{}
+INV-SRC-02480,peppol_bis_3,True,,{}
+INV-SRC-02481,xrechnung_ubl,True,,{}
+INV-SRC-02482,peppol_bis_3,True,,{}
+INV-SRC-02483,facturx,True,,{}
+INV-SRC-02484,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02485,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""821.75"", ""total_amount"": ""5146.75""}"
+INV-SRC-02486,xrechnung_ubl,True,,{}
+INV-SRC-02487,nlcius,True,,{}
+INV-SRC-02488,nlcius,True,,{}
+INV-SRC-02489,facturx,True,,{}
+INV-SRC-02490,peppol_bis_3,True,,{}
+INV-SRC-02491,peppol_bis_3,True,,{}
+INV-SRC-02492,facturx,True,,{}
+INV-SRC-02493,xrechnung_ubl,True,,{}
+INV-SRC-02494,nlcius,True,,{}
+INV-SRC-02495,peppol_bis_3,True,,{}
+INV-SRC-02496,xrechnung_ubl,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""17747.19"", ""total_amount"": ""195219.06"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02497,nlcius,True,,{}
+INV-SRC-02498,pint_sg,True,,{}
+INV-SRC-02499,xrechnung_ubl,True,,{}
+INV-SRC-02500,peppol_bis_3,True,,{}
+INV-SRC-02501,xrechnung_ubl,True,,{}
+INV-SRC-02502,pint_my,True,,{}
+INV-SRC-02503,peppol_bis_3,True,,{}
+INV-SRC-02504,facturx,False,missing_required_field|seller_vat_format_invalid,"{""delivery_date"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02505,pint_my,True,,{}
+INV-SRC-02506,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""20023.4"", ""total_amount"": ""220257.35""}"
+INV-SRC-02507,nlcius,True,,{}
+INV-SRC-02508,xrechnung_ubl,True,,{}
+INV-SRC-02509,peppol_bis_3,True,,{}
+INV-SRC-02510,facturx,True,,{}
+INV-SRC-02511,facturx,True,,{}
+INV-SRC-02512,xrechnung_ubl,True,,{}
+INV-SRC-02513,facturx,True,,{}
+INV-SRC-02514,peppol_bis_3,True,,{}
+INV-SRC-02515,xrechnung_ubl,True,,{}
+INV-SRC-02516,nlcius,True,,{}
+INV-SRC-02517,xrechnung_ubl,True,,{}
+INV-SRC-02518,peppol_bis_3,True,,{}
+INV-SRC-02519,peppol_bis_3,True,,{}
+INV-SRC-02520,xrechnung_ubl,True,,{}
+INV-SRC-02521,pint_sg,True,,{}
+INV-SRC-02522,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02523,nlcius,True,,{}
+INV-SRC-02524,xrechnung_ubl,True,,{}
+INV-SRC-02525,peppol_bis_3,True,,{}
+INV-SRC-02526,peppol_bis_3,True,,{}
+INV-SRC-02527,xrechnung_ubl,True,,{}
+INV-SRC-02528,nlcius,True,,{}
+INV-SRC-02529,facturx,True,,{}
+INV-SRC-02530,facturx,True,,{}
+INV-SRC-02531,peppol_bis_3,True,,{}
+INV-SRC-02532,facturx,True,,{}
+INV-SRC-02533,peppol_bis_3,True,,{}
+INV-SRC-02534,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""8464.8"", ""total_amount"": ""129390.48""}"
+INV-SRC-02535,xrechnung_ubl,True,,{}
+INV-SRC-02536,peppol_bis_3,True,,{}
+INV-SRC-02537,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""10221.91"", ""total_amount"": ""180587.07""}"
+INV-SRC-02538,peppol_bis_3,True,,{}
+INV-SRC-02539,peppol_bis_3,True,,{}
+INV-SRC-02540,peppol_bis_3,True,,{}
+INV-SRC-02541,peppol_bis_3,True,,{}
+INV-SRC-02542,peppol_bis_3,True,,{}
+INV-SRC-02543,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-02544,xrechnung_ubl,True,,{}
+INV-SRC-02545,nlcius,False,tax_amount_mismatch|seller_vat_format_invalid,"{""tax_amount"": ""11441.85"", ""total_amount"": ""125860.31"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02546,nlcius,True,,{}
+INV-SRC-02547,nlcius,True,,{}
+INV-SRC-02548,xrechnung_ubl,True,,{}
+INV-SRC-02549,xrechnung_ubl,True,,{}
+INV-SRC-02550,peppol_bis_3,True,,{}
+INV-SRC-02551,xrechnung_ubl,True,,{}
+INV-SRC-02552,xrechnung_ubl,True,,{}
+INV-SRC-02553,pint_my,True,,{}
+INV-SRC-02554,nlcius,True,,{}
+INV-SRC-02555,nlcius,True,,{}
+INV-SRC-02556,facturx,True,,{}
+INV-SRC-02557,xrechnung_ubl,True,,{}
+INV-SRC-02558,facturx,True,,{}
+INV-SRC-02559,nlcius,True,,{}
+INV-SRC-02560,xrechnung_ubl,True,,{}
+INV-SRC-02561,peppol_bis_3,True,,{}
+INV-SRC-02562,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""496.25"", ""total_amount"": ""5458.78""}"
+INV-SRC-02563,peppol_bis_3,True,,{}
+INV-SRC-02564,xrechnung_ubl,True,,{}
+INV-SRC-02565,nlcius,True,,{}
+INV-SRC-02566,xrechnung_ubl,True,,{}
+INV-SRC-02567,facturx,True,,{}
+INV-SRC-02568,facturx,False,currency_not_supported|seller_vat_format_invalid,"{""currency"": ""EUR"", ""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-02569,facturx,True,,{}
+INV-SRC-02570,pint_my,True,,{}
+INV-SRC-02571,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-02572,xrechnung_ubl,True,,{}
+INV-SRC-02573,xrechnung_ubl,True,,{}
+INV-SRC-02574,nlcius,True,,{}
+INV-SRC-02575,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02576,xrechnung_ubl,True,,{}
+INV-SRC-02577,peppol_bis_3,True,,{}
+INV-SRC-02578,facturx,True,,{}
+INV-SRC-02579,xrechnung_ubl,True,,{}
+INV-SRC-02580,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02581,facturx,True,,{}
+INV-SRC-02582,facturx,True,,{}
+INV-SRC-02583,nlcius,True,,{}
+INV-SRC-02584,peppol_bis_3,True,,{}
+INV-SRC-02585,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""26242.49"", ""total_amount"": ""157454.96""}"
+INV-SRC-02586,pint_sg,True,,{}
+INV-SRC-02587,pint_sg,True,,{}
+INV-SRC-02588,xrechnung_ubl,True,,{}
+INV-SRC-02589,peppol_bis_3,True,,{}
+INV-SRC-02590,nlcius,True,,{}
+INV-SRC-02591,facturx,True,,{}
+INV-SRC-02592,facturx,True,,{}
+INV-SRC-02593,pint_sg,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""0.0"", ""total_amount"": ""51467.84""}"
+INV-SRC-02594,xrechnung_ubl,True,,{}
+INV-SRC-02595,pint_my,True,,{}
+INV-SRC-02596,facturx,True,,{}
+INV-SRC-02597,pint_sg,True,,{}
+INV-SRC-02598,pint_my,False,currency_not_supported,"{""currency"": ""MYR""}"
+INV-SRC-02599,pint_my,True,,{}
+INV-SRC-02600,pint_sg,True,,{}
+INV-SRC-02601,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""31302.2"", ""total_amount"": ""180360.28""}"
+INV-SRC-02602,nlcius,True,,{}
+INV-SRC-02603,pint_sg,True,,{}
+INV-SRC-02604,peppol_bis_3,True,,{}
+INV-SRC-02605,facturx,True,,{}
+INV-SRC-02606,peppol_bis_3,True,,{}
+INV-SRC-02607,facturx,True,,{}
+INV-SRC-02608,pint_my,True,,{}
+INV-SRC-02609,facturx,True,,{}
+INV-SRC-02610,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""23668.33"", ""total_amount"": ""116485.3""}"
+INV-SRC-02611,xrechnung_ubl,True,,{}
+INV-SRC-02612,nlcius,True,,{}
+INV-SRC-02613,facturx,True,,{}
+INV-SRC-02614,xrechnung_ubl,True,,{}
+INV-SRC-02615,nlcius,True,,{}
+INV-SRC-02616,facturx,True,,{}
+INV-SRC-02617,nlcius,True,,{}
+INV-SRC-02618,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02619,pint_sg,True,,{}
+INV-SRC-02620,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""18102.89"", ""total_amount"": ""199131.82""}"
+INV-SRC-02621,facturx,True,,{}
+INV-SRC-02622,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02623,xrechnung_ubl,True,,{}
+INV-SRC-02624,peppol_bis_3,True,,{}
+INV-SRC-02625,facturx,True,,{}
+INV-SRC-02626,pint_my,False,currency_not_supported,"{""currency"": ""MYR""}"
+INV-SRC-02627,nlcius,True,,{}
+INV-SRC-02628,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-02629,peppol_bis_3,True,,{}
+INV-SRC-02630,xrechnung_ubl,True,,{}
+INV-SRC-02631,nlcius,True,,{}
+INV-SRC-02632,pint_sg,True,,{}
+INV-SRC-02633,facturx,True,,{}
+INV-SRC-02634,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""12596.27"", ""total_amount"": ""222534.03""}"
+INV-SRC-02635,facturx,True,,{}
+INV-SRC-02636,pint_sg,True,,{}
+INV-SRC-02637,xrechnung_ubl,True,,{}
+INV-SRC-02638,facturx,True,,{}
+INV-SRC-02639,xrechnung_ubl,True,,{}
+INV-SRC-02640,facturx,True,,{}
+INV-SRC-02641,pint_sg,True,,{}
+INV-SRC-02642,facturx,True,,{}
+INV-SRC-02643,nlcius,True,,{}
+INV-SRC-02644,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02645,facturx,True,,{}
+INV-SRC-02646,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""43003.07"", ""total_amount"": ""269335.0""}"
+INV-SRC-02647,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02648,pint_my,True,,{}
+INV-SRC-02649,xrechnung_ubl,True,,{}
+INV-SRC-02650,xrechnung_ubl,True,,{}
+INV-SRC-02651,facturx,True,,{}
+INV-SRC-02652,xrechnung_ubl,True,,{}
+INV-SRC-02653,facturx,True,,{}
+INV-SRC-02654,facturx,True,,{}
+INV-SRC-02655,xrechnung_ubl,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02656,nlcius,True,,{}
+INV-SRC-02657,xrechnung_ubl,True,,{}
+INV-SRC-02658,xrechnung_ubl,True,,{}
+INV-SRC-02659,facturx,True,,{}
+INV-SRC-02660,xrechnung_ubl,True,,{}
+INV-SRC-02661,nlcius,True,,{}
+INV-SRC-02662,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""10517.83"", ""total_amount"": ""91424.21""}"
+INV-SRC-02663,facturx,True,,{}
+INV-SRC-02664,xrechnung_ubl,True,,{}
+INV-SRC-02665,xrechnung_ubl,True,,{}
+INV-SRC-02666,nlcius,True,,{}
+INV-SRC-02667,xrechnung_ubl,True,,{}
+INV-SRC-02668,pint_sg,True,,{}
+INV-SRC-02669,peppol_bis_3,True,,{}
+INV-SRC-02670,facturx,True,,{}
+INV-SRC-02671,peppol_bis_3,True,,{}
+INV-SRC-02672,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02673,peppol_bis_3,True,,{}
+INV-SRC-02674,facturx,True,,{}
+INV-SRC-02675,pint_sg,True,,{}
+INV-SRC-02676,nlcius,True,,{}
+INV-SRC-02677,pint_my,True,,{}
+INV-SRC-02678,peppol_bis_3,True,,{}
+INV-SRC-02679,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""876.29"", ""total_amount"": ""5257.75""}"
+INV-SRC-02680,xrechnung_ubl,True,,{}
+INV-SRC-02681,pint_my,True,,{}
+INV-SRC-02682,facturx,True,,{}
+INV-SRC-02683,pint_my,True,,{}
+INV-SRC-02684,peppol_bis_3,True,,{}
+INV-SRC-02685,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02686,peppol_bis_3,True,,{}
+INV-SRC-02687,pint_my,True,,{}
+INV-SRC-02688,xrechnung_ubl,True,,{}
+INV-SRC-02689,peppol_bis_3,True,,{}
+INV-SRC-02690,pint_sg,True,,{}
+INV-SRC-02691,pint_my,True,,{}
+INV-SRC-02692,nlcius,True,,{}
+INV-SRC-02693,nlcius,True,,{}
+INV-SRC-02694,facturx,True,,{}
+INV-SRC-02695,nlcius,True,,{}
+INV-SRC-02696,pint_my,True,,{}
+INV-SRC-02697,peppol_bis_3,True,,{}
+INV-SRC-02698,nlcius,True,,{}
+INV-SRC-02699,facturx,True,,{}
+INV-SRC-02700,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02701,nlcius,True,,{}
+INV-SRC-02702,xrechnung_ubl,True,,{}
+INV-SRC-02703,xrechnung_ubl,False,currency_not_supported|seller_vat_format_invalid,"{""currency"": ""EUR"", ""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02704,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-02705,peppol_bis_3,True,,{}
+INV-SRC-02706,peppol_bis_3,True,,{}
+INV-SRC-02707,nlcius,True,,{}
+INV-SRC-02708,pint_sg,True,,{}
+INV-SRC-02709,facturx,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02710,xrechnung_ubl,True,,{}
+INV-SRC-02711,pint_my,True,,{}
+INV-SRC-02712,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02713,peppol_bis_3,True,,{}
+INV-SRC-02714,nlcius,True,,{}
+INV-SRC-02715,peppol_bis_3,True,,{}
+INV-SRC-02716,facturx,True,,{}
+INV-SRC-02717,pint_my,True,,{}
+INV-SRC-02718,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""137.71"", ""total_amount"": ""793.48""}"
+INV-SRC-02719,pint_my,True,,{}
+INV-SRC-02720,facturx,True,,{}
+INV-SRC-02721,facturx,True,,{}
+INV-SRC-02722,pint_sg,True,,{}
+INV-SRC-02723,facturx,True,,{}
+INV-SRC-02724,peppol_bis_3,True,,{}
+INV-SRC-02725,xrechnung_ubl,True,,{}
+INV-SRC-02726,pint_sg,True,,{}
+INV-SRC-02727,facturx,True,,{}
+INV-SRC-02728,facturx,True,,{}
+INV-SRC-02729,facturx,True,,{}
+INV-SRC-02730,pint_sg,True,,{}
+INV-SRC-02731,xrechnung_ubl,True,,{}
+INV-SRC-02732,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02733,facturx,True,,{}
+INV-SRC-02734,xrechnung_ubl,True,,{}
+INV-SRC-02735,pint_my,True,,{}
+INV-SRC-02736,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""14070.37"", ""total_amount"": ""170407.76""}"
+INV-SRC-02737,peppol_bis_3,True,,{}
+INV-SRC-02738,xrechnung_ubl,True,,{}
+INV-SRC-02739,facturx,True,,{}
+INV-SRC-02740,nlcius,True,,{}
+INV-SRC-02741,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""17614.41"", ""total_amount"": ""193758.51""}"
+INV-SRC-02742,xrechnung_ubl,True,,{}
+INV-SRC-02743,facturx,True,,{}
+INV-SRC-02744,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-02745,pint_sg,True,,{}
+INV-SRC-02746,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""0.0"", ""total_amount"": ""16303.68""}"
+INV-SRC-02747,xrechnung_ubl,True,,{}
+INV-SRC-02748,facturx,False,currency_not_supported|credit_note_not_supported,"{""currency"": ""EUR"", ""subtotal"": ""19912.16"", ""tax_amount"": ""1991.22"", ""total_amount"": ""21903.38""}"
+INV-SRC-02749,facturx,True,,{}
+INV-SRC-02750,facturx,True,,{}
+INV-SRC-02751,xrechnung_ubl,True,,{}
+INV-SRC-02752,pint_sg,True,,{}
+INV-SRC-02753,nlcius,True,,{}
+INV-SRC-02754,nlcius,True,,{}
+INV-SRC-02755,peppol_bis_3,True,,{}
+INV-SRC-02756,xrechnung_ubl,True,,{}
+INV-SRC-02757,nlcius,True,,{}
+INV-SRC-02758,xrechnung_ubl,True,,{}
+INV-SRC-02759,pint_sg,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""33421.48"", ""total_amount"": ""209324.01"", ""currency"": ""SGD""}"
+INV-SRC-02760,xrechnung_ubl,True,,{}
+INV-SRC-02761,xrechnung_ubl,True,,{}
+INV-SRC-02762,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02763,peppol_bis_3,True,,{}
+INV-SRC-02764,xrechnung_ubl,True,,{}
+INV-SRC-02765,xrechnung_ubl,True,,{}
+INV-SRC-02766,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02767,facturx,True,,{}
+INV-SRC-02768,pint_my,True,,{}
+INV-SRC-02769,peppol_bis_3,True,,{}
+INV-SRC-02770,facturx,True,,{}
+INV-SRC-02771,facturx,True,,{}
+INV-SRC-02772,pint_sg,True,,{}
+INV-SRC-02773,peppol_bis_3,True,,{}
+INV-SRC-02774,xrechnung_ubl,True,,{}
+INV-SRC-02775,peppol_bis_3,True,,{}
+INV-SRC-02776,peppol_bis_3,True,,{}
+INV-SRC-02777,peppol_bis_3,True,,{}
+INV-SRC-02778,facturx,True,,{}
+INV-SRC-02779,facturx,True,,{}
+INV-SRC-02780,pint_sg,True,,{}
+INV-SRC-02781,peppol_bis_3,True,,{}
+INV-SRC-02782,nlcius,True,,{}
+INV-SRC-02783,nlcius,True,,{}
+INV-SRC-02784,xrechnung_ubl,True,,{}
+INV-SRC-02785,pint_sg,True,,{}
+INV-SRC-02786,pint_my,True,,{}
+INV-SRC-02787,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-02788,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""10443.03"", ""total_amount"": ""114873.35""}"
+INV-SRC-02789,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02790,facturx,True,,{}
+INV-SRC-02791,peppol_bis_3,True,,{}
+INV-SRC-02792,xrechnung_ubl,True,,{}
+INV-SRC-02793,pint_my,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-02794,nlcius,True,,{}
+INV-SRC-02795,peppol_bis_3,True,,{}
+INV-SRC-02796,pint_my,True,,{}
+INV-SRC-02797,pint_sg,True,,{}
+INV-SRC-02798,peppol_bis_3,True,,{}
+INV-SRC-02799,peppol_bis_3,True,,{}
+INV-SRC-02800,xrechnung_ubl,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02801,xrechnung_ubl,True,,{}
+INV-SRC-02802,pint_sg,True,,{}
+INV-SRC-02803,peppol_bis_3,True,,{}
+INV-SRC-02804,pint_sg,True,,{}
+INV-SRC-02805,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""11252.98"", ""total_amount"": ""123782.8""}"
+INV-SRC-02806,nlcius,True,,{}
+INV-SRC-02807,nlcius,True,,{}
+INV-SRC-02808,peppol_bis_3,True,,{}
+INV-SRC-02809,pint_sg,True,,{}
+INV-SRC-02810,peppol_bis_3,True,,{}
+INV-SRC-02811,xrechnung_ubl,True,,{}
+INV-SRC-02812,nlcius,True,,{}
+INV-SRC-02813,peppol_bis_3,True,,{}
+INV-SRC-02814,facturx,True,,{}
+INV-SRC-02815,nlcius,True,,{}
+INV-SRC-02816,nlcius,True,,{}
+INV-SRC-02817,facturx,True,,{}
+INV-SRC-02818,facturx,True,,{}
+INV-SRC-02819,facturx,False,credit_note_not_supported,"{""subtotal"": ""15319.48"", ""tax_amount"": ""1072.36"", ""total_amount"": ""16391.84""}"
+INV-SRC-02820,nlcius,True,,{}
+INV-SRC-02821,pint_sg,True,,{}
+INV-SRC-02822,peppol_bis_3,True,,{}
+INV-SRC-02823,xrechnung_ubl,True,,{}
+INV-SRC-02824,xrechnung_ubl,True,,{}
+INV-SRC-02825,xrechnung_ubl,True,,{}
+INV-SRC-02826,nlcius,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02827,pint_sg,True,,{}
+INV-SRC-02828,xrechnung_ubl,True,,{}
+INV-SRC-02829,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""38.92"", ""total_amount"": ""243.76""}"
+INV-SRC-02830,xrechnung_ubl,True,,{}
+INV-SRC-02831,nlcius,True,,{}
+INV-SRC-02832,pint_my,True,,{}
+INV-SRC-02833,pint_sg,True,,{}
+INV-SRC-02834,xrechnung_ubl,True,,{}
+INV-SRC-02835,xrechnung_ubl,False,missing_required_field|tax_amount_mismatch,"{""delivery_date"": ""REQUIRED"", ""tax_amount"": ""13959.22"", ""total_amount"": ""83755.3""}"
+INV-SRC-02836,xrechnung_ubl,True,,{}
+INV-SRC-02837,nlcius,True,,{}
+INV-SRC-02838,xrechnung_ubl,True,,{}
+INV-SRC-02839,xrechnung_ubl,True,,{}
+INV-SRC-02840,xrechnung_ubl,True,,{}
+INV-SRC-02841,peppol_bis_3,True,,{}
+INV-SRC-02842,facturx,True,,{}
+INV-SRC-02843,facturx,True,,{}
+INV-SRC-02844,nlcius,True,,{}
+INV-SRC-02845,nlcius,True,,{}
+INV-SRC-02846,facturx,True,,{}
+INV-SRC-02847,nlcius,True,,{}
+INV-SRC-02848,facturx,True,,{}
+INV-SRC-02849,xrechnung_ubl,True,,{}
+INV-SRC-02850,peppol_bis_3,True,,{}
+INV-SRC-02851,xrechnung_ubl,True,,{}
+INV-SRC-02852,xrechnung_ubl,True,,{}
+INV-SRC-02853,peppol_bis_3,True,,{}
+INV-SRC-02854,nlcius,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-02855,xrechnung_ubl,True,,{}
+INV-SRC-02856,pint_sg,True,,{}
+INV-SRC-02857,pint_sg,True,,{}
+INV-SRC-02858,nlcius,True,,{}
+INV-SRC-02859,pint_my,True,,{}
+INV-SRC-02860,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""5128.47"", ""total_amount"": ""62111.47""}"
+INV-SRC-02861,facturx,True,,{}
+INV-SRC-02862,facturx,True,,{}
+INV-SRC-02863,xrechnung_ubl,True,,{}
+INV-SRC-02864,peppol_bis_3,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_FR""}"
+INV-SRC-02865,facturx,True,,{}
+INV-SRC-02866,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02867,facturx,True,,{}
+INV-SRC-02868,xrechnung_ubl,True,,{}
+INV-SRC-02869,facturx,True,,{}
+INV-SRC-02870,xrechnung_ubl,True,,{}
+INV-SRC-02871,peppol_bis_3,True,,{}
+INV-SRC-02872,peppol_bis_3,True,,{}
+INV-SRC-02873,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02874,facturx,True,,{}
+INV-SRC-02875,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02876,pint_my,True,,{}
+INV-SRC-02877,nlcius,True,,{}
+INV-SRC-02878,peppol_bis_3,True,,{}
+INV-SRC-02879,xrechnung_ubl,True,,{}
+INV-SRC-02880,pint_my,True,,{}
+INV-SRC-02881,facturx,True,,{}
+INV-SRC-02882,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""12177.44"", ""total_amount"": ""186140.84""}"
+INV-SRC-02883,xrechnung_ubl,True,,{}
+INV-SRC-02884,xrechnung_ubl,True,,{}
+INV-SRC-02885,facturx,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02886,nlcius,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02887,facturx,True,,{}
+INV-SRC-02888,nlcius,True,,{}
+INV-SRC-02889,facturx,False,missing_required_field|tax_amount_mismatch,"{""buyer_id"": ""REQUIRED"", ""tax_amount"": ""22970.41"", ""total_amount"": ""143867.32""}"
+INV-SRC-02890,pint_sg,True,,{}
+INV-SRC-02891,pint_sg,True,,{}
+INV-SRC-02892,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""947.82"", ""total_amount"": ""10425.98""}"
+INV-SRC-02893,xrechnung_ubl,True,,{}
+INV-SRC-02894,pint_sg,True,,{}
+INV-SRC-02895,pint_sg,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02896,pint_my,True,,{}
+INV-SRC-02897,facturx,True,,{}
+INV-SRC-02898,nlcius,True,,{}
+INV-SRC-02899,peppol_bis_3,True,,{}
+INV-SRC-02900,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""1343.03"", ""total_amount"": ""14773.35""}"
+INV-SRC-02901,facturx,True,,{}
+INV-SRC-02902,nlcius,True,,{}
+INV-SRC-02903,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""3447.33"", ""total_amount"": ""52694.86""}"
+INV-SRC-02904,pint_sg,True,,{}
+INV-SRC-02905,xrechnung_ubl,True,,{}
+INV-SRC-02906,nlcius,True,,{}
+INV-SRC-02907,facturx,True,,{}
+INV-SRC-02908,pint_my,True,,{}
+INV-SRC-02909,facturx,True,,{}
+INV-SRC-02910,peppol_bis_3,True,,{}
+INV-SRC-02911,nlcius,False,tax_amount_mismatch|currency_not_supported,"{""tax_amount"": ""35596.17"", ""total_amount"": ""213577.0"", ""currency"": ""EUR""}"
+INV-SRC-02912,xrechnung_ubl,True,,{}
+INV-SRC-02913,xrechnung_ubl,True,,{}
+INV-SRC-02914,pint_my,True,,{}
+INV-SRC-02915,facturx,True,,{}
+INV-SRC-02916,peppol_bis_3,True,,{}
+INV-SRC-02917,facturx,True,,{}
+INV-SRC-02918,facturx,True,,{}
+INV-SRC-02919,nlcius,True,,{}
+INV-SRC-02920,xrechnung_ubl,True,,{}
+INV-SRC-02921,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-02922,xrechnung_ubl,True,,{}
+INV-SRC-02923,nlcius,True,,{}
+INV-SRC-02924,peppol_bis_3,True,,{}
+INV-SRC-02925,xrechnung_ubl,True,,{}
+INV-SRC-02926,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02927,facturx,True,,{}
+INV-SRC-02928,facturx,True,,{}
+INV-SRC-02929,facturx,True,,{}
+INV-SRC-02930,peppol_bis_3,True,,{}
+INV-SRC-02931,xrechnung_ubl,True,,{}
+INV-SRC-02932,pint_sg,False,currency_not_supported,"{""currency"": ""SGD""}"
+INV-SRC-02933,nlcius,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02934,xrechnung_ubl,True,,{}
+INV-SRC-02935,peppol_bis_3,True,,{}
+INV-SRC-02936,pint_my,True,,{}
+INV-SRC-02937,facturx,True,,{}
+INV-SRC-02938,facturx,True,,{}
+INV-SRC-02939,xrechnung_ubl,True,,{}
+INV-SRC-02940,peppol_bis_3,True,,{}
+INV-SRC-02941,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""1233.67"", ""total_amount"": ""6841.27"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02942,xrechnung_ubl,True,,{}
+INV-SRC-02943,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""1224.06"", ""total_amount"": ""18710.58""}"
+INV-SRC-02944,peppol_bis_3,False,currency_not_supported|buyer_vat_missing_for_target,"{""currency"": ""EUR"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-02945,xrechnung_ubl,True,,{}
+INV-SRC-02946,facturx,True,,{}
+INV-SRC-02947,xrechnung_ubl,True,,{}
+INV-SRC-02948,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02949,peppol_bis_3,True,,{}
+INV-SRC-02950,facturx,True,,{}
+INV-SRC-02951,xrechnung_ubl,True,,{}
+INV-SRC-02952,facturx,True,,{}
+INV-SRC-02953,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02954,xrechnung_ubl,True,,{}
+INV-SRC-02955,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""10362.7"", ""total_amount"": ""183074.43""}"
+INV-SRC-02956,facturx,True,,{}
+INV-SRC-02957,pint_sg,True,,{}
+INV-SRC-02958,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""46883.43"", ""total_amount"": ""293638.34""}"
+INV-SRC-02959,pint_my,True,,{}
+INV-SRC-02960,peppol_bis_3,True,,{}
+INV-SRC-02961,xrechnung_ubl,True,,{}
+INV-SRC-02962,facturx,True,,{}
+INV-SRC-02963,nlcius,True,,{}
+INV-SRC-02964,nlcius,True,,{}
+INV-SRC-02965,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-02966,facturx,True,,{}
+INV-SRC-02967,facturx,True,,{}
+INV-SRC-02968,pint_sg,True,,{}
+INV-SRC-02969,facturx,True,,{}
+INV-SRC-02970,facturx,False,credit_note_not_supported,"{""subtotal"": ""214003.97"", ""tax_amount"": ""19260.36"", ""total_amount"": ""233264.33""}"
+INV-SRC-02971,facturx,True,,{}
+INV-SRC-02972,facturx,True,,{}
+INV-SRC-02973,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-02974,pint_sg,True,,{}
+INV-SRC-02975,nlcius,True,,{}
+INV-SRC-02976,xrechnung_ubl,True,,{}
+INV-SRC-02977,xrechnung_ubl,True,,{}
+INV-SRC-02978,peppol_bis_3,True,,{}
+INV-SRC-02979,peppol_bis_3,False,tax_amount_mismatch,"{""tax_amount"": ""17485.73"", ""total_amount"": ""211771.65""}"
+INV-SRC-02980,xrechnung_ubl,True,,{}
+INV-SRC-02981,facturx,True,,{}
+INV-SRC-02982,pint_sg,False,tax_amount_mismatch,"{""tax_amount"": ""4563.27"", ""total_amount"": ""27379.6""}"
+INV-SRC-02983,facturx,True,,{}
+INV-SRC-02984,xrechnung_ubl,True,,{}
+INV-SRC-02985,pint_sg,True,,{}
+INV-SRC-02986,nlcius,True,,{}
+INV-SRC-02987,peppol_bis_3,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-02988,nlcius,True,,{}
+INV-SRC-02989,peppol_bis_3,False,buyer_vat_missing_for_target|seller_vat_format_invalid,"{""buyer_vat"": ""REQUIRED"", ""seller_vat"": ""INVALID_FORMAT_FOR_NL""}"
+INV-SRC-02990,pint_sg,True,,{}
+INV-SRC-02991,pint_sg,True,,{}
+INV-SRC-02992,nlcius,True,,{}
+INV-SRC-02993,nlcius,True,,{}
+INV-SRC-02994,pint_my,True,,{}
+INV-SRC-02995,pint_my,True,,{}
+INV-SRC-02996,pint_my,True,,{}
+INV-SRC-02997,nlcius,True,,{}
+INV-SRC-02998,peppol_bis_3,True,,{}
+INV-SRC-02999,xrechnung_ubl,True,,{}
+INV-SRC-03000,facturx,True,,{}
+INV-SRC-03001,pint_sg,True,,{}
+INV-SRC-03002,xrechnung_ubl,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-03003,peppol_bis_3,True,,{}
+INV-SRC-03004,pint_sg,True,,{}
+INV-SRC-03005,nlcius,True,,{}
+INV-SRC-03006,facturx,True,,{}
+INV-SRC-03007,pint_sg,True,,{}
+INV-SRC-03008,peppol_bis_3,True,,{}
+INV-SRC-03009,pint_my,True,,{}
+INV-SRC-03010,xrechnung_ubl,True,,{}
+INV-SRC-03011,nlcius,True,,{}
+INV-SRC-03012,facturx,True,,{}
+INV-SRC-03013,xrechnung_ubl,True,,{}
+INV-SRC-03014,nlcius,True,,{}
+INV-SRC-03015,facturx,True,,{}
+INV-SRC-03016,xrechnung_ubl,True,,{}
+INV-SRC-03017,facturx,False,line_item_structure_incompatible,"{""line_item_structure"": ""flat""}"
+INV-SRC-03018,pint_sg,True,,{}
+INV-SRC-03019,facturx,True,,{}
+INV-SRC-03020,peppol_bis_3,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-03021,pint_my,False,missing_required_field,"{""buyer_id"": ""REQUIRED""}"
+INV-SRC-03022,nlcius,True,,{}
+INV-SRC-03023,facturx,True,,{}
+INV-SRC-03024,xrechnung_ubl,True,,{}
+INV-SRC-03025,pint_my,True,,{}
+INV-SRC-03026,pint_my,True,,{}
+INV-SRC-03027,facturx,True,,{}
+INV-SRC-03028,peppol_bis_3,True,,{}
+INV-SRC-03029,xrechnung_ubl,True,,{}
+INV-SRC-03030,nlcius,True,,{}
+INV-SRC-03031,facturx,True,,{}
+INV-SRC-03032,facturx,True,,{}
+INV-SRC-03033,nlcius,True,,{}
+INV-SRC-03034,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""11201.05"", ""total_amount"": ""214856.46""}"
+INV-SRC-03035,pint_sg,True,,{}
+INV-SRC-03036,xrechnung_ubl,True,,{}
+INV-SRC-03037,facturx,True,,{}
+INV-SRC-03038,xrechnung_ubl,True,,{}
+INV-SRC-03039,nlcius,True,,{}
+INV-SRC-03040,facturx,True,,{}
+INV-SRC-03041,pint_my,False,currency_not_supported,"{""currency"": ""MYR""}"
+INV-SRC-03042,facturx,True,,{}
+INV-SRC-03043,facturx,True,,{}
+INV-SRC-03044,facturx,True,,{}
+INV-SRC-03045,nlcius,True,,{}
+INV-SRC-03046,peppol_bis_3,True,,{}
+INV-SRC-03047,facturx,True,,{}
+INV-SRC-03048,peppol_bis_3,True,,{}
+INV-SRC-03049,xrechnung_ubl,True,,{}
+INV-SRC-03050,facturx,True,,{}
+INV-SRC-03051,peppol_bis_3,True,,{}
+INV-SRC-03052,peppol_bis_3,False,missing_required_field|buyer_vat_missing_for_target,"{""buyer_id"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-03053,peppol_bis_3,True,,{}
+INV-SRC-03054,pint_my,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_SG""}"
+INV-SRC-03055,facturx,True,,{}
+INV-SRC-03056,nlcius,True,,{}
+INV-SRC-03057,xrechnung_ubl,True,,{}
+INV-SRC-03058,peppol_bis_3,True,,{}
+INV-SRC-03059,facturx,True,,{}
+INV-SRC-03060,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""1698.45"", ""total_amount"": ""32579.45""}"
+INV-SRC-03061,peppol_bis_3,True,,{}
+INV-SRC-03062,peppol_bis_3,True,,{}
+INV-SRC-03063,facturx,True,,{}
+INV-SRC-03064,facturx,False,tax_amount_mismatch,"{""tax_amount"": ""28983.33"", ""total_amount"": ""181527.19""}"
+INV-SRC-03065,nlcius,True,,{}
+INV-SRC-03066,nlcius,True,,{}
+INV-SRC-03067,peppol_bis_3,True,,{}
+INV-SRC-03068,facturx,True,,{}
+INV-SRC-03069,pint_sg,True,,{}
+INV-SRC-03070,facturx,True,,{}
+INV-SRC-03071,peppol_bis_3,True,,{}
+INV-SRC-03072,peppol_bis_3,True,,{}
+INV-SRC-03073,nlcius,True,,{}
+INV-SRC-03074,xrechnung_ubl,True,,{}
+INV-SRC-03075,facturx,True,,{}
+INV-SRC-03076,nlcius,True,,{}
+INV-SRC-03077,facturx,True,,{}
+INV-SRC-03078,facturx,True,,{}
+INV-SRC-03079,pint_my,True,,{}
+INV-SRC-03080,facturx,True,,{}
+INV-SRC-03081,xrechnung_ubl,True,,{}
+INV-SRC-03082,xrechnung_ubl,True,,{}
+INV-SRC-03083,peppol_bis_3,True,,{}
+INV-SRC-03084,xrechnung_ubl,True,,{}
+INV-SRC-03085,pint_sg,True,,{}
+INV-SRC-03086,facturx,True,,{}
+INV-SRC-03087,facturx,True,,{}
+INV-SRC-03088,pint_my,True,,{}
+INV-SRC-03089,pint_my,True,,{}
+INV-SRC-03090,facturx,True,,{}
+INV-SRC-03091,facturx,True,,{}
+INV-SRC-03092,facturx,True,,{}
+INV-SRC-03093,pint_my,True,,{}
+INV-SRC-03094,nlcius,True,,{}
+INV-SRC-03095,pint_my,True,,{}
+INV-SRC-03096,nlcius,True,,{}
+INV-SRC-03097,xrechnung_ubl,True,,{}
+INV-SRC-03098,xrechnung_ubl,True,,{}
+INV-SRC-03099,facturx,True,,{}
+INV-SRC-03100,peppol_bis_3,True,,{}
+INV-SRC-03101,xrechnung_ubl,True,,{}
+INV-SRC-03102,peppol_bis_3,True,,{}
+INV-SRC-03103,nlcius,False,tax_amount_mismatch|buyer_vat_missing_for_target,"{""tax_amount"": ""1716.76"", ""total_amount"": ""10752.36"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-03104,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_MY""}"
+INV-SRC-03105,xrechnung_ubl,True,,{}
+INV-SRC-03106,pint_my,True,,{}
+INV-SRC-03107,nlcius,True,,{}
+INV-SRC-03108,peppol_bis_3,True,,{}
+INV-SRC-03109,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""5450.23"", ""total_amount"": ""59952.52""}"
+INV-SRC-03110,xrechnung_ubl,True,,{}
+INV-SRC-03111,peppol_bis_3,True,,{}
+INV-SRC-03112,nlcius,True,,{}
+INV-SRC-03113,pint_sg,True,,{}
+INV-SRC-03114,peppol_bis_3,True,,{}
+INV-SRC-03115,nlcius,True,,{}
+INV-SRC-03116,pint_sg,True,,{}
+INV-SRC-03117,pint_my,True,,{}
+INV-SRC-03118,pint_sg,True,,{}
+INV-SRC-03119,xrechnung_ubl,True,,{}
+INV-SRC-03120,facturx,True,,{}
+INV-SRC-03121,xrechnung_ubl,True,,{}
+INV-SRC-03122,xrechnung_ubl,True,,{}
+INV-SRC-03123,facturx,True,,{}
+INV-SRC-03124,peppol_bis_3,True,,{}
+INV-SRC-03125,xrechnung_ubl,True,,{}
+INV-SRC-03126,nlcius,True,,{}
+INV-SRC-03127,nlcius,True,,{}
+INV-SRC-03128,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""1406.78"", ""total_amount"": ""21503.61""}"
+INV-SRC-03129,pint_sg,True,,{}
+INV-SRC-03130,facturx,True,,{}
+INV-SRC-03131,xrechnung_ubl,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-03132,pint_sg,True,,{}
+INV-SRC-03133,pint_my,True,,{}
+INV-SRC-03134,peppol_bis_3,True,,{}
+INV-SRC-03135,peppol_bis_3,True,,{}
+INV-SRC-03136,peppol_bis_3,True,,{}
+INV-SRC-03137,nlcius,True,,{}
+INV-SRC-03138,peppol_bis_3,True,,{}
+INV-SRC-03139,facturx,True,,{}
+INV-SRC-03140,pint_my,False,tax_amount_mismatch,"{""tax_amount"": ""42006.93"", ""total_amount"": ""263096.01""}"
+INV-SRC-03141,pint_my,True,,{}
+INV-SRC-03142,xrechnung_ubl,True,,{}
+INV-SRC-03143,xrechnung_ubl,True,,{}
+INV-SRC-03144,peppol_bis_3,True,,{}
+INV-SRC-03145,nlcius,True,,{}
+INV-SRC-03146,peppol_bis_3,True,,{}
+INV-SRC-03147,pint_sg,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-03148,nlcius,True,,{}
+INV-SRC-03149,facturx,True,,{}
+INV-SRC-03150,nlcius,True,,{}
+INV-SRC-03151,xrechnung_ubl,True,,{}
+INV-SRC-03152,peppol_bis_3,False,missing_required_field,"{""payment_reference"": ""REQUIRED""}"
+INV-SRC-03153,xrechnung_ubl,True,,{}
+INV-SRC-03154,peppol_bis_3,True,,{}
+INV-SRC-03155,xrechnung_ubl,True,,{}
+INV-SRC-03156,nlcius,True,,{}
+INV-SRC-03157,nlcius,True,,{}
+INV-SRC-03158,xrechnung_ubl,False,tax_amount_mismatch,"{""tax_amount"": ""11688.22"", ""total_amount"": ""67346.41""}"
+INV-SRC-03159,xrechnung_ubl,True,,{}
+INV-SRC-03160,pint_sg,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-03161,facturx,True,,{}
+INV-SRC-03162,facturx,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_DE""}"
+INV-SRC-03163,nlcius,True,,{}
+INV-SRC-03164,xrechnung_ubl,True,,{}
+INV-SRC-03165,nlcius,True,,{}
+INV-SRC-03166,pint_my,True,,{}
+INV-SRC-03167,pint_my,True,,{}
+INV-SRC-03168,pint_sg,True,,{}
+INV-SRC-03169,peppol_bis_3,False,buyer_vat_missing_for_target,"{""buyer_vat"": ""REQUIRED""}"
+INV-SRC-03170,nlcius,True,,{}
+INV-SRC-03171,facturx,True,,{}
+INV-SRC-03172,facturx,True,,{}
+INV-SRC-03173,nlcius,False,currency_not_supported,"{""currency"": ""EUR""}"
+INV-SRC-03174,peppol_bis_3,True,,{}
+INV-SRC-03175,nlcius,False,tax_amount_mismatch,"{""tax_amount"": ""2197.56"", ""total_amount"": ""33591.31""}"
+INV-SRC-03176,nlcius,True,,{}
+INV-SRC-03177,peppol_bis_3,True,,{}
+INV-SRC-03178,peppol_bis_3,True,,{}
+INV-SRC-03179,xrechnung_ubl,True,,{}
+INV-SRC-03180,xrechnung_ubl,True,,{}
+INV-SRC-03181,peppol_bis_3,True,,{}
+INV-SRC-03182,peppol_bis_3,True,,{}
+INV-SRC-03183,pint_my,True,,{}
+INV-SRC-03184,nlcius,True,,{}
+INV-SRC-03185,pint_sg,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-03186,xrechnung_ubl,True,,{}
+INV-SRC-03187,nlcius,True,,{}
+INV-SRC-03188,xrechnung_ubl,True,,{}
+INV-SRC-03189,xrechnung_ubl,False,missing_required_field|buyer_vat_missing_for_target,"{""buyer_id"": ""REQUIRED"", ""buyer_vat"": ""REQUIRED""}"
+INV-SRC-03190,xrechnung_ubl,True,,{}
+INV-SRC-03191,pint_sg,True,,{}
+INV-SRC-03192,xrechnung_ubl,True,,{}
+INV-SRC-03193,facturx,False,missing_required_field,"{""delivery_date"": ""REQUIRED""}"
+INV-SRC-03194,facturx,True,,{}
+INV-SRC-03195,nlcius,True,,{}
+INV-SRC-03196,facturx,True,,{}
+INV-SRC-03197,peppol_bis_3,True,,{}
+INV-SRC-03198,pint_my,True,,{}
+INV-SRC-03199,nlcius,False,seller_vat_format_invalid,"{""seller_vat"": ""INVALID_FORMAT_FOR_BE""}"
+INV-SRC-03200,xrechnung_ubl,True,,{}

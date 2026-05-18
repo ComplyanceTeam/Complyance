@@ -1,0 +1,851 @@
+invoice_id,is_mapping_valid,mapping_errors
+INV-TST-00001,0,currency_not_supported
+INV-TST-00002,0,currency_not_supported
+INV-TST-00003,0,currency_not_supported
+INV-TST-00004,0,currency_not_supported
+INV-TST-00005,0,currency_not_supported
+INV-TST-00006,0,currency_not_supported
+INV-TST-00007,0,currency_not_supported
+INV-TST-00008,0,currency_not_supported
+INV-TST-00009,0,currency_not_supported
+INV-TST-00010,0,currency_not_supported
+INV-TST-00011,0,currency_not_supported
+INV-TST-00012,0,currency_not_supported
+INV-TST-00013,0,currency_not_supported
+INV-TST-00014,0,currency_not_supported
+INV-TST-00015,0,currency_not_supported
+INV-TST-00016,0,currency_not_supported
+INV-TST-00017,0,currency_not_supported
+INV-TST-00018,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00019,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00020,0,currency_not_supported
+INV-TST-00021,0,currency_not_supported
+INV-TST-00022,0,currency_not_supported
+INV-TST-00023,0,currency_not_supported
+INV-TST-00024,0,currency_not_supported
+INV-TST-00025,0,currency_not_supported
+INV-TST-00026,0,currency_not_supported
+INV-TST-00027,0,"credit_note_not_supported, currency_not_supported"
+INV-TST-00028,0,currency_not_supported
+INV-TST-00029,0,currency_not_supported
+INV-TST-00030,0,"buyer_vat_missing_for_target, currency_not_supported, line_item_structure_incompatible"
+INV-TST-00031,0,currency_not_supported
+INV-TST-00032,0,currency_not_supported
+INV-TST-00033,0,currency_not_supported
+INV-TST-00034,0,currency_not_supported
+INV-TST-00035,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00036,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00037,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00038,0,currency_not_supported
+INV-TST-00039,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00040,0,currency_not_supported
+INV-TST-00041,0,currency_not_supported
+INV-TST-00042,0,currency_not_supported
+INV-TST-00043,0,currency_not_supported
+INV-TST-00044,0,currency_not_supported
+INV-TST-00045,0,currency_not_supported
+INV-TST-00046,0,currency_not_supported
+INV-TST-00047,0,currency_not_supported
+INV-TST-00048,0,currency_not_supported
+INV-TST-00049,0,currency_not_supported
+INV-TST-00050,0,currency_not_supported
+INV-TST-00051,0,currency_not_supported
+INV-TST-00052,0,currency_not_supported
+INV-TST-00053,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00054,0,currency_not_supported
+INV-TST-00055,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00056,0,currency_not_supported
+INV-TST-00057,0,currency_not_supported
+INV-TST-00058,0,currency_not_supported
+INV-TST-00059,0,currency_not_supported
+INV-TST-00060,0,currency_not_supported
+INV-TST-00061,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00062,0,currency_not_supported
+INV-TST-00063,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00064,0,currency_not_supported
+INV-TST-00065,0,currency_not_supported
+INV-TST-00066,0,currency_not_supported
+INV-TST-00067,0,currency_not_supported
+INV-TST-00068,0,currency_not_supported
+INV-TST-00069,0,currency_not_supported
+INV-TST-00070,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00071,0,currency_not_supported
+INV-TST-00072,0,currency_not_supported
+INV-TST-00073,0,currency_not_supported
+INV-TST-00074,0,currency_not_supported
+INV-TST-00075,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00076,0,currency_not_supported
+INV-TST-00077,0,currency_not_supported
+INV-TST-00078,0,currency_not_supported
+INV-TST-00079,0,currency_not_supported
+INV-TST-00080,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00081,0,currency_not_supported
+INV-TST-00082,0,currency_not_supported
+INV-TST-00083,0,currency_not_supported
+INV-TST-00084,0,currency_not_supported
+INV-TST-00085,0,currency_not_supported
+INV-TST-00086,0,currency_not_supported
+INV-TST-00087,0,currency_not_supported
+INV-TST-00088,0,currency_not_supported
+INV-TST-00089,0,currency_not_supported
+INV-TST-00090,0,currency_not_supported
+INV-TST-00091,0,currency_not_supported
+INV-TST-00092,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00093,0,currency_not_supported
+INV-TST-00094,0,currency_not_supported
+INV-TST-00095,0,currency_not_supported
+INV-TST-00096,0,currency_not_supported
+INV-TST-00097,0,currency_not_supported
+INV-TST-00098,0,currency_not_supported
+INV-TST-00099,0,currency_not_supported
+INV-TST-00100,0,currency_not_supported
+INV-TST-00101,0,currency_not_supported
+INV-TST-00102,0,currency_not_supported
+INV-TST-00103,0,currency_not_supported
+INV-TST-00104,0,currency_not_supported
+INV-TST-00105,0,currency_not_supported
+INV-TST-00106,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00107,0,currency_not_supported
+INV-TST-00108,0,currency_not_supported
+INV-TST-00109,0,currency_not_supported
+INV-TST-00110,0,currency_not_supported
+INV-TST-00111,0,currency_not_supported
+INV-TST-00112,0,currency_not_supported
+INV-TST-00113,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00114,0,currency_not_supported
+INV-TST-00115,0,currency_not_supported
+INV-TST-00116,0,currency_not_supported
+INV-TST-00117,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00118,0,currency_not_supported
+INV-TST-00119,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00120,0,currency_not_supported
+INV-TST-00121,0,currency_not_supported
+INV-TST-00122,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00123,0,currency_not_supported
+INV-TST-00124,0,currency_not_supported
+INV-TST-00125,0,currency_not_supported
+INV-TST-00126,0,currency_not_supported
+INV-TST-00127,0,currency_not_supported
+INV-TST-00128,0,currency_not_supported
+INV-TST-00129,0,currency_not_supported
+INV-TST-00130,0,currency_not_supported
+INV-TST-00131,0,currency_not_supported
+INV-TST-00132,0,currency_not_supported
+INV-TST-00133,0,currency_not_supported
+INV-TST-00134,0,currency_not_supported
+INV-TST-00135,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00136,0,currency_not_supported
+INV-TST-00137,0,currency_not_supported
+INV-TST-00138,0,currency_not_supported
+INV-TST-00139,0,currency_not_supported
+INV-TST-00140,0,currency_not_supported
+INV-TST-00141,0,currency_not_supported
+INV-TST-00142,0,currency_not_supported
+INV-TST-00143,0,currency_not_supported
+INV-TST-00144,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00145,0,currency_not_supported
+INV-TST-00146,0,currency_not_supported
+INV-TST-00147,0,currency_not_supported
+INV-TST-00148,0,currency_not_supported
+INV-TST-00149,0,currency_not_supported
+INV-TST-00150,0,currency_not_supported
+INV-TST-00151,0,currency_not_supported
+INV-TST-00152,0,currency_not_supported
+INV-TST-00153,0,"currency_not_supported, line_item_structure_incompatible, tax_amount_mismatch"
+INV-TST-00154,0,currency_not_supported
+INV-TST-00155,0,currency_not_supported
+INV-TST-00156,0,currency_not_supported
+INV-TST-00157,0,currency_not_supported
+INV-TST-00158,0,currency_not_supported
+INV-TST-00159,0,currency_not_supported
+INV-TST-00160,0,currency_not_supported
+INV-TST-00161,0,currency_not_supported
+INV-TST-00162,0,currency_not_supported
+INV-TST-00163,0,currency_not_supported
+INV-TST-00164,0,currency_not_supported
+INV-TST-00165,0,currency_not_supported
+INV-TST-00166,0,currency_not_supported
+INV-TST-00167,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00168,0,currency_not_supported
+INV-TST-00169,0,currency_not_supported
+INV-TST-00170,0,currency_not_supported
+INV-TST-00171,0,currency_not_supported
+INV-TST-00172,0,currency_not_supported
+INV-TST-00173,0,currency_not_supported
+INV-TST-00174,0,currency_not_supported
+INV-TST-00175,0,currency_not_supported
+INV-TST-00176,0,"buyer_vat_missing_for_target, currency_not_supported, tax_amount_mismatch"
+INV-TST-00177,0,currency_not_supported
+INV-TST-00178,0,currency_not_supported
+INV-TST-00179,0,currency_not_supported
+INV-TST-00180,0,currency_not_supported
+INV-TST-00181,0,currency_not_supported
+INV-TST-00182,0,currency_not_supported
+INV-TST-00183,0,currency_not_supported
+INV-TST-00184,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00185,0,currency_not_supported
+INV-TST-00186,0,currency_not_supported
+INV-TST-00187,0,currency_not_supported
+INV-TST-00188,0,currency_not_supported
+INV-TST-00189,0,currency_not_supported
+INV-TST-00190,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00191,0,currency_not_supported
+INV-TST-00192,0,currency_not_supported
+INV-TST-00193,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00194,0,currency_not_supported
+INV-TST-00195,0,currency_not_supported
+INV-TST-00196,0,currency_not_supported
+INV-TST-00197,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00198,0,currency_not_supported
+INV-TST-00199,0,currency_not_supported
+INV-TST-00200,0,currency_not_supported
+INV-TST-00201,0,currency_not_supported
+INV-TST-00202,0,currency_not_supported
+INV-TST-00203,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00204,0,currency_not_supported
+INV-TST-00205,0,currency_not_supported
+INV-TST-00206,0,currency_not_supported
+INV-TST-00207,0,currency_not_supported
+INV-TST-00208,0,currency_not_supported
+INV-TST-00209,0,currency_not_supported
+INV-TST-00210,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00211,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00212,0,currency_not_supported
+INV-TST-00213,0,currency_not_supported
+INV-TST-00214,0,currency_not_supported
+INV-TST-00215,0,currency_not_supported
+INV-TST-00216,0,currency_not_supported
+INV-TST-00217,0,currency_not_supported
+INV-TST-00218,0,currency_not_supported
+INV-TST-00219,0,currency_not_supported
+INV-TST-00220,0,currency_not_supported
+INV-TST-00221,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00222,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00223,0,currency_not_supported
+INV-TST-00224,0,currency_not_supported
+INV-TST-00225,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00226,0,currency_not_supported
+INV-TST-00227,0,currency_not_supported
+INV-TST-00228,0,currency_not_supported
+INV-TST-00229,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00230,0,currency_not_supported
+INV-TST-00231,0,currency_not_supported
+INV-TST-00232,0,currency_not_supported
+INV-TST-00233,0,currency_not_supported
+INV-TST-00234,0,currency_not_supported
+INV-TST-00235,0,currency_not_supported
+INV-TST-00236,0,currency_not_supported
+INV-TST-00237,0,currency_not_supported
+INV-TST-00238,0,currency_not_supported
+INV-TST-00239,0,currency_not_supported
+INV-TST-00240,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00241,0,currency_not_supported
+INV-TST-00242,0,currency_not_supported
+INV-TST-00243,0,currency_not_supported
+INV-TST-00244,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00245,0,currency_not_supported
+INV-TST-00246,0,currency_not_supported
+INV-TST-00247,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00248,0,currency_not_supported
+INV-TST-00249,0,currency_not_supported
+INV-TST-00250,0,currency_not_supported
+INV-TST-00251,0,currency_not_supported
+INV-TST-00252,0,currency_not_supported
+INV-TST-00253,0,currency_not_supported
+INV-TST-00254,0,currency_not_supported
+INV-TST-00255,0,currency_not_supported
+INV-TST-00256,0,currency_not_supported
+INV-TST-00257,0,currency_not_supported
+INV-TST-00258,0,currency_not_supported
+INV-TST-00259,0,currency_not_supported
+INV-TST-00260,0,currency_not_supported
+INV-TST-00261,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00262,0,currency_not_supported
+INV-TST-00263,0,currency_not_supported
+INV-TST-00264,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00265,0,currency_not_supported
+INV-TST-00266,0,currency_not_supported
+INV-TST-00267,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00268,0,currency_not_supported
+INV-TST-00269,0,currency_not_supported
+INV-TST-00270,0,currency_not_supported
+INV-TST-00271,0,currency_not_supported
+INV-TST-00272,0,currency_not_supported
+INV-TST-00273,0,currency_not_supported
+INV-TST-00274,0,currency_not_supported
+INV-TST-00275,0,currency_not_supported
+INV-TST-00276,0,currency_not_supported
+INV-TST-00277,0,currency_not_supported
+INV-TST-00278,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00279,0,currency_not_supported
+INV-TST-00280,0,currency_not_supported
+INV-TST-00281,0,currency_not_supported
+INV-TST-00282,0,currency_not_supported
+INV-TST-00283,0,"buyer_vat_missing_for_target, currency_not_supported, line_item_structure_incompatible"
+INV-TST-00284,0,currency_not_supported
+INV-TST-00285,0,currency_not_supported
+INV-TST-00286,0,currency_not_supported
+INV-TST-00287,0,currency_not_supported
+INV-TST-00288,0,currency_not_supported
+INV-TST-00289,0,currency_not_supported
+INV-TST-00290,0,currency_not_supported
+INV-TST-00291,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00292,0,currency_not_supported
+INV-TST-00293,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00294,0,currency_not_supported
+INV-TST-00295,0,currency_not_supported
+INV-TST-00296,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00297,0,currency_not_supported
+INV-TST-00298,0,currency_not_supported
+INV-TST-00299,0,currency_not_supported
+INV-TST-00300,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00301,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00302,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00303,0,currency_not_supported
+INV-TST-00304,0,currency_not_supported
+INV-TST-00305,0,currency_not_supported
+INV-TST-00306,0,currency_not_supported
+INV-TST-00307,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00308,0,currency_not_supported
+INV-TST-00309,0,currency_not_supported
+INV-TST-00310,0,currency_not_supported
+INV-TST-00311,0,currency_not_supported
+INV-TST-00312,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00313,0,currency_not_supported
+INV-TST-00314,0,currency_not_supported
+INV-TST-00315,0,currency_not_supported
+INV-TST-00316,0,currency_not_supported
+INV-TST-00317,0,"credit_note_not_supported, currency_not_supported"
+INV-TST-00318,0,currency_not_supported
+INV-TST-00319,0,currency_not_supported
+INV-TST-00320,0,currency_not_supported
+INV-TST-00321,0,currency_not_supported
+INV-TST-00322,0,currency_not_supported
+INV-TST-00323,0,currency_not_supported
+INV-TST-00324,0,currency_not_supported
+INV-TST-00325,0,currency_not_supported
+INV-TST-00326,0,currency_not_supported
+INV-TST-00327,0,currency_not_supported
+INV-TST-00328,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00329,0,currency_not_supported
+INV-TST-00330,0,currency_not_supported
+INV-TST-00331,0,currency_not_supported
+INV-TST-00332,0,currency_not_supported
+INV-TST-00333,0,currency_not_supported
+INV-TST-00334,0,currency_not_supported
+INV-TST-00335,0,currency_not_supported
+INV-TST-00336,0,currency_not_supported
+INV-TST-00337,0,currency_not_supported
+INV-TST-00338,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00339,0,currency_not_supported
+INV-TST-00340,0,currency_not_supported
+INV-TST-00341,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00342,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00343,0,currency_not_supported
+INV-TST-00344,0,currency_not_supported
+INV-TST-00345,0,currency_not_supported
+INV-TST-00346,0,currency_not_supported
+INV-TST-00347,0,currency_not_supported
+INV-TST-00348,0,currency_not_supported
+INV-TST-00349,0,currency_not_supported
+INV-TST-00350,0,currency_not_supported
+INV-TST-00351,0,currency_not_supported
+INV-TST-00352,0,currency_not_supported
+INV-TST-00353,0,currency_not_supported
+INV-TST-00354,0,currency_not_supported
+INV-TST-00355,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00356,0,currency_not_supported
+INV-TST-00357,0,currency_not_supported
+INV-TST-00358,0,currency_not_supported
+INV-TST-00359,0,currency_not_supported
+INV-TST-00360,0,currency_not_supported
+INV-TST-00361,0,currency_not_supported
+INV-TST-00362,0,currency_not_supported
+INV-TST-00363,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00364,0,currency_not_supported
+INV-TST-00365,0,currency_not_supported
+INV-TST-00366,0,currency_not_supported
+INV-TST-00367,0,currency_not_supported
+INV-TST-00368,0,currency_not_supported
+INV-TST-00369,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00370,0,currency_not_supported
+INV-TST-00371,0,"credit_note_not_supported, currency_not_supported"
+INV-TST-00372,0,currency_not_supported
+INV-TST-00373,0,currency_not_supported
+INV-TST-00374,0,currency_not_supported
+INV-TST-00375,0,currency_not_supported
+INV-TST-00376,0,currency_not_supported
+INV-TST-00377,0,currency_not_supported
+INV-TST-00378,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00379,0,currency_not_supported
+INV-TST-00380,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00381,0,currency_not_supported
+INV-TST-00382,0,currency_not_supported
+INV-TST-00383,0,currency_not_supported
+INV-TST-00384,0,currency_not_supported
+INV-TST-00385,0,currency_not_supported
+INV-TST-00386,0,currency_not_supported
+INV-TST-00387,0,currency_not_supported
+INV-TST-00388,0,currency_not_supported
+INV-TST-00389,0,currency_not_supported
+INV-TST-00390,0,currency_not_supported
+INV-TST-00391,0,currency_not_supported
+INV-TST-00392,0,currency_not_supported
+INV-TST-00393,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00394,0,currency_not_supported
+INV-TST-00395,0,currency_not_supported
+INV-TST-00396,0,currency_not_supported
+INV-TST-00397,0,currency_not_supported
+INV-TST-00398,0,currency_not_supported
+INV-TST-00399,0,currency_not_supported
+INV-TST-00400,0,currency_not_supported
+INV-TST-00401,0,currency_not_supported
+INV-TST-00402,0,currency_not_supported
+INV-TST-00403,0,currency_not_supported
+INV-TST-00404,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00405,0,currency_not_supported
+INV-TST-00406,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00407,0,currency_not_supported
+INV-TST-00408,0,currency_not_supported
+INV-TST-00409,0,currency_not_supported
+INV-TST-00410,0,currency_not_supported
+INV-TST-00411,0,currency_not_supported
+INV-TST-00412,0,currency_not_supported
+INV-TST-00413,0,currency_not_supported
+INV-TST-00414,0,currency_not_supported
+INV-TST-00415,0,currency_not_supported
+INV-TST-00416,0,currency_not_supported
+INV-TST-00417,0,currency_not_supported
+INV-TST-00418,0,currency_not_supported
+INV-TST-00419,0,currency_not_supported
+INV-TST-00420,0,currency_not_supported
+INV-TST-00421,0,currency_not_supported
+INV-TST-00422,0,currency_not_supported
+INV-TST-00423,0,currency_not_supported
+INV-TST-00424,0,currency_not_supported
+INV-TST-00425,0,currency_not_supported
+INV-TST-00426,0,currency_not_supported
+INV-TST-00427,0,currency_not_supported
+INV-TST-00428,0,currency_not_supported
+INV-TST-00429,0,currency_not_supported
+INV-TST-00430,0,currency_not_supported
+INV-TST-00431,0,"currency_not_supported, line_item_structure_incompatible, tax_amount_mismatch"
+INV-TST-00432,0,currency_not_supported
+INV-TST-00433,0,currency_not_supported
+INV-TST-00434,0,currency_not_supported
+INV-TST-00435,0,currency_not_supported
+INV-TST-00436,0,currency_not_supported
+INV-TST-00437,0,currency_not_supported
+INV-TST-00438,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00439,0,currency_not_supported
+INV-TST-00440,0,currency_not_supported
+INV-TST-00441,0,currency_not_supported
+INV-TST-00442,0,currency_not_supported
+INV-TST-00443,0,currency_not_supported
+INV-TST-00444,0,currency_not_supported
+INV-TST-00445,0,currency_not_supported
+INV-TST-00446,0,currency_not_supported
+INV-TST-00447,0,currency_not_supported
+INV-TST-00448,0,currency_not_supported
+INV-TST-00449,0,currency_not_supported
+INV-TST-00450,0,currency_not_supported
+INV-TST-00451,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00452,0,currency_not_supported
+INV-TST-00453,0,currency_not_supported
+INV-TST-00454,0,currency_not_supported
+INV-TST-00455,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00456,0,currency_not_supported
+INV-TST-00457,0,currency_not_supported
+INV-TST-00458,0,currency_not_supported
+INV-TST-00459,0,currency_not_supported
+INV-TST-00460,0,currency_not_supported
+INV-TST-00461,0,currency_not_supported
+INV-TST-00462,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00463,0,currency_not_supported
+INV-TST-00464,0,currency_not_supported
+INV-TST-00465,0,currency_not_supported
+INV-TST-00466,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00467,0,currency_not_supported
+INV-TST-00468,0,currency_not_supported
+INV-TST-00469,0,currency_not_supported
+INV-TST-00470,0,currency_not_supported
+INV-TST-00471,0,currency_not_supported
+INV-TST-00472,0,currency_not_supported
+INV-TST-00473,0,currency_not_supported
+INV-TST-00474,0,currency_not_supported
+INV-TST-00475,0,currency_not_supported
+INV-TST-00476,0,currency_not_supported
+INV-TST-00477,0,currency_not_supported
+INV-TST-00478,0,currency_not_supported
+INV-TST-00479,0,currency_not_supported
+INV-TST-00480,0,currency_not_supported
+INV-TST-00481,0,currency_not_supported
+INV-TST-00482,0,currency_not_supported
+INV-TST-00483,0,currency_not_supported
+INV-TST-00484,0,currency_not_supported
+INV-TST-00485,0,currency_not_supported
+INV-TST-00486,0,currency_not_supported
+INV-TST-00487,0,currency_not_supported
+INV-TST-00488,0,currency_not_supported
+INV-TST-00489,0,currency_not_supported
+INV-TST-00490,0,currency_not_supported
+INV-TST-00491,0,currency_not_supported
+INV-TST-00492,0,currency_not_supported
+INV-TST-00493,0,currency_not_supported
+INV-TST-00494,0,currency_not_supported
+INV-TST-00495,0,currency_not_supported
+INV-TST-00496,0,currency_not_supported
+INV-TST-00497,0,currency_not_supported
+INV-TST-00498,0,currency_not_supported
+INV-TST-00499,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00500,0,currency_not_supported
+INV-TST-00501,0,currency_not_supported
+INV-TST-00502,0,currency_not_supported
+INV-TST-00503,0,currency_not_supported
+INV-TST-00504,0,currency_not_supported
+INV-TST-00505,0,currency_not_supported
+INV-TST-00506,0,currency_not_supported
+INV-TST-00507,0,currency_not_supported
+INV-TST-00508,0,currency_not_supported
+INV-TST-00509,0,currency_not_supported
+INV-TST-00510,0,currency_not_supported
+INV-TST-00511,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00512,0,currency_not_supported
+INV-TST-00513,0,currency_not_supported
+INV-TST-00514,0,currency_not_supported
+INV-TST-00515,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00516,0,currency_not_supported
+INV-TST-00517,0,currency_not_supported
+INV-TST-00518,0,currency_not_supported
+INV-TST-00519,0,currency_not_supported
+INV-TST-00520,0,currency_not_supported
+INV-TST-00521,0,currency_not_supported
+INV-TST-00522,0,currency_not_supported
+INV-TST-00523,0,currency_not_supported
+INV-TST-00524,0,currency_not_supported
+INV-TST-00525,0,currency_not_supported
+INV-TST-00526,0,currency_not_supported
+INV-TST-00527,0,currency_not_supported
+INV-TST-00528,0,currency_not_supported
+INV-TST-00529,0,currency_not_supported
+INV-TST-00530,0,currency_not_supported
+INV-TST-00531,0,currency_not_supported
+INV-TST-00532,0,currency_not_supported
+INV-TST-00533,0,currency_not_supported
+INV-TST-00534,0,currency_not_supported
+INV-TST-00535,0,currency_not_supported
+INV-TST-00536,0,currency_not_supported
+INV-TST-00537,0,currency_not_supported
+INV-TST-00538,0,currency_not_supported
+INV-TST-00539,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00540,0,currency_not_supported
+INV-TST-00541,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00542,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00543,0,currency_not_supported
+INV-TST-00544,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00545,0,currency_not_supported
+INV-TST-00546,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00547,0,currency_not_supported
+INV-TST-00548,0,currency_not_supported
+INV-TST-00549,0,currency_not_supported
+INV-TST-00550,0,currency_not_supported
+INV-TST-00551,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00552,0,currency_not_supported
+INV-TST-00553,0,currency_not_supported
+INV-TST-00554,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00555,0,currency_not_supported
+INV-TST-00556,0,currency_not_supported
+INV-TST-00557,0,currency_not_supported
+INV-TST-00558,0,currency_not_supported
+INV-TST-00559,0,currency_not_supported
+INV-TST-00560,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00561,0,currency_not_supported
+INV-TST-00562,0,currency_not_supported
+INV-TST-00563,0,currency_not_supported
+INV-TST-00564,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00565,0,currency_not_supported
+INV-TST-00566,0,currency_not_supported
+INV-TST-00567,0,currency_not_supported
+INV-TST-00568,0,currency_not_supported
+INV-TST-00569,0,currency_not_supported
+INV-TST-00570,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00571,0,currency_not_supported
+INV-TST-00572,0,currency_not_supported
+INV-TST-00573,0,currency_not_supported
+INV-TST-00574,0,currency_not_supported
+INV-TST-00575,0,currency_not_supported
+INV-TST-00576,0,currency_not_supported
+INV-TST-00577,0,currency_not_supported
+INV-TST-00578,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00579,0,currency_not_supported
+INV-TST-00580,0,currency_not_supported
+INV-TST-00581,0,currency_not_supported
+INV-TST-00582,0,currency_not_supported
+INV-TST-00583,0,currency_not_supported
+INV-TST-00584,0,currency_not_supported
+INV-TST-00585,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00586,0,currency_not_supported
+INV-TST-00587,0,currency_not_supported
+INV-TST-00588,0,currency_not_supported
+INV-TST-00589,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00590,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00591,0,currency_not_supported
+INV-TST-00592,0,currency_not_supported
+INV-TST-00593,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00594,0,currency_not_supported
+INV-TST-00595,0,currency_not_supported
+INV-TST-00596,0,currency_not_supported
+INV-TST-00597,0,currency_not_supported
+INV-TST-00598,0,currency_not_supported
+INV-TST-00599,0,currency_not_supported
+INV-TST-00600,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00601,0,currency_not_supported
+INV-TST-00602,0,currency_not_supported
+INV-TST-00603,0,currency_not_supported
+INV-TST-00604,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00605,0,currency_not_supported
+INV-TST-00606,0,currency_not_supported
+INV-TST-00607,0,currency_not_supported
+INV-TST-00608,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00609,0,currency_not_supported
+INV-TST-00610,0,currency_not_supported
+INV-TST-00611,0,currency_not_supported
+INV-TST-00612,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00613,0,currency_not_supported
+INV-TST-00614,0,currency_not_supported
+INV-TST-00615,0,currency_not_supported
+INV-TST-00616,0,currency_not_supported
+INV-TST-00617,0,currency_not_supported
+INV-TST-00618,0,currency_not_supported
+INV-TST-00619,0,currency_not_supported
+INV-TST-00620,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00621,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00622,0,currency_not_supported
+INV-TST-00623,0,currency_not_supported
+INV-TST-00624,0,currency_not_supported
+INV-TST-00625,0,currency_not_supported
+INV-TST-00626,0,currency_not_supported
+INV-TST-00627,0,currency_not_supported
+INV-TST-00628,0,currency_not_supported
+INV-TST-00629,0,currency_not_supported
+INV-TST-00630,0,currency_not_supported
+INV-TST-00631,0,currency_not_supported
+INV-TST-00632,0,currency_not_supported
+INV-TST-00633,0,currency_not_supported
+INV-TST-00634,0,currency_not_supported
+INV-TST-00635,0,currency_not_supported
+INV-TST-00636,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00637,0,currency_not_supported
+INV-TST-00638,0,currency_not_supported
+INV-TST-00639,0,currency_not_supported
+INV-TST-00640,0,currency_not_supported
+INV-TST-00641,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00642,0,currency_not_supported
+INV-TST-00643,0,"buyer_vat_missing_for_target, currency_not_supported, tax_amount_mismatch"
+INV-TST-00644,0,currency_not_supported
+INV-TST-00645,0,currency_not_supported
+INV-TST-00646,0,currency_not_supported
+INV-TST-00647,0,currency_not_supported
+INV-TST-00648,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00649,0,currency_not_supported
+INV-TST-00650,0,currency_not_supported
+INV-TST-00651,0,currency_not_supported
+INV-TST-00652,0,currency_not_supported
+INV-TST-00653,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00654,0,currency_not_supported
+INV-TST-00655,0,currency_not_supported
+INV-TST-00656,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00657,0,currency_not_supported
+INV-TST-00658,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00659,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00660,0,currency_not_supported
+INV-TST-00661,0,currency_not_supported
+INV-TST-00662,0,currency_not_supported
+INV-TST-00663,0,currency_not_supported
+INV-TST-00664,0,currency_not_supported
+INV-TST-00665,0,currency_not_supported
+INV-TST-00666,0,currency_not_supported
+INV-TST-00667,0,currency_not_supported
+INV-TST-00668,0,currency_not_supported
+INV-TST-00669,0,currency_not_supported
+INV-TST-00670,0,currency_not_supported
+INV-TST-00671,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00672,0,currency_not_supported
+INV-TST-00673,0,currency_not_supported
+INV-TST-00674,0,currency_not_supported
+INV-TST-00675,0,currency_not_supported
+INV-TST-00676,0,currency_not_supported
+INV-TST-00677,0,currency_not_supported
+INV-TST-00678,0,currency_not_supported
+INV-TST-00679,0,currency_not_supported
+INV-TST-00680,0,currency_not_supported
+INV-TST-00681,0,currency_not_supported
+INV-TST-00682,0,currency_not_supported
+INV-TST-00683,0,currency_not_supported
+INV-TST-00684,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00685,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00686,0,currency_not_supported
+INV-TST-00687,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00688,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00689,0,currency_not_supported
+INV-TST-00690,0,currency_not_supported
+INV-TST-00691,0,currency_not_supported
+INV-TST-00692,0,currency_not_supported
+INV-TST-00693,0,currency_not_supported
+INV-TST-00694,0,currency_not_supported
+INV-TST-00695,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00696,0,currency_not_supported
+INV-TST-00697,0,currency_not_supported
+INV-TST-00698,0,currency_not_supported
+INV-TST-00699,0,currency_not_supported
+INV-TST-00700,0,currency_not_supported
+INV-TST-00701,0,currency_not_supported
+INV-TST-00702,0,currency_not_supported
+INV-TST-00703,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00704,0,currency_not_supported
+INV-TST-00705,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00706,0,currency_not_supported
+INV-TST-00707,0,currency_not_supported
+INV-TST-00708,0,currency_not_supported
+INV-TST-00709,0,currency_not_supported
+INV-TST-00710,0,currency_not_supported
+INV-TST-00711,0,currency_not_supported
+INV-TST-00712,0,currency_not_supported
+INV-TST-00713,0,currency_not_supported
+INV-TST-00714,0,currency_not_supported
+INV-TST-00715,0,currency_not_supported
+INV-TST-00716,0,currency_not_supported
+INV-TST-00717,0,currency_not_supported
+INV-TST-00718,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00719,0,currency_not_supported
+INV-TST-00720,0,currency_not_supported
+INV-TST-00721,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00722,0,currency_not_supported
+INV-TST-00723,0,currency_not_supported
+INV-TST-00724,0,currency_not_supported
+INV-TST-00725,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00726,0,currency_not_supported
+INV-TST-00727,0,currency_not_supported
+INV-TST-00728,0,currency_not_supported
+INV-TST-00729,0,currency_not_supported
+INV-TST-00730,0,currency_not_supported
+INV-TST-00731,0,currency_not_supported
+INV-TST-00732,0,currency_not_supported
+INV-TST-00733,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00734,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00735,0,currency_not_supported
+INV-TST-00736,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00737,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00738,0,currency_not_supported
+INV-TST-00739,0,currency_not_supported
+INV-TST-00740,0,currency_not_supported
+INV-TST-00741,0,currency_not_supported
+INV-TST-00742,0,currency_not_supported
+INV-TST-00743,0,currency_not_supported
+INV-TST-00744,0,currency_not_supported
+INV-TST-00745,0,currency_not_supported
+INV-TST-00746,0,currency_not_supported
+INV-TST-00747,0,currency_not_supported
+INV-TST-00748,0,currency_not_supported
+INV-TST-00749,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00750,0,currency_not_supported
+INV-TST-00751,0,currency_not_supported
+INV-TST-00752,0,currency_not_supported
+INV-TST-00753,0,currency_not_supported
+INV-TST-00754,0,currency_not_supported
+INV-TST-00755,0,currency_not_supported
+INV-TST-00756,0,currency_not_supported
+INV-TST-00757,0,currency_not_supported
+INV-TST-00758,0,currency_not_supported
+INV-TST-00759,0,currency_not_supported
+INV-TST-00760,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00761,0,currency_not_supported
+INV-TST-00762,0,currency_not_supported
+INV-TST-00763,0,currency_not_supported
+INV-TST-00764,0,currency_not_supported
+INV-TST-00765,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00766,0,currency_not_supported
+INV-TST-00767,0,currency_not_supported
+INV-TST-00768,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00769,0,currency_not_supported
+INV-TST-00770,0,currency_not_supported
+INV-TST-00771,0,currency_not_supported
+INV-TST-00772,0,currency_not_supported
+INV-TST-00773,0,currency_not_supported
+INV-TST-00774,0,currency_not_supported
+INV-TST-00775,0,"buyer_vat_missing_for_target, currency_not_supported"
+INV-TST-00776,0,currency_not_supported
+INV-TST-00777,0,currency_not_supported
+INV-TST-00778,0,currency_not_supported
+INV-TST-00779,0,currency_not_supported
+INV-TST-00780,0,currency_not_supported
+INV-TST-00781,0,currency_not_supported
+INV-TST-00782,0,currency_not_supported
+INV-TST-00783,0,currency_not_supported
+INV-TST-00784,0,currency_not_supported
+INV-TST-00785,0,currency_not_supported
+INV-TST-00786,0,currency_not_supported
+INV-TST-00787,0,currency_not_supported
+INV-TST-00788,0,currency_not_supported
+INV-TST-00789,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00790,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00791,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00792,0,currency_not_supported
+INV-TST-00793,0,currency_not_supported
+INV-TST-00794,0,currency_not_supported
+INV-TST-00795,0,currency_not_supported
+INV-TST-00796,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00797,0,currency_not_supported
+INV-TST-00798,0,currency_not_supported
+INV-TST-00799,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00800,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00801,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00802,0,currency_not_supported
+INV-TST-00803,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00804,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00805,0,currency_not_supported
+INV-TST-00806,0,currency_not_supported
+INV-TST-00807,0,currency_not_supported
+INV-TST-00808,0,currency_not_supported
+INV-TST-00809,0,currency_not_supported
+INV-TST-00810,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00811,0,currency_not_supported
+INV-TST-00812,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00813,0,currency_not_supported
+INV-TST-00814,0,currency_not_supported
+INV-TST-00815,0,currency_not_supported
+INV-TST-00816,0,currency_not_supported
+INV-TST-00817,0,currency_not_supported
+INV-TST-00818,0,currency_not_supported
+INV-TST-00819,0,currency_not_supported
+INV-TST-00820,0,currency_not_supported
+INV-TST-00821,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00822,0,currency_not_supported
+INV-TST-00823,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00824,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00825,0,currency_not_supported
+INV-TST-00826,0,currency_not_supported
+INV-TST-00827,0,"currency_not_supported, line_item_structure_incompatible"
+INV-TST-00828,0,currency_not_supported
+INV-TST-00829,0,currency_not_supported
+INV-TST-00830,0,currency_not_supported
+INV-TST-00831,0,currency_not_supported
+INV-TST-00832,0,currency_not_supported
+INV-TST-00833,0,currency_not_supported
+INV-TST-00834,0,currency_not_supported
+INV-TST-00835,0,currency_not_supported
+INV-TST-00836,0,currency_not_supported
+INV-TST-00837,0,currency_not_supported
+INV-TST-00838,0,currency_not_supported
+INV-TST-00839,0,currency_not_supported
+INV-TST-00840,0,currency_not_supported
+INV-TST-00841,0,currency_not_supported
+INV-TST-00842,0,currency_not_supported
+INV-TST-00843,0,currency_not_supported
+INV-TST-00844,0,currency_not_supported
+INV-TST-00845,0,currency_not_supported
+INV-TST-00846,0,currency_not_supported
+INV-TST-00847,0,currency_not_supported
+INV-TST-00848,0,currency_not_supported
+INV-TST-00849,0,"currency_not_supported, tax_amount_mismatch"
+INV-TST-00850,0,currency_not_supported

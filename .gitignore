@@ -37,6 +37,15 @@ out/
 
 # Local data / logs
 *.log
+/services/api/run_*/
 /services/api/temp/
 /services/api/outputs/
-/core/engine/__pycache__/
+/core/engine/outputs/
+/core/processed/
+
+# System specific / Audit
+run_full_audit.py
+phase.txt
+/Complyance/backend/
+/Complyance/data/
+/Complyance/src/
