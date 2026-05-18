@@ -251,10 +251,12 @@ def map_invoice(
 
         # Wrap in a standard envelope
         root_tag = 'Invoice' if syntax == 'UBL' else 'CrossIndustryInvoice'
-        
-        xml_data = {
-            root_tag: mapped_invoices[0] if len(mapped_invoices) == 1 else mapped_invoices
-        }
+
+        if len(mapped_invoices) == 1:
+            xml_data = {root_tag: mapped_invoices[0]}
+        else:
+            # Ensure a single root element for multiple invoices
+            xml_data = {'Invoices': {root_tag: mapped_invoices}}
 
         xml_string = xmltodict.unparse(
 

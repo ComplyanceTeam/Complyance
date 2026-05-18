@@ -1,6 +1,6 @@
 import StatusPill from '../ui/StatusPill'
 
-export default function ValidationTable({ rows = [] }) {
+export default function ValidationTable({ rows = [], onRowClick }) {
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
       <div className="overflow-x-auto">
@@ -19,7 +19,11 @@ export default function ValidationTable({ rows = [] }) {
           </thead>
           <tbody className="divide-y divide-slate-50">
             {rows.map((row, idx) => (
-              <tr key={idx} className="hover:bg-slate-50/50 transition-colors group">
+              <tr 
+                key={idx} 
+                className={`hover:bg-slate-50/50 transition-colors group ${onRowClick ? 'cursor-pointer' : ''}`}
+                onClick={() => onRowClick && onRowClick(row)}
+              >
                 <td className="px-8 py-5 text-[13px] font-black text-slate-900">{row.invoice_id}</td>
                 <td className="px-8 py-5 text-[12px] font-bold text-slate-500 uppercase tracking-wide">{row.error_type}</td>
                 <td className="px-8 py-5">

@@ -23,9 +23,10 @@ from core.engine.utils import clean_nan_values
 # Base directory for API
 BASE_DIR = os.path.dirname(__file__)
 
-def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") -> Dict[str, Any]:
+def run_transcode_pipeline(input_data: Any, file_type: str = "json") -> Dict[str, Any]:
     """
-    Orchestrates the transcoding pipeline for a single invoice provided as a dictionary.
+    Orchestrates the transcoding pipeline for a single invoice.
+    Accepts a dict for JSON input or raw file content for CSV/XML.
     Thread-safe version: uses unique directories per request and isolated execution.
     """
     session_id = str(uuid.uuid4())
@@ -46,6 +47,11 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
     with open(temp_input_path, "w", encoding="utf-8") as f:
         if file_type == "json":
             json.dump([input_data], f)
+        else:
+            if isinstance(input_data, (bytes, bytearray)):
+                f.write(input_data.decode("utf-8"))
+            else:
+                f.write(str(input_data))
         
     original_cwd = os.getcwd()
     
@@ -56,8 +62,13 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
         # 1. Parse
         if file_type == 'json':
             csv_path = convert_json_to_csv(temp_input_path)
+        elif file_type == 'xml':
+            csv_path = convert_xml_to_csv(temp_input_path)
         else:
             csv_path = load_csv(temp_input_path)
+
+        if not csv_path:
+            raise ValueError("Failed to convert input to CSV for processing.")
             
         # 2. Preprocess
         processed_df = preprocess_invoice(csv_path)
@@ -75,6 +86,26 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
         pred_df = pd.read_csv('outputs/prediction_output.csv')
         is_mapping_valid = bool(pred_df.iloc[0]['is_mapping_valid'])
         mapping_errors = str(pred_df.iloc[0]['mapping_errors']) if not pd.isna(pred_df.iloc[0]['mapping_errors']) else ""
+
+        invoice_snapshot = {}
+        try:
+            snapshot_df = pd.read_csv(csv_path)
+            if not snapshot_df.empty:
+                invoice_snapshot = snapshot_df.iloc[0].to_dict()
+        except Exception:
+            if isinstance(input_data, dict):
+                invoice_snapshot = dict(input_data)
+
+        if invoice_snapshot:
+            try:
+                invoice_snapshot = json.loads(json.dumps(invoice_snapshot, default=str))
+            except Exception:
+                pass
+        
+        # Get target_format from corrected invoice (after resolution)
+        corr_df = pd.read_csv('outputs/corrected_invoice.csv')
+        # We need the format name, not ID. Correction/Mapper uses country to resolve it again.
+        # But wait, we can just use the name from transcoded_payload if we want.
         
         final_mapped_path = 'outputs/final_mapped_invoice.csv'
         if file_type == 'json':
@@ -85,11 +116,15 @@ def run_transcode_pipeline(input_data: Dict[Any, Any], file_type: str = "json") 
             mapped_df = pd.read_csv(final_mapped_path)
             transcoded_payload = mapped_df.iloc[0].to_dict()
             
+        invoice_id = invoice_snapshot.get("invoice_id", "UNKNOWN") if isinstance(invoice_snapshot, dict) else "UNKNOWN"
+        source_format = invoice_snapshot.get("source_format", "UNKNOWN") if isinstance(invoice_snapshot, dict) else "UNKNOWN"
+        original_payload = input_data if isinstance(input_data, dict) else invoice_snapshot or {"file_type": file_type}
+
         return clean_nan_values({
-            "invoice_id": input_data.get("invoice_id", "UNKNOWN"),
-            "source_format": input_data.get("source_format", "UNKNOWN"),
-            "target_format": transcoded_payload.get("target_format", "UNKNOWN"),
-            "original_payload": input_data,
+            "invoice_id": invoice_id,
+            "source_format": source_format,
+            "target_format": str(transcoded_payload.get("_syntax", "UNKNOWN")),
+            "original_payload": original_payload,
             "transcoded_payload": transcoded_payload,
             "is_mapping_valid": is_mapping_valid,
             "mapping_errors": mapping_errors

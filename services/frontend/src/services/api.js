@@ -56,8 +56,39 @@ const requestData = async (loader, payload) => {
   }
 }
 
+const normalizeDashboardSummary = (payload) => {
+  if (!payload || typeof payload !== 'object') return dashboardSummary
+
+  return {
+    ...dashboardSummary,
+    ...payload,
+    totals: {
+      ...dashboardSummary.totals,
+      ...(payload.totals && typeof payload.totals === 'object' ? payload.totals : {}),
+    },
+    pipelineStages: Array.isArray(payload.pipelineStages)
+      ? payload.pipelineStages
+      : dashboardSummary.pipelineStages,
+    trendData: Array.isArray(payload.trendData)
+      ? payload.trendData
+      : dashboardSummary.trendData,
+    pipelineSplit: Array.isArray(payload.pipelineSplit)
+      ? payload.pipelineSplit
+      : dashboardSummary.pipelineSplit,
+    validationSummary: Array.isArray(payload.validationSummary)
+      ? payload.validationSummary
+      : dashboardSummary.validationSummary,
+    recentActivity: Array.isArray(payload.recentActivity)
+      ? payload.recentActivity
+      : dashboardSummary.recentActivity,
+  }
+}
+
 export const dashboardApi = {
-  getSummary: () => requestData(() => apiClient.get('/api/dashboard/stats'), dashboardSummary),
+  getSummary: async () => {
+    const data = await requestData(() => apiClient.get('/api/dashboard/stats'), dashboardSummary)
+    return normalizeDashboardSummary(data)
+  },
   
   getPipelineStages: () => requestData(() => withDelay(dashboardSummary.pipelineStages), dashboardSummary.pipelineStages),
   
@@ -87,7 +118,8 @@ export const validationApi = {
       error_type: r.mapping_errors || 'None',
       severity: r.is_mapping_valid ? 'Low' : 'High',
       corrected_fields: r.is_mapping_valid ? 'None' : 'Repaired',
-      validation_status: r.is_mapping_valid ? 'Valid' : 'Invalid'
+      validation_status: r.is_mapping_valid ? 'Valid' : 'Invalid',
+      transcoded_payload: r.transcoded_payload
     }))
   }, validationResults),
 }
@@ -120,6 +152,19 @@ export const invoiceApi = {
   uploadInvoice: async (invoiceData) => {
     console.log('POST -> /api/transcode', invoiceData.invoice_id)
     return apiClient.post('/api/transcode', invoiceData)
+  },
+
+  uploadInvoiceFile: async (file) => {
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('file_type', file?.name?.split('.').pop()?.toLowerCase() || '')
+
+    console.log('POST -> /api/transcode-file', file?.name)
+    return apiClient.post('/api/transcode-file', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
   },
 }
 

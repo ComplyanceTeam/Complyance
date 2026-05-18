@@ -17,6 +17,7 @@ from .paths import get_data_path
 format_df = pd.read_csv(
     get_data_path('format_rules.csv')
 )
+format_df.columns = [str(col).strip().lower() for col in format_df.columns]
 
 def get_realistic_default(field, row, target_format):
     """Generate a realistic value for a missing field."""
@@ -141,7 +142,7 @@ def correct_invoice(
 
             if target_format:
                 format_row = format_df[format_df['format_id'] == target_format]
-                supported = [c.strip() for f in str(format_row.iloc[0]['supported_currencies']).split(',')]
+                supported = [currency.strip() for currency in str(format_row.iloc[0]['supported_currencies']).split(',')]
                 target_currency = supported[0]
 
                 try:

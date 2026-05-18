@@ -7,3 +7,4 @@ joblib
 forex-python
 xmltodict
 python-dotenv
+python-multipart

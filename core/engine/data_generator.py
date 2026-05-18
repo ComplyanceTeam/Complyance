@@ -17,13 +17,13 @@ from datetime import datetime, timedelta
 from collections import Counter
 
 # Add parent dir to path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import (
+# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from .config import (
     FORMAT_RULES, FORMAT_BY_NAME, COUNTRY_FORMAT_MAP, FORMAT_CURRENCIES,
     VAT_PATTERNS, STANDARD_TAX_RATES, COUNTRY_CURRENCIES, TRADE_CORRIDORS,
     PRODUCT_CATALOG, COMPANIES, ERROR_TYPES, ERROR_WEIGHTS,
 )
-from utils import clean_nan_values
+from .utils import clean_nan_values
 
 random.seed(42)  # Reproducibility
 

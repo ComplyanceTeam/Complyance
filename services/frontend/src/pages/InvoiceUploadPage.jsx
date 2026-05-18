@@ -4,17 +4,23 @@ import Card from '../components/ui/Card'
 import UploadDropzone from '../components/upload/UploadDropzone'
 import { invoiceApi } from '../services/api'
 import { uploadFeedback } from '../data/mockData'
+import JsonViewer from '../components/viewer/JsonViewer'
+import Modal from '../components/ui/Modal'
 
 export default function InvoiceUploadPage() {
   const [file, setFile] = useState(null)
   const [progress, setProgress] = useState(0)
   const [isUploading, setIsUploading] = useState(false)
   const [feedback, setFeedback] = useState(uploadFeedback)
+  const [resultPayload, setResultPayload] = useState(null)
+  const [isResultModalOpen, setIsResultModalOpen] = useState(false)
 
   const handleFileSelect = (nextFile) => {
     setFile(nextFile)
     setProgress(12)
     setFeedback(['Payload detected', 'Schema mapped', 'Ingestion ready'])
+    setResultPayload(null)
+    setIsResultModalOpen(false)
   }
 
   const startUpload = async () => {
@@ -27,26 +33,60 @@ export default function InvoiceUploadPage() {
     }, 1000)
 
     try {
-      // 1. Read the file content
-      const text = await file.text()
-      if (!text.trim()) {
+      const fileName = file.name.toLowerCase()
+      const fileExt = fileName.split('.').pop()
+      const isJson = fileExt === 'json'
+      const isCsv = fileExt === 'csv'
+      const isXml = fileExt === 'xml'
+
+      if (!isJson && !isCsv && !isXml) {
+        throw new Error('Unsupported file type. Please upload a CSV, JSON, or XML invoice file.')
+      }
+
+      let response
+
+      if (isJson) {
+        const text = await file.text()
+        if (!text.trim()) {
           throw new Error('Selected file is empty.')
-      }
+        }
 
-      let invoiceData
-      try {
-          invoiceData = JSON.parse(text)
+        let invoiceData
+        try {
+          const sanitizedText = text.replace(/:\s*NaN/g, ': null')
+          invoiceData = JSON.parse(sanitizedText)
+
           if (Array.isArray(invoiceData)) {
-              if (invoiceData.length === 0) throw new Error('JSON array is empty.')
-              invoiceData = invoiceData[0]
+            if (invoiceData.length === 0) throw new Error('JSON array is empty.')
+            invoiceData = invoiceData[0]
           }
-      } catch (err) {
-          throw new Error('Invalid JSON format. Please upload a valid invoice object.')
-      }
 
-      // 2. Post to the real API
-      console.log('Initiating pipeline for:', invoiceData.invoice_id)
-      const response = await invoiceApi.uploadInvoice(invoiceData)
+          if (!invoiceData || typeof invoiceData !== 'object') {
+            throw new Error('Parsed data is not a valid invoice object.')
+          }
+
+          // Sanitize types for backend strict validation
+          const stringFields = ['invoice_id', 'source_format', 'target_country', 'seller_id', 'buyer_id', 'issue_date', 'currency']
+          stringFields.forEach(field => {
+            if (invoiceData[field] !== undefined && invoiceData[field] !== null) {
+              invoiceData[field] = String(invoiceData[field])
+            }
+          })
+
+          if (invoiceData.line_items_json && typeof invoiceData.line_items_json !== 'string') {
+            invoiceData.line_items_json = JSON.stringify(invoiceData.line_items_json)
+          }
+        } catch (err) {
+          console.error('Parsing error:', err)
+          throw new Error('Invalid JSON format. Please upload a valid invoice object (malformed syntax or unsupported values).')
+        }
+
+        console.log('Initiating pipeline for:', invoiceData.invoice_id)
+        response = await invoiceApi.uploadInvoice(invoiceData)
+      } else {
+        console.log('Initiating pipeline file upload for:', file.name)
+        response = await invoiceApi.uploadInvoiceFile(file)
+      }
       
       if (!response || !response.data) {
           throw new Error('Backend returned an empty response.')
@@ -62,6 +102,15 @@ export default function InvoiceUploadPage() {
           `Integrity: ${result.is_mapping_valid ? 'Verified' : 'Flagged'}`,
           `Findings: ${result.mapping_errors || 'None'}`
       ])
+      
+      if (result.transcoded_payload) {
+          setResultPayload(result.transcoded_payload)
+      } else if (result.original_payload) {
+          setResultPayload(result.original_payload)
+      } else {
+          setResultPayload(result)
+      }
+      setIsResultModalOpen(true)
       
     } catch (err) {
       console.error('Upload Error:', err)
@@ -84,6 +133,8 @@ export default function InvoiceUploadPage() {
       setFeedback([`Execution Failed: ${errorMsg}`])
       window.clearInterval(intervalId)
       setProgress(0)
+      setResultPayload(null)
+      setIsResultModalOpen(false)
     } finally {
       setIsUploading(false)
     }
@@ -103,7 +154,7 @@ export default function InvoiceUploadPage() {
             subtitle="Upload datasets for ML-driven validation"
             action={
               <button 
-                onClick={() => { setFile(null); setProgress(0); setFeedback(uploadFeedback); }}
+                onClick={() => { setFile(null); setProgress(0); setFeedback(uploadFeedback); setResultPayload(null); setIsResultModalOpen(false); }}
                 className="p-2 rounded-lg bg-slate-50 text-slate-400 hover:text-slate-900 transition-colors"
               >
                 <RefreshCw className="h-4 w-4" />
@@ -124,6 +175,18 @@ export default function InvoiceUploadPage() {
               </button>
             </div>
           </Card>
+
+          <Modal 
+            isOpen={isResultModalOpen} 
+            onClose={() => setIsResultModalOpen(false)}
+            title="Transformed Payload Result"
+          >
+            {resultPayload && (
+              <div className="bg-slate-900 rounded-xl p-6 overflow-x-auto">
+                <JsonViewer data={resultPayload} />
+              </div>
+            )}
+          </Modal>
         </div>
 
         <div className="space-y-6">

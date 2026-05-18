@@ -203,7 +203,13 @@ def clean_nan_values(data):
     Recursively convert NaN values to None in dictionaries and lists.
     Useful for JSON serialization where NaN is not allowed.
     """
-    import pandas as pd
+    import math
+    try:
+        import pandas as pd
+        HAS_PANDAS = True
+    except ImportError:
+        HAS_PANDAS = False
+
     if isinstance(data, dict):
         return {
             key: clean_nan_values(value)
@@ -214,9 +220,12 @@ def clean_nan_values(data):
             clean_nan_values(item)
             for item in data
         ]
-    elif isinstance(data, float) and (data != data): # Standard NaN check
-        return None
-    elif pd.isna(data) if 'pd' in globals() else False:
+    elif isinstance(data, float):
+        if math.isnan(data):
+            return None
+        if data in (float('inf'), float('-inf')):
+            return None
+    elif HAS_PANDAS and pd.isna(data):
         return None
     else:
         return data

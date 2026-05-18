@@ -28,6 +28,7 @@ encoders = joblib.load(
 format_df = pd.read_csv(
     get_data_path('format_rules.csv')
 )
+format_df.columns = [str(col).strip().lower() for col in format_df.columns]
 
 # =========================================================
 # MAIN PREPROCESS FUNCTION

@@ -4,7 +4,7 @@
         "source_format": "facturx",
         "target_country": "DE",
         "seller_id": "MART-8774",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-05-02",
         "currency": "EUR",
         "subtotal": 166069.38,
@@ -68,7 +68,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Cloud Hosting Monthly\", \"quantity\": 85, \"unit\": \"EA\", \"unit_price\": 144.68, \"line_total\": 12297.8}, {\"line_id\": 2, \"description\": \"Assembly Group 2\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 52386.04, \"line_total\": 52386.04, \"sub_items\": [{\"line_id\": \"2.1\", \"description\": \"Server Rack Unit 42U\", \"quantity\": 29, \"unit\": \"EA\", \"unit_price\": 1314.14, \"line_total\": 38110.06}, {\"line_id\": \"2.2\", \"description\": \"SSD 1TB NVMe Enterprise\", \"quantity\": 37, \"unit\": \"EA\", \"unit_price\": 218.33, \"line_total\": 8078.21}, {\"line_id\": \"2.3\", \"description\": \"Data Migration Service\", \"quantity\": 10, \"unit\": \"HUR\", \"unit_price\": 319.63, \"line_total\": 3196.3}, {\"line_id\": \"2.4\", \"description\": \"Cybersecurity Audit\", \"quantity\": 38, \"unit\": \"EA\", \"unit_price\": 3393.66, \"line_total\": 128959.08}]}, {\"line_id\": 3, \"description\": \"Software License Enterprise Annual\", \"quantity\": 74, \"unit\": \"EA\", \"unit_price\": 837.32, \"line_total\": 61961.68}, {\"line_id\": 4, \"description\": \"Server Rack Unit 42U\", \"quantity\": 45, \"unit\": \"EA\", \"unit_price\": 346.06, \"line_total\": 15572.7}, {\"line_id\": 5, \"description\": \"Assembly Group 5\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 20853.31, \"line_total\": 20853.31, \"sub_items\": [{\"line_id\": \"5.1\", \"description\": \"CAT6A Cable 305m Box\", \"quantity\": 34, \"unit\": \"EA\", \"unit_price\": 222.87, \"line_total\": 7577.58}, {\"line_id\": \"5.2\", \"description\": \"UPS 3000VA Rackmount\", \"quantity\": 48, \"unit\": \"EA\", \"unit_price\": 1321.16, \"line_total\": 63415.68}]}, {\"line_id\": 6, \"description\": \"UPS 3000VA Rackmount\", \"quantity\": 66, \"unit\": \"EA\", \"unit_price\": 296.56, \"line_total\": 19572.96}]",
         "seller_vat": "NL733750205B73",
         "buyer_vat": "BE0850695226",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-12-10"
     },
     {
@@ -229,7 +229,7 @@
         "total_amount": 21332.42,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Whiteboard Magnetic 120x90cm\", \"quantity\": 84, \"unit\": \"EA\", \"unit_price\": 88.28, \"line_total\": 7415.52}, {\"line_id\": 2, \"description\": \"Assembly Group 2\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 1711.42, \"line_total\": 1711.42, \"sub_items\": [{\"line_id\": \"2.1\", \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 10, \"unit\": \"EA\", \"unit_price\": 28.11, \"line_total\": 281.1}, {\"line_id\": \"2.2\", \"description\": \"Whiteboard Magnetic 120x90cm\", \"quantity\": 19, \"unit\": \"EA\", \"unit_price\": 75.28, \"line_total\": 1430.32}]}, {\"line_id\": 3, \"description\": \"Document Shredder Cross-Cut\", \"quantity\": 10, \"unit\": \"EA\", \"unit_price\": 200.73, \"line_total\": 2007.3}, {\"line_id\": 4, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 67, \"unit\": \"EA\", \"unit_price\": 5.93, \"line_total\": 397.31}, {\"line_id\": 5, \"description\": \"Assembly Group 5\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 1103.16, \"line_total\": 1103.16, \"sub_items\": [{\"line_id\": \"5.1\", \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 18, \"unit\": \"EA\", \"unit_price\": 44.3, \"line_total\": 797.4}, {\"line_id\": \"5.2\", \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 8, \"unit\": \"EA\", \"unit_price\": 38.22, \"line_total\": 305.76}]}, {\"line_id\": 6, \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 22, \"unit\": \"EA\", \"unit_price\": 307.2, \"line_total\": 6758.4}]",
         "seller_vat": "FRQV113513908",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-376535-00013",
         "delivery_date": "2025-01-08"
     },
@@ -247,7 +247,7 @@
         "total_amount": 22382.71,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Network Switch 48-Port PoE+\", \"quantity\": 2, \"unit\": \"EA\", \"unit_price\": 737.28, \"line_total\": 1474.56}, {\"line_id\": 2, \"description\": \"Cloud Hosting Monthly\", \"quantity\": 44, \"unit\": \"EA\", \"unit_price\": 428.94, \"line_total\": 18873.36}]",
         "seller_vat": "MY40215399221",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-732197-00014",
         "delivery_date": "2025-07-12"
     },
@@ -733,7 +733,7 @@
         "total_amount": 83135.77,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Ergonomic Office Chair Pro\", \"quantity\": 95, \"unit\": \"EA\", \"unit_price\": 420.16, \"line_total\": 39915.2}, {\"line_id\": 2, \"description\": \"Monitor Arm Dual VESA\", \"quantity\": 76, \"unit\": \"EA\", \"unit_price\": 93.73, \"line_total\": 7123.48}, {\"line_id\": 3, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 11, \"unit\": \"EA\", \"unit_price\": 6.57, \"line_total\": 72.27}, {\"line_id\": 4, \"description\": \"Ergonomic Office Chair Pro\", \"quantity\": 6, \"unit\": \"EA\", \"unit_price\": 456.57, \"line_total\": 2739.42}, {\"line_id\": 5, \"description\": \"Assembly Group 5\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 12929.08, \"line_total\": 12929.08, \"sub_items\": [{\"line_id\": \"5.1\", \"description\": \"Document Shredder Cross-Cut\", \"quantity\": 41, \"unit\": \"EA\", \"unit_price\": 229.9, \"line_total\": 9425.9}, {\"line_id\": \"5.2\", \"description\": \"Toner Cartridge Black HP 26A\", \"quantity\": 13, \"unit\": \"EA\", \"unit_price\": 72.56, \"line_total\": 943.28}, {\"line_id\": \"5.3\", \"description\": \"Monitor Arm Dual VESA\", \"quantity\": 35, \"unit\": \"EA\", \"unit_price\": 73.14, \"line_total\": 2559.9}]}, {\"line_id\": 6, \"description\": \"Assembly Group 6\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 5347.35, \"line_total\": 5347.35, \"sub_items\": [{\"line_id\": \"6.1\", \"description\": \"Whiteboard Magnetic 120x90cm\", \"quantity\": 43, \"unit\": \"EA\", \"unit_price\": 77.73, \"line_total\": 3342.39}, {\"line_id\": \"6.2\", \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 48, \"unit\": \"EA\", \"unit_price\": 41.77, \"line_total\": 2004.96}]}, {\"line_id\": 7, \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 59, \"unit\": \"EA\", \"unit_price\": 29.41, \"line_total\": 1735.19}]",
         "seller_vat": "DE164024404",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-364581-00041",
         "delivery_date": "2024-05-20"
     },
@@ -951,14 +951,14 @@
         "seller_vat": "NO370964729MVA",
         "buyer_vat": "SG577739078U",
         "payment_reference": "PAY-766435-00053",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00054",
         "source_format": "facturx",
         "target_country": "NL",
         "seller_id": "DUPO-8263",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-02-01",
         "currency": "EUR",
         "subtotal": 232055.38,
@@ -1021,7 +1021,7 @@
         "total_amount": 1135.08,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Thermal Paste Arctic MX-6 4g\", \"quantity\": 90, \"unit\": \"EA\", \"unit_price\": 10.51, \"line_total\": 945.9}]",
         "seller_vat": "fr20323",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-719745-00057",
         "delivery_date": "2024-09-21"
     },
@@ -1057,7 +1057,7 @@
         "total_amount": 58039.11,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Assembly Group 1\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 9467.71, \"line_total\": 9467.71, \"sub_items\": [{\"line_id\": \"1.1\", \"description\": \"SSD 1TB NVMe Enterprise\", \"quantity\": 11, \"unit\": \"EA\", \"unit_price\": 219.41, \"line_total\": 2413.51}, {\"line_id\": \"1.2\", \"description\": \"CAT6A Cable 305m Box\", \"quantity\": 36, \"unit\": \"EA\", \"unit_price\": 195.95, \"line_total\": 7054.2}]}, {\"line_id\": 2, \"description\": \"Server Rack Unit 42U\", \"quantity\": 33, \"unit\": \"EA\", \"unit_price\": 1191.05, \"line_total\": 39304.65}]",
         "seller_vat": "DE475922913",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-113951-00059",
         "delivery_date": "2025-03-12"
     },
@@ -1561,7 +1561,7 @@
         "total_amount": 6600.06,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Wire Harness Custom 12-Pin\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 12.5, \"line_total\": 12.5}, {\"line_id\": 2, \"description\": \"PCB Assembly 4-Layer\", \"quantity\": 76, \"unit\": \"EA\", \"unit_price\": 7.63, \"line_total\": 579.88}, {\"line_id\": 3, \"description\": \"Power Supply Module 24V/10A\", \"quantity\": 77, \"unit\": \"EA\", \"unit_price\": 73.17, \"line_total\": 5634.09}]",
         "seller_vat": "MY51503508896",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-564033-00087",
         "delivery_date": "2024-11-17"
     },
@@ -1831,7 +1831,7 @@
         "total_amount": 231540.2,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Business Process Consulting\", \"quantity\": 71, \"unit\": \"HUR\", \"unit_price\": 236.5, \"line_total\": 16791.5}, {\"line_id\": 2, \"description\": \"Annual Financial Audit\", \"quantity\": 21, \"unit\": \"EA\", \"unit_price\": 8507.5, \"line_total\": 178657.5}]",
         "seller_vat": "DE632365454",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-770585-00102",
         "delivery_date": "2024-11-28"
     },
@@ -2047,7 +2047,7 @@
         "total_amount": 968.56,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Ball Bearing SKF 6205-2RS\", \"quantity\": 73, \"unit\": \"EA\", \"unit_price\": 12.4, \"line_total\": 905.2}]",
         "seller_vat": "DE062670950",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-760026-00114",
         "delivery_date": "2024-05-09"
     },
@@ -2056,7 +2056,7 @@
         "source_format": "facturx",
         "target_country": "DE",
         "seller_id": "PETI-2860",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-10-04",
         "currency": "EUR",
         "subtotal": 110996.84,
@@ -2085,7 +2085,7 @@
         "seller_vat": "NL401464024B83",
         "buyer_vat": "DE707899720",
         "payment_reference": "PAY-762146-00116",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00117",
@@ -2524,7 +2524,7 @@
         "source_format": "xrechnung_ubl",
         "target_country": "FR",
         "seller_id": "HOFF-3310",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-05-16",
         "currency": "EUR",
         "subtotal": 114007.87,
@@ -2607,7 +2607,7 @@
         "seller_vat": "MY35000397843",
         "buyer_vat": "SG519205673K",
         "payment_reference": "PAY-956364-00145",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00146",
@@ -2668,7 +2668,7 @@
         "source_format": "facturx",
         "target_country": "BE",
         "seller_id": "DUPO-9461",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-07-11",
         "currency": "EUR",
         "subtotal": 37949.04,
@@ -2732,7 +2732,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"EMI Shielding Gasket 100mm\", \"quantity\": 80, \"unit\": \"EA\", \"unit_price\": 6.31, \"line_total\": 504.8}, {\"line_id\": 2, \"description\": \"Thermal Paste Arctic MX-6 4g\", \"quantity\": 5, \"unit\": \"EA\", \"unit_price\": 11.27, \"line_total\": 56.35}]",
         "seller_vat": "DE817290710",
         "buyer_vat": "NL005792039B24",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2025-04-23"
     },
     {
@@ -2769,7 +2769,7 @@
         "seller_vat": "NL106046621B00",
         "buyer_vat": "DE987734789",
         "payment_reference": "PAY-851198-00154",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00155",
@@ -3075,7 +3075,7 @@
         "seller_vat": "NL821872360B20",
         "buyer_vat": "FRTM698736949",
         "payment_reference": "PAY-115262-00171",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00172",
@@ -3415,7 +3415,7 @@
         "total_amount": 2744.17,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Assembly Group 1\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 1624.94, \"line_total\": 1624.94, \"sub_items\": [{\"line_id\": \"1.1\", \"description\": \"Stainless Steel Bolt M12x60\", \"quantity\": 12, \"unit\": \"EA\", \"unit_price\": 1.72, \"line_total\": 20.64}, {\"line_id\": \"1.2\", \"description\": \"CNC Machining Service\", \"quantity\": 10, \"unit\": \"HUR\", \"unit_price\": 160.43, \"line_total\": 1604.3}]}, {\"line_id\": 2, \"description\": \"Ball Bearing SKF 6205-2RS\", \"quantity\": 72, \"unit\": \"EA\", \"unit_price\": 12.08, \"line_total\": 869.76}]",
         "seller_vat": "FRAD416077807",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-825509-00190",
         "delivery_date": "2025-04-06"
     },
@@ -3542,7 +3542,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Translation Service EN-DE\", \"quantity\": 11, \"unit\": \"EA\", \"unit_price\": 0.01, \"line_total\": 0.11}, {\"line_id\": 2, \"description\": \"Compliance Training Workshop\", \"quantity\": 91, \"unit\": \"EA\", \"unit_price\": 194.01, \"line_total\": 17654.91}, {\"line_id\": 3, \"description\": \"Tax Advisory Session\", \"quantity\": 54, \"unit\": \"HUR\", \"unit_price\": 38.1, \"line_total\": 2057.4}, {\"line_id\": 4, \"description\": \"Business Process Consulting\", \"quantity\": 99, \"unit\": \"HUR\", \"unit_price\": 32.12, \"line_total\": 3179.88}, {\"line_id\": 5, \"description\": \"Assembly Group 5\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 14464.56, \"line_total\": 14464.56, \"sub_items\": [{\"line_id\": \"5.1\", \"description\": \"Tax Advisory Session\", \"quantity\": 26, \"unit\": \"HUR\", \"unit_price\": 248.63, \"line_total\": 6464.38}, {\"line_id\": \"5.2\", \"description\": \"Annual Financial Audit\", \"quantity\": 12, \"unit\": \"EA\", \"unit_price\": 8839.46, \"line_total\": 106073.52}]}, {\"line_id\": 6, \"description\": \"Quality Management Certification\", \"quantity\": 21, \"unit\": \"EA\", \"unit_price\": 665.3, \"line_total\": 13971.3}, {\"line_id\": 7, \"description\": \"Annual Financial Audit\", \"quantity\": 28, \"unit\": \"EA\", \"unit_price\": 932.74, \"line_total\": 26116.72}, {\"line_id\": 8, \"description\": \"Patent Filing Service\", \"quantity\": 92, \"unit\": \"EA\", \"unit_price\": 512.08, \"line_total\": 47111.36}, {\"line_id\": 9, \"description\": \"Translation Service EN-DE\", \"quantity\": 54, \"unit\": \"EA\", \"unit_price\": 0.02, \"line_total\": 1.08}]",
         "seller_vat": "DE771420372",
         "buyer_vat": "BE0529891237",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2025-05-26"
     },
     {
@@ -3802,7 +3802,7 @@
         "source_format": "facturx",
         "target_country": "BE",
         "seller_id": "LEFE-5676",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-08-15",
         "currency": "EUR",
         "subtotal": 281.57,
@@ -3964,7 +3964,7 @@
         "source_format": "peppol_bis_3",
         "target_country": "DE",
         "seller_id": "HUBE-7590",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-11-29",
         "currency": "EUR",
         "subtotal": 97188.95,
@@ -4316,7 +4316,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Heat Sink Aluminum 40x40x20\", \"quantity\": 7, \"unit\": \"EA\", \"unit_price\": 3.43, \"line_total\": 24.01}, {\"line_id\": 2, \"description\": \"Wire Harness Custom 12-Pin\", \"quantity\": 60, \"unit\": \"EA\", \"unit_price\": 14.46, \"line_total\": 867.6}]",
         "seller_vat": "de45674",
         "buyer_vat": "NL558383792B98",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-10-01"
     },
     {
@@ -4414,7 +4414,7 @@
         "source_format": "nlcius",
         "target_country": "DE",
         "seller_id": "SMIT-1207",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-02-29",
         "currency": "EUR",
         "subtotal": 39254.71,
@@ -4891,7 +4891,7 @@
         "total_amount": 87274.68,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"CNC Machining Service\", \"quantity\": 90, \"unit\": \"HUR\", \"unit_price\": 152.1, \"line_total\": 13689.0}, {\"line_id\": 2, \"description\": \"Assembly Group 2\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 2796.95, \"line_total\": 2796.95, \"sub_items\": [{\"line_id\": \"2.1\", \"description\": \"Aluminum Extrusion Profile 40x40\", \"quantity\": 40, \"unit\": \"MTR\", \"unit_price\": 32.91, \"line_total\": 1316.4}, {\"line_id\": \"2.2\", \"description\": \"Aluminum Extrusion Profile 40x40\", \"quantity\": 45, \"unit\": \"MTR\", \"unit_price\": 28.38, \"line_total\": 1277.1}, {\"line_id\": \"2.3\", \"description\": \"Aluminum Extrusion Profile 40x40\", \"quantity\": 5, \"unit\": \"MTR\", \"unit_price\": 40.69, \"line_total\": 203.45}]}, {\"line_id\": 3, \"description\": \"Precision Ground Shaft 25mm\", \"quantity\": 46, \"unit\": \"MTR\", \"unit_price\": 103.01, \"line_total\": 4738.46}, {\"line_id\": 4, \"description\": \"Assembly Group 4\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 10344.55, \"line_total\": 10344.55, \"sub_items\": [{\"line_id\": \"4.1\", \"description\": \"Precision Ground Shaft 25mm\", \"quantity\": 47, \"unit\": \"MTR\", \"unit_price\": 110.5, \"line_total\": 5193.5}, {\"line_id\": \"4.2\", \"description\": \"Aluminum Extrusion Profile 40x40\", \"quantity\": 37, \"unit\": \"MTR\", \"unit_price\": 38.4, \"line_total\": 1420.8}, {\"line_id\": \"4.3\", \"description\": \"Aluminum Extrusion Profile 40x40\", \"quantity\": 25, \"unit\": \"MTR\", \"unit_price\": 35.93, \"line_total\": 898.25}, {\"line_id\": \"4.4\", \"description\": \"Steel Sheet 2mm 1000x2000mm\", \"quantity\": 32, \"unit\": \"EA\", \"unit_price\": 88.5, \"line_total\": 2832.0}]}, {\"line_id\": 5, \"description\": \"Precision Ground Shaft 25mm\", \"quantity\": 14, \"unit\": \"MTR\", \"unit_price\": 75.77, \"line_total\": 1060.78}, {\"line_id\": 6, \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 94, \"unit\": \"EA\", \"unit_price\": 55.55, \"line_total\": 5221.7}, {\"line_id\": 7, \"description\": \"Assembly Group 7\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 3791.6, \"line_total\": 3791.6, \"sub_items\": [{\"line_id\": \"7.1\", \"description\": \"CNC Machining Service\", \"quantity\": 22, \"unit\": \"HUR\", \"unit_price\": 156.37, \"line_total\": 3440.14}, {\"line_id\": \"7.2\", \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 5, \"unit\": \"EA\", \"unit_price\": 59.91, \"line_total\": 299.55}, {\"line_id\": \"7.3\", \"description\": \"Stainless Steel Bolt M12x60\", \"quantity\": 29, \"unit\": \"EA\", \"unit_price\": 1.79, \"line_total\": 51.91}]}, {\"line_id\": 8, \"description\": \"Pneumatic Actuator DA-63\", \"quantity\": 54, \"unit\": \"EA\", \"unit_price\": 355.8, \"line_total\": 19213.2}, {\"line_id\": 9, \"description\": \"Assembly Group 9\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 4516.3, \"line_total\": 4516.3, \"sub_items\": [{\"line_id\": \"9.1\", \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 47, \"unit\": \"EA\", \"unit_price\": 76.21, \"line_total\": 3581.87}, {\"line_id\": \"9.2\", \"description\": \"Ball Bearing SKF 6205-2RS\", \"quantity\": 35, \"unit\": \"EA\", \"unit_price\": 13.3, \"line_total\": 465.5}, {\"line_id\": \"9.3\", \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 7, \"unit\": \"EA\", \"unit_price\": 66.99, \"line_total\": 468.93}]}, {\"line_id\": 10, \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 45, \"unit\": \"EA\", \"unit_price\": 79.36, \"line_total\": 3571.2}, {\"line_id\": 11, \"description\": \"Pneumatic Actuator DA-63\", \"quantity\": 47, \"unit\": \"EA\", \"unit_price\": 268.54, \"line_total\": 12621.38}]",
         "seller_vat": "XX978271",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-838118-00272",
         "delivery_date": "2024-08-27"
     },
@@ -4900,7 +4900,7 @@
         "source_format": "pint_sg",
         "target_country": "MY",
         "seller_id": "MERI-3598",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-07-14",
         "currency": "MYR",
         "subtotal": 22651.72,
@@ -5017,7 +5017,7 @@
         "total_amount": 212159.4,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Annual Financial Audit\", \"quantity\": 38, \"unit\": \"EA\", \"unit_price\": 1854.2, \"line_total\": 70459.6}, {\"line_id\": 2, \"description\": \"Assembly Group 2\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 40266.82, \"line_total\": 40266.82, \"sub_items\": [{\"line_id\": \"2.1\", \"description\": \"Legal Consultation\", \"quantity\": 18, \"unit\": \"HUR\", \"unit_price\": 263.7, \"line_total\": 4746.6}, {\"line_id\": \"2.2\", \"description\": \"Quality Management Certification\", \"quantity\": 31, \"unit\": \"EA\", \"unit_price\": 5085.3, \"line_total\": 157644.3}, {\"line_id\": \"2.3\", \"description\": \"Legal Consultation\", \"quantity\": 27, \"unit\": \"HUR\", \"unit_price\": 267.08, \"line_total\": 7211.16}]}, {\"line_id\": 3, \"description\": \"Market Research Report\", \"quantity\": 53, \"unit\": \"EA\", \"unit_price\": 1549.92, \"line_total\": 82145.76}]",
         "seller_vat": "FRMU819379017",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-939219-00279",
         "delivery_date": "2024-05-28"
     },
@@ -5512,7 +5512,7 @@
         "source_format": "facturx",
         "target_country": "NL",
         "seller_id": "MART-7583",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-12-24",
         "currency": "EUR",
         "subtotal": 12639.64,
@@ -5557,7 +5557,7 @@
         "total_amount": 173865.65,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Patent Filing Service\", \"quantity\": 58, \"unit\": \"EA\", \"unit_price\": 881.21, \"line_total\": 51110.18}, {\"line_id\": 2, \"description\": \"Quality Management Certification\", \"quantity\": 13, \"unit\": \"EA\", \"unit_price\": 1216.67, \"line_total\": 15816.71}, {\"line_id\": 3, \"description\": \"Patent Filing Service\", \"quantity\": 79, \"unit\": \"EA\", \"unit_price\": 986.85, \"line_total\": 77961.15}]",
         "seller_vat": "ATU60965889",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-388125-00309",
         "delivery_date": "2024-06-15"
     },
@@ -6061,7 +6061,7 @@
         "total_amount": 396.85,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 23, \"unit\": \"EA\", \"unit_price\": 5.29, \"line_total\": 121.67}, {\"line_id\": 2, \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 242.41, \"line_total\": 242.41}]",
         "seller_vat": "NL503109029B18",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-222853-00337",
         "delivery_date": "2025-04-08"
     },
@@ -6142,7 +6142,7 @@
         "source_format": "peppol_bis_3",
         "target_country": "DE",
         "seller_id": "GRUB-1611",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-02-04",
         "currency": "EUR",
         "subtotal": 214605.83,
@@ -6169,9 +6169,9 @@
         "total_amount": 130068.46,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Annual Financial Audit\", \"quantity\": 57, \"unit\": \"EA\", \"unit_price\": 819.31, \"line_total\": 46700.67}, {\"line_id\": 2, \"description\": \"Compliance Training Workshop\", \"quantity\": 63, \"unit\": \"EA\", \"unit_price\": 200.42, \"line_total\": 12626.46}, {\"line_id\": 3, \"description\": \"Tax Advisory Session\", \"quantity\": 95, \"unit\": \"HUR\", \"unit_price\": 21.74, \"line_total\": 2065.3}, {\"line_id\": 4, \"description\": \"Assembly Group 4\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 3727.87, \"line_total\": 3727.87, \"sub_items\": [{\"line_id\": \"4.1\", \"description\": \"Legal Consultation\", \"quantity\": 7, \"unit\": \"HUR\", \"unit_price\": 354.94, \"line_total\": 2484.58}, {\"line_id\": \"4.2\", \"description\": \"Patent Filing Service\", \"quantity\": 10, \"unit\": \"EA\", \"unit_price\": 3570.16, \"line_total\": 35701.6}]}, {\"line_id\": 5, \"description\": \"Compliance Training Workshop\", \"quantity\": 90, \"unit\": \"EA\", \"unit_price\": 200.13, \"line_total\": 18011.7}, {\"line_id\": 6, \"description\": \"Compliance Training Workshop\", \"quantity\": 55, \"unit\": \"EA\", \"unit_price\": 167.82, \"line_total\": 9230.1}, {\"line_id\": 7, \"description\": \"Compliance Training Workshop\", \"quantity\": 81, \"unit\": \"EA\", \"unit_price\": 197.88, \"line_total\": 16028.28}]",
         "seller_vat": "ATU49820361",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-551607-00343",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00344",
@@ -6430,7 +6430,7 @@
         "source_format": "facturx",
         "target_country": "DE",
         "seller_id": "MORE-4280",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-12-07",
         "currency": "EUR",
         "subtotal": 197726.6,
@@ -6520,7 +6520,7 @@
         "source_format": "zugferd",
         "target_country": "FR",
         "seller_id": "WEBE-4162",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-12-17",
         "currency": "EUR",
         "subtotal": 1353.8,
@@ -7033,7 +7033,7 @@
         "total_amount": 54300.56,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Legal Consultation\", \"quantity\": 27, \"unit\": \"HUR\", \"unit_price\": 304.07, \"line_total\": 8209.89}, {\"line_id\": 2, \"description\": \"Business Process Consulting\", \"quantity\": 98, \"unit\": \"HUR\", \"unit_price\": 276.11, \"line_total\": 27058.78}, {\"line_id\": 3, \"description\": \"Legal Consultation\", \"quantity\": 35, \"unit\": \"HUR\", \"unit_price\": 353.24, \"line_total\": 12363.4}]",
         "seller_vat": "FI36073215",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-763501-00391",
         "delivery_date": "2024-06-04"
     },
@@ -7124,7 +7124,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Assembly Group 1\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 182135.64, \"line_total\": 182135.64, \"sub_items\": [{\"line_id\": \"1.1\", \"description\": \"Patent Filing Service\", \"quantity\": 34, \"unit\": \"EA\", \"unit_price\": 3379.42, \"line_total\": 114900.28}, {\"line_id\": \"1.2\", \"description\": \"Quality Management Certification\", \"quantity\": 14, \"unit\": \"EA\", \"unit_price\": 4764.09, \"line_total\": 66697.26}, {\"line_id\": \"1.3\", \"description\": \"Quality Management Certification\", \"quantity\": 38, \"unit\": \"EA\", \"unit_price\": 5447.67, \"line_total\": 207011.46}]}]",
         "seller_vat": "FRKC114415116",
         "buyer_vat": "NL496656785B97",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-02-07"
     },
     {
@@ -7240,7 +7240,7 @@
         "source_format": "facturx",
         "target_country": "DE",
         "seller_id": "PETI-5553",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-12-12",
         "currency": "EUR",
         "subtotal": 92009.34,
@@ -7917,7 +7917,7 @@
         "seller_vat": "NO047662945MVA",
         "buyer_vat": "FRLM448406441",
         "payment_reference": "PAY-398227-00440",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00441",
@@ -8419,7 +8419,7 @@
         "total_amount": 8882.26,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 43, \"unit\": \"EA\", \"unit_price\": 38.76, \"line_total\": 1666.68}, {\"line_id\": 2, \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 47, \"unit\": \"EA\", \"unit_price\": 39.82, \"line_total\": 1871.54}, {\"line_id\": 3, \"description\": \"Toner Cartridge Black HP 26A\", \"quantity\": 43, \"unit\": \"EA\", \"unit_price\": 88.43, \"line_total\": 3802.49}]",
         "seller_vat": "BE0947935794",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-254714-00468",
         "delivery_date": "2025-01-19"
     },
@@ -8572,7 +8572,7 @@
         "source_format": "zugferd",
         "target_country": "BE",
         "seller_id": "WEBE-5849",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-10-21",
         "currency": "EUR",
         "subtotal": 225345.46,
@@ -8788,7 +8788,7 @@
         "source_format": "xrechnung_ubl",
         "target_country": "NL",
         "seller_id": "HOFF-6244",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-05-23",
         "currency": "EUR",
         "subtotal": 6956.61,
@@ -9328,7 +9328,7 @@
         "source_format": "nlcius",
         "target_country": "FR",
         "seller_id": "DIJK-1970",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-11-13",
         "currency": "GBP",
         "subtotal": 176608.72,
@@ -9841,7 +9841,7 @@
         "total_amount": 2210.08,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Connector USB-C Female PCB\", \"quantity\": 16, \"unit\": \"EA\", \"unit_price\": 1.4, \"line_total\": 22.4}, {\"line_id\": 2, \"description\": \"Heat Sink Aluminum 40x40x20\", \"quantity\": 49, \"unit\": \"EA\", \"unit_price\": 3.46, \"line_total\": 169.54}, {\"line_id\": 3, \"description\": \"Microcontroller STM32F407\", \"quantity\": 67, \"unit\": \"EA\", \"unit_price\": 12.46, \"line_total\": 834.82}, {\"line_id\": 4, \"description\": \"EMI Shielding Gasket 100mm\", \"quantity\": 76, \"unit\": \"EA\", \"unit_price\": 8.87, \"line_total\": 674.12}, {\"line_id\": 5, \"description\": \"LCD Display Module 7-inch\", \"quantity\": 8, \"unit\": \"EA\", \"unit_price\": 40.84, \"line_total\": 326.72}]",
         "seller_vat": "NL549792384B25",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-363300-00547",
         "delivery_date": "2024-09-30"
     },
@@ -9904,7 +9904,7 @@
         "source_format": "xrechnung_ubl",
         "target_country": "MY",
         "seller_id": "HOFF-6850",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-04-01",
         "currency": "MYR",
         "subtotal": 123975.84,
@@ -10129,7 +10129,7 @@
         "total_amount": 163.05,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Translation Service EN-DE\", \"quantity\": 32, \"unit\": \"EA\", \"unit_price\": 1.94, \"line_total\": 62.08}, {\"line_id\": 2, \"description\": \"Translation Service EN-DE\", \"quantity\": 43, \"unit\": \"EA\", \"unit_price\": 2.1, \"line_total\": 90.3}]",
         "seller_vat": "DE959897443",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-997749-00563",
         "delivery_date": "2024-03-18"
     },
@@ -10167,7 +10167,7 @@
         "seller_vat": "DE624086278",
         "buyer_vat": "FRCU104431209",
         "payment_reference": "PAY-857192-00565",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00566",
@@ -10300,7 +10300,7 @@
         "source_format": "xrechnung_cii",
         "target_country": "NL",
         "seller_id": "SCHM-7540",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-09-19",
         "currency": "EUR",
         "subtotal": 18295.7,
@@ -10309,7 +10309,7 @@
         "total_amount": 19576.4,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Document Shredder Cross-Cut\", \"quantity\": 85, \"unit\": \"EA\", \"unit_price\": 179.57, \"line_total\": 15263.45}, {\"line_id\": 2, \"description\": \"Desk Organizer Set 5-Piece\", \"quantity\": 73, \"unit\": \"EA\", \"unit_price\": 38.38, \"line_total\": 2801.74}, {\"line_id\": 3, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 37, \"unit\": \"EA\", \"unit_price\": 6.23, \"line_total\": 230.51}]",
         "seller_vat": "DE231907992",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-695845-00573",
         "delivery_date": "2025-09-24"
     },
@@ -10364,7 +10364,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Market Research Report\", \"quantity\": 45, \"unit\": \"EA\", \"unit_price\": 1102.52, \"line_total\": 49613.4}, {\"line_id\": 2, \"description\": \"Assembly Group 2\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 109134.63, \"line_total\": 109134.63, \"sub_items\": [{\"line_id\": \"2.1\", \"description\": \"Annual Financial Audit\", \"quantity\": 49, \"unit\": \"EA\", \"unit_price\": 9605.58, \"line_total\": 470673.42}, {\"line_id\": \"2.2\", \"description\": \"Quality Management Certification\", \"quantity\": 20, \"unit\": \"EA\", \"unit_price\": 4562.46, \"line_total\": 91249.2}, {\"line_id\": \"2.3\", \"description\": \"Patent Filing Service\", \"quantity\": 47, \"unit\": \"EA\", \"unit_price\": 3588.25, \"line_total\": 168647.75}, {\"line_id\": \"2.4\", \"description\": \"Business Process Consulting\", \"quantity\": 28, \"unit\": \"HUR\", \"unit_price\": 320.02, \"line_total\": 8960.56}]}, {\"line_id\": 3, \"description\": \"Assembly Group 3\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 58252.28, \"line_total\": 58252.28, \"sub_items\": [{\"line_id\": \"3.1\", \"description\": \"Compliance Training Workshop\", \"quantity\": 26, \"unit\": \"EA\", \"unit_price\": 2117.83, \"line_total\": 55063.58}, {\"line_id\": \"3.2\", \"description\": \"Compliance Training Workshop\", \"quantity\": 41, \"unit\": \"EA\", \"unit_price\": 1705.5, \"line_total\": 69925.5}, {\"line_id\": \"3.3\", \"description\": \"Quality Management Certification\", \"quantity\": 44, \"unit\": \"EA\", \"unit_price\": 6130.61, \"line_total\": 269746.84}]}]",
         "seller_vat": "NL133201613B70",
         "buyer_vat": "BE0362921194",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-11-01"
     },
     {
@@ -10498,7 +10498,7 @@
         "source_format": "peppol_bis_3",
         "target_country": "FR",
         "seller_id": "SELL-72361",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-01-06",
         "currency": "EUR",
         "subtotal": 190139.2,
@@ -10525,7 +10525,7 @@
         "total_amount": 257054.65,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Network Switch 48-Port PoE+\", \"quantity\": 76, \"unit\": \"EA\", \"unit_price\": 220.49, \"line_total\": 16757.24}, {\"line_id\": 2, \"description\": \"Software License Enterprise Annual\", \"quantity\": 78, \"unit\": \"EA\", \"unit_price\": 752.66, \"line_total\": 58707.48}, {\"line_id\": 3, \"description\": \"Software License Enterprise Annual\", \"quantity\": 48, \"unit\": \"EA\", \"unit_price\": 707.65, \"line_total\": 33967.2}, {\"line_id\": 4, \"description\": \"Software License Enterprise Annual\", \"quantity\": 46, \"unit\": \"EA\", \"unit_price\": 714.65, \"line_total\": 32873.9}, {\"line_id\": 5, \"description\": \"IT Consultation\", \"quantity\": 95, \"unit\": \"HUR\", \"unit_price\": 60.81, \"line_total\": 5776.95}, {\"line_id\": 6, \"description\": \"Data Migration Service\", \"quantity\": 3, \"unit\": \"HUR\", \"unit_price\": 69.22, \"line_total\": 207.66}, {\"line_id\": 7, \"description\": \"Assembly Group 7\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 26573.32, \"line_total\": 26573.32, \"sub_items\": [{\"line_id\": \"7.1\", \"description\": \"Cybersecurity Audit\", \"quantity\": 22, \"unit\": \"EA\", \"unit_price\": 3260.58, \"line_total\": 71732.76}, {\"line_id\": \"7.2\", \"description\": \"UPS 3000VA Rackmount\", \"quantity\": 15, \"unit\": \"EA\", \"unit_price\": 1312.31, \"line_total\": 19684.65}]}, {\"line_id\": 8, \"description\": \"Assembly Group 8\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 4094.42, \"line_total\": 4094.42, \"sub_items\": [{\"line_id\": \"8.1\", \"description\": \"CAT6A Cable 305m Box\", \"quantity\": 11, \"unit\": \"EA\", \"unit_price\": 228.18, \"line_total\": 2509.98}, {\"line_id\": \"8.2\", \"description\": \"Data Migration Service\", \"quantity\": 42, \"unit\": \"HUR\", \"unit_price\": 275.61, \"line_total\": 11575.62}]}, {\"line_id\": 9, \"description\": \"Cloud Hosting Monthly\", \"quantity\": 28, \"unit\": \"EA\", \"unit_price\": 145.28, \"line_total\": 4067.84}, {\"line_id\": 10, \"description\": \"UPS 3000VA Rackmount\", \"quantity\": 20, \"unit\": \"EA\", \"unit_price\": 361.53, \"line_total\": 7230.6}, {\"line_id\": 11, \"description\": \"Server Rack Unit 42U\", \"quantity\": 93, \"unit\": \"EA\", \"unit_price\": 333.7, \"line_total\": 31034.1}, {\"line_id\": 12, \"description\": \"SSD 1TB NVMe Enterprise\", \"quantity\": 75, \"unit\": \"EA\", \"unit_price\": 58.92, \"line_total\": 4419.0}, {\"line_id\": 13, \"description\": \"Network Switch 48-Port PoE+\", \"quantity\": 52, \"unit\": \"EA\", \"unit_price\": 279.39, \"line_total\": 14528.28}]",
         "seller_vat": "DE581806924",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-266976-00585",
         "delivery_date": "2025-05-17"
     },
@@ -10580,7 +10580,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Server Rack Unit 42U\", \"quantity\": 7, \"unit\": \"EA\", \"unit_price\": 1406.26, \"line_total\": 9843.82}, {\"line_id\": 2, \"description\": \"Software License Enterprise Annual\", \"quantity\": 92, \"unit\": \"EA\", \"unit_price\": 2410.06, \"line_total\": 221725.52}, {\"line_id\": 3, \"description\": \"SSD 1TB NVMe Enterprise\", \"quantity\": 81, \"unit\": \"EA\", \"unit_price\": 218.71, \"line_total\": 17715.51}]",
         "seller_vat": "ATU48538553",
         "buyer_vat": "NL689346978B65",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-12-31"
     },
     {
@@ -10633,7 +10633,7 @@
         "total_amount": 101171.36,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Patent Filing Service\", \"quantity\": 5, \"unit\": \"EA\", \"unit_price\": 4957.39, \"line_total\": 24786.95}, {\"line_id\": 2, \"description\": \"Tax Advisory Session\", \"quantity\": 38, \"unit\": \"HUR\", \"unit_price\": 275.0, \"line_total\": 10450.0}, {\"line_id\": 3, \"description\": \"HR Recruitment Service\", \"quantity\": 16, \"unit\": \"EA\", \"unit_price\": 3621.04, \"line_total\": 57936.64}]",
         "seller_vat": "MY643637784137",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-156415-00591",
         "delivery_date": "2025-10-12"
     },
@@ -11193,7 +11193,7 @@
         "seller_vat": "FRAAAAA",
         "buyer_vat": "DE862307497",
         "payment_reference": "PAY-466695-00622",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00623",
@@ -11859,7 +11859,7 @@
         "seller_vat": "NL559392098B56",
         "buyer_vat": "DE668222623",
         "payment_reference": "PAY-599824-00659",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00660",
@@ -12712,7 +12712,7 @@
         "source_format": "peppol_bis_3",
         "target_country": "FR",
         "seller_id": "ROSS-7686",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-12-11",
         "currency": "EUR",
         "subtotal": 4283.92,
@@ -12831,7 +12831,7 @@
         "seller_vat": "DE016317814",
         "buyer_vat": "FRUL943168042",
         "payment_reference": "PAY-891674-00713",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00714",
@@ -12921,7 +12921,7 @@
         "seller_vat": "DE877266231",
         "buyer_vat": "FRC2260907068",
         "payment_reference": "PAY-285578-00718",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00719",
@@ -13047,7 +13047,7 @@
         "seller_vat": "FR869",
         "buyer_vat": "DE277903140",
         "payment_reference": "PAY-643778-00725",
-        "delivery_date": NaN
+        "delivery_date": null
     },
     {
         "invoice_id": "INV-TST-00726",
@@ -13658,7 +13658,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Monitor Arm Dual VESA\", \"quantity\": 8, \"unit\": \"EA\", \"unit_price\": 92.18, \"line_total\": 737.44}, {\"line_id\": 2, \"description\": \"Monitor Arm Dual VESA\", \"quantity\": 90, \"unit\": \"EA\", \"unit_price\": 84.53, \"line_total\": 7607.7}]",
         "seller_vat": "FRAC185120898",
         "buyer_vat": "BE0278541156",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2024-05-27"
     },
     {
@@ -13675,7 +13675,7 @@
         "total_amount": 6108.05,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Whiteboard Magnetic 120x90cm\", \"quantity\": 54, \"unit\": \"EA\", \"unit_price\": 83.69, \"line_total\": 4519.26}, {\"line_id\": 2, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 87, \"unit\": \"EA\", \"unit_price\": 4.89, \"line_total\": 425.43}, {\"line_id\": 3, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 88, \"unit\": \"EA\", \"unit_price\": 6.91, \"line_total\": 608.08}]",
         "seller_vat": "FRB8020439931",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-204915-00760",
         "delivery_date": "2024-06-30"
     },
@@ -13846,7 +13846,7 @@
         "source_format": "nlcius",
         "target_country": "FR",
         "seller_id": "VISS-8721",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2025-04-23",
         "currency": "EUR",
         "subtotal": 12971.2,
@@ -14414,7 +14414,7 @@
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Standing Desk Electric 160x80\", \"quantity\": 99, \"unit\": \"EA\", \"unit_price\": 720.43, \"line_total\": 71322.57}, {\"line_id\": 2, \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 77, \"unit\": \"EA\", \"unit_price\": 39.87, \"line_total\": 3069.99}, {\"line_id\": 3, \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 53, \"unit\": \"EA\", \"unit_price\": 39.54, \"line_total\": 2095.62}, {\"line_id\": 4, \"description\": \"Ergonomic Office Chair Pro\", \"quantity\": 50, \"unit\": \"EA\", \"unit_price\": 367.71, \"line_total\": 18385.5}, {\"line_id\": 5, \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 83, \"unit\": \"EA\", \"unit_price\": 213.79, \"line_total\": 17744.57}, {\"line_id\": 6, \"description\": \"Assembly Group 6\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 28912.64, \"line_total\": 28912.64, \"sub_items\": [{\"line_id\": \"6.1\", \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 46, \"unit\": \"EA\", \"unit_price\": 230.02, \"line_total\": 10580.92}, {\"line_id\": \"6.2\", \"description\": \"Standing Desk Electric 160x80\", \"quantity\": 14, \"unit\": \"EA\", \"unit_price\": 652.6, \"line_total\": 9136.4}, {\"line_id\": \"6.3\", \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 22, \"unit\": \"EA\", \"unit_price\": 41.13, \"line_total\": 904.86}, {\"line_id\": \"6.4\", \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 38, \"unit\": \"EA\", \"unit_price\": 218.17, \"line_total\": 8290.46}]}, {\"line_id\": 7, \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 87, \"unit\": \"EA\", \"unit_price\": 43.82, \"line_total\": 3812.34}, {\"line_id\": 8, \"description\": \"A4 Paper Premium 80gsm 500-Sheet\", \"quantity\": 55, \"unit\": \"EA\", \"unit_price\": 5.54, \"line_total\": 304.7}, {\"line_id\": 9, \"description\": \"Assembly Group 9\", \"quantity\": 1, \"unit\": \"EA\", \"unit_price\": 13957.56, \"line_total\": 13957.56, \"sub_items\": [{\"line_id\": \"9.1\", \"description\": \"Document Shredder Cross-Cut\", \"quantity\": 43, \"unit\": \"EA\", \"unit_price\": 179.31, \"line_total\": 7710.33}, {\"line_id\": \"9.2\", \"description\": \"Monitor Arm Dual VESA\", \"quantity\": 46, \"unit\": \"EA\", \"unit_price\": 70.04, \"line_total\": 3221.84}, {\"line_id\": \"9.3\", \"description\": \"Toner Cartridge Black HP 26A\", \"quantity\": 41, \"unit\": \"EA\", \"unit_price\": 73.79, \"line_total\": 3025.39}]}, {\"line_id\": 10, \"description\": \"LED Desk Lamp Adjustable\", \"quantity\": 4, \"unit\": \"EA\", \"unit_price\": 45.93, \"line_total\": 183.72}, {\"line_id\": 11, \"description\": \"Ergonomic Office Chair Pro\", \"quantity\": 19, \"unit\": \"EA\", \"unit_price\": 513.94, \"line_total\": 9764.86}, {\"line_id\": 12, \"description\": \"Filing Cabinet 4-Drawer Steel\", \"quantity\": 65, \"unit\": \"EA\", \"unit_price\": 287.98, \"line_total\": 18718.7}, {\"line_id\": 13, \"description\": \"Document Shredder Cross-Cut\", \"quantity\": 20, \"unit\": \"EA\", \"unit_price\": 197.7, \"line_total\": 3954.0}, {\"line_id\": 14, \"description\": \"Toner Cartridge Black HP 26A\", \"quantity\": 72, \"unit\": \"EA\", \"unit_price\": 87.3, \"line_total\": 6285.6}, {\"line_id\": 15, \"description\": \"Ergonomic Office Chair Pro\", \"quantity\": 45, \"unit\": \"EA\", \"unit_price\": 521.65, \"line_total\": 23474.25}]",
         "seller_vat": "ATU95335558",
         "buyer_vat": "NL758392957B09",
-        "payment_reference": NaN,
+        "payment_reference": null,
         "delivery_date": "2025-09-25"
     },
     {
@@ -14683,7 +14683,7 @@
         "total_amount": 22574.46,
         "line_items_json": "[{\"line_id\": 1, \"description\": \"Welding Wire 1.2mm 15kg\", \"quantity\": 44, \"unit\": \"EA\", \"unit_price\": 67.33, \"line_total\": 2962.52}, {\"line_id\": 2, \"description\": \"Pneumatic Actuator DA-63\", \"quantity\": 54, \"unit\": \"EA\", \"unit_price\": 325.18, \"line_total\": 17559.72}]",
         "seller_vat": "FRQS169097328",
-        "buyer_vat": NaN,
+        "buyer_vat": null,
         "payment_reference": "PAY-839390-00816",
         "delivery_date": "2025-08-19"
     },
@@ -15052,7 +15052,7 @@
         "source_format": "facturx",
         "target_country": "DE",
         "seller_id": "PETI-6813",
-        "buyer_id": NaN,
+        "buyer_id": null,
         "issue_date": "2024-02-19",
         "currency": "EUR",
         "subtotal": 21172.67,
