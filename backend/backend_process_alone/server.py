@@ -1,5 +1,4 @@
 import os
-
 from parsers.xml_to_csv import convert_xml_to_csv
 from parsers.json_to_csv import convert_json_to_csv
 from parsers.csv_loader import load_csv
@@ -7,114 +6,52 @@ from pipeline.preprocess import preprocess_invoice
 from pipeline.predict import predict_invoice
 from pipeline.correction import correct_invoice
 from pipeline.mapper import map_invoice
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.responses import JSONResponse
+import pandas as pd
 
-file_path = input(
-    "Enter invoice file path: "
-)
+app = FastAPI()
 
-if not os.path.exists(file_path):
-    print("File does not exist.")
-    exit()
+@app.post("/process-invoice")
+async def process_invoice(file: UploadFile = File(...)):
+    try:
+        # Save uploaded file
+        file_location = f"uploads/{file.filename}"
+        with open(file_location, "wb") as f:
+            f.write(await file.read())
 
-file_extension = file_path.split('.')[-1].lower()
+        # Detect file type and process
+        file_extension = file.filename.split('.')[-1].lower()
+        if file_extension == 'xml':
+            csv_path = convert_xml_to_csv(file_location)
+        elif file_extension == 'json':
+            csv_path = convert_json_to_csv(file_location)
+        elif file_extension == 'csv':
+            csv_path = load_csv(file_location)
+        else:
+            raise HTTPException(status_code=400, detail="Unsupported file type.")
 
-print(
-    f"\nDetected File Type : {file_extension}"
-)
+        # Run pipeline
+        processed_df = preprocess_invoice(csv_path)
+        prediction_output = predict_invoice(processed_df, csv_path)
+        corrected_df = correct_invoice(csv_path, 'outputs/prediction_output.csv')
+        mapped_df = map_invoice('outputs/corrected_invoice.csv', file_extension)
 
-if file_extension == 'xml':
-    print("\nConverting XML to CSV...")
-    csv_path = convert_xml_to_csv(
-        file_path
-    )
-elif file_extension == 'json':
-    print("\nConverting JSON to CSV...")
-    csv_path = convert_json_to_csv(
-        file_path
-    )
-elif file_extension == 'csv':
-    print("\nLoading CSV file...")
-    csv_path = load_csv(
-        file_path
-    )
-else:
-    print("Unsupported file type.")
-    exit()
-print(f"\nCSV Ready : {csv_path}")
+        # Save final output to database (example)
+        mapped_df.to_sql('processed_invoices', con=engine, if_exists='append', index=False)
 
-print(
-    "\nStarting preprocessing pipeline..."
-)
-processed_df = preprocess_invoice(
-    csv_path
-)
-print(
-    "\nPreprocessing completed."
-)
+        return JSONResponse(content={"message": "Invoice processed successfully."})
 
-print(
-    "\nRunning model prediction..."
-)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
-prediction_output = predict_invoice(
-    processed_df,
-    csv_path
-)
-print(
-    "\nPrediction completed."
-)
+@app.get("/results")
+async def get_results():
+    try:
+        # Fetch results from database
+        query = "SELECT * FROM processed_invoices ORDER BY id DESC LIMIT 10"
+        results = pd.read_sql(query, con=engine)
+        return JSONResponse(content=results.to_dict(orient='records'))
 
-print(
-    "\nPrediction Output Preview:\n"
-)
-print(
-    prediction_output.head()
-)
-
-print(
-    "\nStarting correction engine..."
-)
-corrected_df = correct_invoice(
-    csv_path,
-    'outputs/prediction_output.csv'
-)
-print(
-    "\nCorrection completed."
-)
-
-print(
-    "\nStarting invoice transcoding..."
-
-mapped_df = map_invoice(
-    'outputs/corrected_invoice.csv',
-    file_extension
-)
-print(
-    "\nTranscoding completed."
-)
-
-print("\nGenerated Files:\n")
-
-print(
-    "1. outputs/prediction_output.csv"
-)
-print(
-    "2. outputs/corrected_invoice.csv"
-)
-print(
-    "3. outputs/final_mapped_invoice.csv"
-)
-
-if file_extension == 'json':
-    print(
-        "4. outputs/final_mapped_invoice.json"
-    )
-
-elif file_extension == 'xml':
-    print(
-        "4. outputs/final_mapped_invoice.xml"
-    )
-
-print(
-    "\nPipeline Completed Successfully."
-)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

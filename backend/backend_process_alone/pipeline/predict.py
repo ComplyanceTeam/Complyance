@@ -74,46 +74,7 @@ def predict_invoice(processed_df, original_invoice_path):
     # CREATE FINAL OUTPUT
     # =====================================================
 
-    final_output = pd.DataFrame()
-
-    # -----------------------------------------------------
-    # Invoice ID
-    # -----------------------------------------------------
-
-    final_output['invoice_id'] = original_df[
-        'invoice_id'
-    ]
-
-    # -----------------------------------------------------
-    # is_mapping_valid
-    # -----------------------------------------------------
-
-    final_output['is_mapping_valid'] = pred_df[
-        'is_mapping_valid'
-    ]
-
-    # =====================================================
-    # BUILD mapping_errors COLUMN
-    # =====================================================
-
-    mapping_errors = []
-
-    for _, row in pred_df.iterrows():
-
-        current_errors = []
-
-        for error_col in error_columns:
-
-            if row[error_col] == 1:
-
-                current_errors.append(error_col)
-
-        # Convert list -> comma separated string
-        error_string = ', '.join(current_errors)
-
-        mapping_errors.append(error_string)
-
-    final_output['mapping_errors'] = mapping_errors
+    final_output = pd.concat([original_df, pred_df], axis=1)
 
     # =====================================================
     # SAVE OUTPUT
