@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const envUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api'
+console.log(import.meta.env.VITE_API_BASE_URL)
 const API_BASE = envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`
 
 export const apiClient = axios.create({
