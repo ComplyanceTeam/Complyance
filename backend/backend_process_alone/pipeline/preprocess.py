@@ -128,25 +128,16 @@ def preprocess_invoice(invoice_csv_path):
     # =====================================================
 
     def get_line_item_count(x):
-
         try:
-
             data = json.loads(x)
-
             if 'invoice_lines' in data:
-
                 return len(data['invoice_lines'])
-
             return 0
-
         except:
-
             return 0
 
     def get_total_quantity(x):
-
         try:
-
             data = json.loads(x)
 
             total_qty = 0

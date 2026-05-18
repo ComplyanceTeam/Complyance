@@ -1,14 +1,6 @@
-# =========================================================
-# server.py  —  FastAPI REST layer for the E-Invoice Pipeline
-# =========================================================
-# Run from backend_process_alone/:
-#   uvicorn server:app --port 8000
-# =========================================================
-
 import os
 import sys
 
-# Append paths without forcing directory alterations
 _SERVER_DIR = os.path.dirname(os.path.abspath(__file__))
 if _SERVER_DIR not in sys.path:
     sys.path.insert(0, _SERVER_DIR)
