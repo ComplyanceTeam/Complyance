@@ -13,12 +13,9 @@ RUN apt-get update && apt-get install -y \
 
 # Copy requirements from the API service
 COPY services/api/requirements.txt .
-# Add core requirements as well
-COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir -r services/api/requirements.txt
 
 # Copy the core engine and models
 COPY core /app/core
