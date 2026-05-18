@@ -7,3 +7,6 @@ xmltodict
 forex-python
 sqlalchemy
 psycopg2-binary
+fastapi
+uvicorn
+python-multipart
