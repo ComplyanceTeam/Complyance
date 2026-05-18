@@ -7,52 +7,66 @@ from datetime import datetime
 # DATABASE CONNECTION & INITIALIZATION
 # =====================================================
 
-DB_USER = "postgres"
-DB_PASSWORD = "12345678"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "Complyance"
-
-from sqlalchemy import text
+import os
+from dotenv import load_dotenv
+from sqlalchemy import create_engine, text
 from sqlalchemy.exc import ProgrammingError, OperationalError
 
+# =====================================================
+# LOAD ENV VARIABLES
+# =====================================================
+
+load_dotenv()
+
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+
+DATABASE_URL = (
+    f"postgresql+psycopg2://"
+    f"{DB_USER}:{DB_PASSWORD}"
+    f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    f"?sslmode=require"
+)
+
+# =====================================================
+# DATABASE CONNECTION & INITIALIZATION
+# =====================================================
+
 def init_db_and_get_engine():
-    # 1. Try connecting to invoice_db directly
+
     try:
-        engine = create_engine(
-            f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-        )
+
+        engine = create_engine(DATABASE_URL)
+
         # Test connection
         with engine.connect() as conn:
             conn.execute(text("SELECT 1"))
+
+        print("Database connected successfully!")
+
     except (OperationalError, ProgrammingError) as e:
-        print(f"Connecting to {DB_NAME} failed or database does not exist. Attempting to create it... Error: {e}")
-        try:
-            # Connect to default postgres database
-            default_engine = create_engine(
-                f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/postgres",
-                isolation_level="AUTOCOMMIT"
-            )
-            with default_engine.connect() as conn:
-                conn.execute(text(f"CREATE DATABASE {DB_NAME}"))
-            print(f"Database {DB_NAME} created successfully.")
-        except Exception as db_err:
-            print(f"Failed to create database {DB_NAME}: {db_err}")
-        
-        # Re-create engine
-        engine = create_engine(
-            f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-        )
-        
-    # 2. Ensure table exists with correct schema
+
+        print(f"Database connection failed: {e}")
+
+        raise e
+
+    # =================================================
+    # CREATE TABLE IF NOT EXISTS
+    # =================================================
+
     try:
+
         with engine.connect() as conn:
-            # Postgres needs pgcrypto for gen_random_uuid()
-            try:
-                conn.execute(text("CREATE EXTENSION IF NOT EXISTS pgcrypto"))
-            except Exception as ext_err:
-                print(f"Warning: Could not create extension pgcrypto: {ext_err}")
-                
+
+            # Enable extension
+            conn.execute(
+                text("CREATE EXTENSION IF NOT EXISTS pgcrypto")
+            )
+
+            # Create table
             conn.execute(text("""
                 CREATE TABLE IF NOT EXISTS transcode_history (
                     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -66,14 +80,15 @@ def init_db_and_get_engine():
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """))
-            try:
-                conn.execute(text("COMMIT"))
-            except Exception:
-                pass
-            print("Table transcode_history verified/created successfully.")
+
+            conn.commit()
+
+            print("Table verified/created successfully.")
+
     except Exception as tbl_err:
-        print(f"Error ensuring table transcode_history exists: {tbl_err}")
-        
+
+        print(f"Table creation error: {tbl_err}")
+
     return engine
 
 # =====================================================
