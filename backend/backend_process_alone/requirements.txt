@@ -10,3 +10,4 @@ uvicorn
 python-multipart
 sqlalchemy
 psycopg2
+dotenv
