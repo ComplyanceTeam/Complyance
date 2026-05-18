@@ -4,18 +4,77 @@ from sqlalchemy import create_engine
 from datetime import datetime
 
 # =====================================================
-# DATABASE CONNECTION
+# DATABASE CONNECTION & INITIALIZATION
 # =====================================================
 
 DB_USER = "postgres"
-DB_PASSWORD = "postgre00"
+DB_PASSWORD = "12345678"
 DB_HOST = "localhost"
 DB_PORT = "5432"
-DB_NAME = "invoice_db"
+DB_NAME = "Complyance"
 
-engine = create_engine(
-    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
+from sqlalchemy import text
+from sqlalchemy.exc import ProgrammingError, OperationalError
+
+def init_db_and_get_engine():
+    # 1. Try connecting to invoice_db directly
+    try:
+        engine = create_engine(
+            f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+        )
+        # Test connection
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+    except (OperationalError, ProgrammingError) as e:
+        print(f"Connecting to {DB_NAME} failed or database does not exist. Attempting to create it... Error: {e}")
+        try:
+            # Connect to default postgres database
+            default_engine = create_engine(
+                f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/postgres",
+                isolation_level="AUTOCOMMIT"
+            )
+            with default_engine.connect() as conn:
+                conn.execute(text(f"CREATE DATABASE {DB_NAME}"))
+            print(f"Database {DB_NAME} created successfully.")
+        except Exception as db_err:
+            print(f"Failed to create database {DB_NAME}: {db_err}")
+        
+        # Re-create engine
+        engine = create_engine(
+            f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+        )
+        
+    # 2. Ensure table exists with correct schema
+    try:
+        with engine.connect() as conn:
+            # Postgres needs pgcrypto for gen_random_uuid()
+            try:
+                conn.execute(text("CREATE EXTENSION IF NOT EXISTS pgcrypto"))
+            except Exception as ext_err:
+                print(f"Warning: Could not create extension pgcrypto: {ext_err}")
+                
+            conn.execute(text("""
+                CREATE TABLE IF NOT EXISTS transcode_history (
+                    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+                    invoice_id TEXT,
+                    source_format TEXT,
+                    target_country TEXT,
+                    original_payload JSONB,
+                    transcoded_payload JSONB,
+                    is_mapping_valid BOOLEAN,
+                    mapping_errors TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """))
+            try:
+                conn.execute(text("COMMIT"))
+            except Exception:
+                pass
+            print("Table transcode_history verified/created successfully.")
+    except Exception as tbl_err:
+        print(f"Error ensuring table transcode_history exists: {tbl_err}")
+        
+    return engine
 
 # =====================================================
 # CLEAN NaN VALUES
@@ -57,6 +116,7 @@ def append_transcode_history(
 
     prediction_csv_path
 ):
+    engine = init_db_and_get_engine()
 
     # -------------------------------------------------
     # READ FILES
@@ -85,10 +145,14 @@ def append_transcode_history(
     FROM transcode_history
     """
 
-    existing_ids = pd.read_sql(
-        existing_ids_query,
-        engine
-    )["invoice_id"].tolist()
+    try:
+        existing_ids = pd.read_sql(
+            existing_ids_query,
+            engine
+        )["invoice_id"].tolist()
+    except Exception as e:
+        print(f"Could not read existing transcode history: {e}")
+        existing_ids = []
 
     # -------------------------------------------------
     # FINAL RECORDS

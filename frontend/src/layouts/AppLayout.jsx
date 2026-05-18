@@ -7,8 +7,8 @@ const navItems = [
   { label: 'Pipeline Monitoring', to: '/pipeline', icon: ActivitySquare },
   { label: 'Validation Results', to: '/validation', icon: ShieldCheck },
   { label: 'Invoice Viewer', to: '/viewer', icon: FileJson2 },
-  { label: 'Analytics', to: '/analytics', icon: LineChart },
-  { label: 'Logs & Audit', to: '/logs', icon: FileText },
+//   { label: 'Analytics', to: '/analytics', icon: LineChart },
+//   { label: 'Logs & Audit', to: '/logs', icon: FileText },
 ]
 
 function SidebarLink({ item }) {

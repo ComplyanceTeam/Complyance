@@ -1,9 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import AppLayout from '../layouts/AppLayout'
 import DashboardPage from '../pages/DashboardPage'
-import AnalyticsDashboardPage from '../pages/AnalyticsDashboardPage'
+//import AnalyticsDashboardPage from '../pages/AnalyticsDashboardPage'
 import InvoiceUploadPage from '../pages/InvoiceUploadPage'
-import LogsAuditViewerPage from '../pages/LogsAuditViewerPage'
+//import LogsAuditViewerPage from '../pages/LogsAuditViewerPage'
 import PipelineMonitoringPage from '../pages/PipelineMonitoringPage'
 import TransformedInvoiceViewerPage from '../pages/TransformedInvoiceViewerPage'
 import ValidationResultsPage from '../pages/ValidationResultsPage'
@@ -18,8 +18,6 @@ export default function AppRouter() {
           <Route path="pipeline" element={<PipelineMonitoringPage />} />
           <Route path="validation" element={<ValidationResultsPage />} />
           <Route path="viewer" element={<TransformedInvoiceViewerPage />} />
-          <Route path="analytics" element={<AnalyticsDashboardPage />} />
-          <Route path="logs" element={<LogsAuditViewerPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

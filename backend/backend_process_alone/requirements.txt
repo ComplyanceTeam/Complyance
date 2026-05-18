@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+xgboost
+joblib
+xmltodict
+forex-python
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+psycopg2

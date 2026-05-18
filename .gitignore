@@ -1,1 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.env
+.venv
+virtualenv/
+venv*/
+
+# IDE and Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.user
+
+# Node / Frontend dependencies & builds
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment and Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+
+# Pipeline outputs and raw directories
+**/outputs/*
+!**/outputs/.gitkeep
+**/processed/*
+!**/processed/.gitkeep
+
+# Temporary / scratch / test files
+PS4.txt
+test_server.py
 phase.txt
+.DS_Store
+Thumbs.db
+*.md 
+*.yml
+Dockerfile
+*.bat
+*.sh
+.gitignore
